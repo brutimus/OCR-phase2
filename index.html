@@ -19,6 +19,7 @@
         <script data-main="js/main" src="js/require.js"></script>
 
         <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,500,600,700,800' rel='stylesheet' type='text/css'>
+        <link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
         
     </head>
     <body>
@@ -26,16 +27,46 @@
         <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
 
+        <a name="top"></a>
+
         <div id="page-wrapper">
             <header>
+                <div id="top-links">
+                    <div id="classifieds">
+                        <ul>
+                            <li><a href="#">Cars</a></li>
+                            <li><a href="#">Jobs</a></li>
+                            <li><a href="#">Homes</a></li>
+                            <li><a href="#">Shop</a></li>
+                        </ul>
+                    </div>
+                    <div id="text-links">
+                        <ul>
+                            <li><a href="#">Advertise</a></li>
+                            <li><a href="#">Customer Service</a></li>
+                            <li><a href="#">eRegister</a></li>
+                        </ul>
+                    </div>
+                    <div class="user-access">
+                        <ul>
+                            <li><a href="#">Subscribe Today</a></li>
+                            <li><a href="#">Log In</a></li>
+                        </ul>
+                    </div>
+                </div><!-- /#top-links -->
                 <div id="nameplate">
-                    <div class="ad" id="top-left"></div>
-                    <div class="ad" id="top-right"></div>
-                    <img id="flag" width="300" height="" alt="Orange County Register" src="assets/ocr-flag.svg">
+                    <div id="ad-topLeft"><img src="http://placehold.it/184x90"></div>
+                    <div id="ad-topRight"><img src="http://placehold.it/184x90"></div>
+                    <div id="flag">
+                        <img width="325" height="" alt="Orange County Register" src="assets/ocr-flag.svg">
+                    </div>
                 </div>
-                <div class="nav-container">
+                <div id="nav-anchor"></div>
+                <div id="nav-container">
                     <nav>
                         <ul>
+                            <li class="section-menu"><a href="#"><i class="fa fa-bars"></i><span>All sections</span></a></li>
+                            <li class="search-mini-nav"><a href="#"><i class="fa fa-search"></i></a></li>
                             <li><a href="">News</a></li>
                             <li><a href="">Sports</a></li>
                             <li><a href="">Business</a></li>
@@ -44,6 +75,13 @@
                             <li><a href="">Opinion</a></li>
                             <li><a href="">Obits</a></li>
                             <li><a href="">Today's Paper</a></li>
+                            <li class="search"><a href="#"><span>Search</span><i class="fa fa-search"></i></a></li>
+                            <div class="user-access">
+                                <ul>
+                                    <li><a href="#">Subscribe Today</a></li>
+                                    <li><a href="#">Log In</a></li>
+                                </ul>
+                            </div>
                         </ul>
                     </nav>
                 </div>
@@ -52,7 +90,7 @@
             <div id="ad-featured"><img src="http://placehold.it/940x90"></div>
 
             <div id="main">
-                <section id="lead-container">
+                <section class="container">
                     <div id="a-box" class="col-8">
                         <div class="col-3 lead-rail">
                             <h5 class="label"><a href="#">Today's news &raquo;</a></h5>
@@ -83,11 +121,11 @@
                         <div class="col-8 topics">
                             <span class="label"><p>In the news</p></span>
                             <ul>
-                                <li><a href="#">Topic #1</a></li>
-                                <li><a href="#">Topic #2</a></li>
-                                <li><a href="#">Topic #3</a></li>
-                                <li><a href="#">Topic #4</a></li>
-                                <li><a href="#">Topic #5</a></li>
+                                <li><a href="#">News Topic 1</a></li>
+                                <li><a href="#">News Topic 2</a></li>
+                                <li><a href="#">News Topic 3</a></li>
+                                <li><a href="#">News Topic 4</a></li>
+                                <li><a href="#">News Topic 5</a></li>
                             </ul>
                         </div>
                     </div>
@@ -104,7 +142,7 @@
                         </div>
                         <div class="ad"><img src="http://placehold.it/300x250"></div>
                     </div>
-                </section><!-- /#lead-container -->
+                </section><!-- /.container -->
 
                 <hr>
 
@@ -143,24 +181,184 @@
 
                 <hr>
 
-                <section id="second-container">
+                <section class="container">
                     <div class="col-5">sports</div>
                     <div class="col-3">opinion</div>
                     <div class="col-4">
                         <div class="ad"><img src="http://placehold.it/300x250"></div>
                         <div class="ad"><img src="http://placehold.it/300x250"></div>
                     </div>
-                </section><!-- /#second-container -->
+                </section><!-- /.container -->
 
                 <hr>
 
-                <section id="third-container">
-                    <div class="col-12">featured slideshows</div>
-                    <hr>
-                    <div class="col-4">ads</div>
-                    <div class="col-4">events</div>
-                    <div class="col-4">ad</div>
+                <section id="multimedia">
+                    <div class="col-12">
+                        <div class="ad"><img src="http://placehold.it/940x200"></div>
+                    </div>
                 </section>
+
+                <hr>
+
+                <section class="container">
+                    <div class="col-4">
+                        <div class="ad"><img src="http://placehold.it/300x250"></div>
+                    </div>
+                    <div class="col-4">
+                        <div class="ad"><img src="http://placehold.it/300x250"></div>
+                    </div>
+                    <div class="col-4">
+                        <div class="ad"><img src="http://placehold.it/300x250"></div>
+                    </div>
+                </section><!-- /.container -->
+
+                <hr>
+
+                <section class="section-grid">
+                    <!-- row one -->
+                    <div class="col-3 mini-bucket">
+                        <h5 class="label"><a href="#">Section &raquo;</a></h5>
+                        <h4><a href="#">Lorem ipsum dolor sit amet consectetur elit sed do</a></h4>
+                        <h4><a href="#">Lorem ipsum dolor sit amet consectetur elit sed do</a></h4>
+                        <h4><a href="#">Lorem ipsum dolor sit amet consectetur elit sed do</a></h4>
+                        <h4><a href="#">Lorem ipsum dolor sit amet consectetur elit sed do</a></h4>
+                    </div>
+                    <div class="col-3 mini-bucket">
+                        <h5 class="label"><a href="#">Section &raquo;</a></h5>
+                        <h4><a href="#">Lorem ipsum dolor sit amet consectetur elit sed do</a></h4>
+                        <h4><a href="#">Lorem ipsum dolor sit amet consectetur elit sed do</a></h4>
+                        <h4><a href="#">Lorem ipsum dolor sit amet consectetur elit sed do</a></h4>
+                        <h4><a href="#">Lorem ipsum dolor sit amet consectetur elit sed do</a></h4>
+                    </div>
+                    <div class="col-3 mini-bucket">
+                        <h5 class="label"><a href="#">Section &raquo;</a></h5>
+                        <h4><a href="#">Lorem ipsum dolor sit amet consectetur elit sed do</a></h4>
+                        <h4><a href="#">Lorem ipsum dolor sit amet consectetur elit sed do</a></h4>
+                        <h4><a href="#">Lorem ipsum dolor sit amet consectetur elit sed do</a></h4>
+                        <h4><a href="#">Lorem ipsum dolor sit amet consectetur elit sed do</a></h4>
+                    </div>
+                    <div class="col-3 mini-bucket">
+                        <h5 class="label"><a href="#">Section &raquo;</a></h5>
+                        <h4><a href="#">Lorem ipsum dolor sit amet consectetur elit sed do</a></h4>
+                        <h4><a href="#">Lorem ipsum dolor sit amet consectetur elit sed do</a></h4>
+                        <h4><a href="#">Lorem ipsum dolor sit amet consectetur elit sed do</a></h4>
+                        <h4><a href="#">Lorem ipsum dolor sit amet consectetur elit sed do</a></h4>
+                    </div>
+
+                    <!-- row two -->
+                    <div class="col-3 mini-bucket">
+                        <h5 class="label"><a href="#">Section &raquo;</a></h5>
+                        <h4><a href="#">Lorem ipsum dolor sit amet consectetur elit sed do</a></h4>
+                        <h4><a href="#">Lorem ipsum dolor sit amet consectetur elit sed do</a></h4>
+                        <h4><a href="#">Lorem ipsum dolor sit amet consectetur elit sed do</a></h4>
+                        <h4><a href="#">Lorem ipsum dolor sit amet consectetur elit sed do</a></h4>
+                    </div>
+                    <div class="col-3 mini-bucket">
+                        <h5 class="label"><a href="#">Section &raquo;</a></h5>
+                        <h4><a href="#">Lorem ipsum dolor sit amet consectetur elit sed do</a></h4>
+                        <h4><a href="#">Lorem ipsum dolor sit amet consectetur elit sed do</a></h4>
+                        <h4><a href="#">Lorem ipsum dolor sit amet consectetur elit sed do</a></h4>
+                        <h4><a href="#">Lorem ipsum dolor sit amet consectetur elit sed do</a></h4>
+                    </div>
+                    <div class="col-3 mini-bucket">
+                        <h5 class="label"><a href="#">Section &raquo;</a></h5>
+                        <h4><a href="#">Lorem ipsum dolor sit amet consectetur elit sed do</a></h4>
+                        <h4><a href="#">Lorem ipsum dolor sit amet consectetur elit sed do</a></h4>
+                        <h4><a href="#">Lorem ipsum dolor sit amet consectetur elit sed do</a></h4>
+                        <h4><a href="#">Lorem ipsum dolor sit amet consectetur elit sed do</a></h4>
+                    </div>
+                    <div class="col-3 mini-bucket">
+                        <h5 class="label"><a href="#">Section &raquo;</a></h5>
+                        <h4><a href="#">Lorem ipsum dolor sit amet consectetur elit sed do</a></h4>
+                        <h4><a href="#">Lorem ipsum dolor sit amet consectetur elit sed do</a></h4>
+                        <h4><a href="#">Lorem ipsum dolor sit amet consectetur elit sed do</a></h4>
+                        <h4><a href="#">Lorem ipsum dolor sit amet consectetur elit sed do</a></h4>
+                    </div>
+                </section><!-- /.section-grid -->
+
+                <hr>
+
+                <div class="ad-strip"><img src="http://placehold.it/940x90"></div>
+
+                <hr>
+
+                <section class="section-grid">
+                    <!-- row three -->
+                    <div class="col-3 mini-bucket">
+                        <h5 class="label"><a href="#">Section &raquo;</a></h5>
+                        <h4><a href="#">Lorem ipsum dolor sit amet consectetur elit sed do</a></h4>
+                        <h4><a href="#">Lorem ipsum dolor sit amet consectetur elit sed do</a></h4>
+                        <h4><a href="#">Lorem ipsum dolor sit amet consectetur elit sed do</a></h4>
+                        <h4><a href="#">Lorem ipsum dolor sit amet consectetur elit sed do</a></h4>
+                    </div>
+                    <div class="col-3 mini-bucket">
+                        <h5 class="label"><a href="#">Section &raquo;</a></h5>
+                        <h4><a href="#">Lorem ipsum dolor sit amet consectetur elit sed do</a></h4>
+                        <h4><a href="#">Lorem ipsum dolor sit amet consectetur elit sed do</a></h4>
+                        <h4><a href="#">Lorem ipsum dolor sit amet consectetur elit sed do</a></h4>
+                        <h4><a href="#">Lorem ipsum dolor sit amet consectetur elit sed do</a></h4>
+                    </div>
+                    <div class="col-3 mini-bucket">
+                        <h5 class="label"><a href="#">Section &raquo;</a></h5>
+                        <h4><a href="#">Lorem ipsum dolor sit amet consectetur elit sed do</a></h4>
+                        <h4><a href="#">Lorem ipsum dolor sit amet consectetur elit sed do</a></h4>
+                        <h4><a href="#">Lorem ipsum dolor sit amet consectetur elit sed do</a></h4>
+                        <h4><a href="#">Lorem ipsum dolor sit amet consectetur elit sed do</a></h4>
+                    </div>
+                    <div class="col-3 mini-bucket">
+                        <h5 class="label"><a href="#">Section &raquo;</a></h5>
+                        <h4><a href="#">Lorem ipsum dolor sit amet consectetur elit sed do</a></h4>
+                        <h4><a href="#">Lorem ipsum dolor sit amet consectetur elit sed do</a></h4>
+                        <h4><a href="#">Lorem ipsum dolor sit amet consectetur elit sed do</a></h4>
+                        <h4><a href="#">Lorem ipsum dolor sit amet consectetur elit sed do</a></h4>
+                    </div>
+
+                    <!-- row four -->
+                    <div class="col-3 mini-bucket">
+                        <h5 class="label"><a href="#">Section &raquo;</a></h5>
+                        <h4><a href="#">Lorem ipsum dolor sit amet consectetur elit sed do</a></h4>
+                        <h4><a href="#">Lorem ipsum dolor sit amet consectetur elit sed do</a></h4>
+                        <h4><a href="#">Lorem ipsum dolor sit amet consectetur elit sed do</a></h4>
+                        <h4><a href="#">Lorem ipsum dolor sit amet consectetur elit sed do</a></h4>
+                    </div>
+                    <div class="col-3 mini-bucket">
+                        <h5 class="label"><a href="#">Section &raquo;</a></h5>
+                        <h4><a href="#">Lorem ipsum dolor sit amet consectetur elit sed do</a></h4>
+                        <h4><a href="#">Lorem ipsum dolor sit amet consectetur elit sed do</a></h4>
+                        <h4><a href="#">Lorem ipsum dolor sit amet consectetur elit sed do</a></h4>
+                        <h4><a href="#">Lorem ipsum dolor sit amet consectetur elit sed do</a></h4>
+                    </div>
+                    <div class="col-3 mini-bucket">
+                        <h5 class="label"><a href="#">Section &raquo;</a></h5>
+                        <h4><a href="#">Lorem ipsum dolor sit amet consectetur elit sed do</a></h4>
+                        <h4><a href="#">Lorem ipsum dolor sit amet consectetur elit sed do</a></h4>
+                        <h4><a href="#">Lorem ipsum dolor sit amet consectetur elit sed do</a></h4>
+                        <h4><a href="#">Lorem ipsum dolor sit amet consectetur elit sed do</a></h4>
+                    </div>
+                    <div class="col-3 mini-bucket">
+                        <h5 class="label"><a href="#">Section &raquo;</a></h5>
+                        <h4><a href="#">Lorem ipsum dolor sit amet consectetur elit sed do</a></h4>
+                        <h4><a href="#">Lorem ipsum dolor sit amet consectetur elit sed do</a></h4>
+                        <h4><a href="#">Lorem ipsum dolor sit amet consectetur elit sed do</a></h4>
+                        <h4><a href="#">Lorem ipsum dolor sit amet consectetur elit sed do</a></h4>
+                    </div>
+                </section><!-- /.section-grid -->
+
+                <hr>
+
+                <section class="container">
+                    <div class="col-4">
+                        <div class="ad"><img src="http://placehold.it/300x250"></div>
+                    </div>
+                    <div class="col-4">
+                        <div class="ad"><img src="http://placehold.it/300x250"></div>
+                    </div>
+                    <div class="col-4">
+                        <div class="ad"><img src="http://placehold.it/300x250"></div>
+                    </div>
+                </section><!-- /.container -->
+
+                <hr>
 
             </div>
         </div>
@@ -169,5 +367,29 @@
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.2.min.js"><\/script>')</script>
         <script src="js/plugins.js"></script>
         <script src="js/main.js"></script>
+        <script>
+            $(document).ready(function() {
+                var $window = $(window),
+                    $navAnchor = $('#nav-anchor'),
+                    $nav = $('nav');
+                    $header = $('header');
+
+                $window.scroll(function() {
+                    var window_top = $window.scrollTop();
+                    var nav_top = $navAnchor.offset().top;
+                    if (window_top > nav_top) {
+                        $nav.addClass('fixed');
+                        $navAnchor.height($nav.height());
+                        $header.css('margin-bottom','16px');
+
+
+                    } else {
+                        $nav.removeClass('fixed');
+                        $navAnchor.height(0);
+                        $header.css('margin-bottom','8px');
+                    }
+                });
+            });
+        </script>
     </body>
 </html>
