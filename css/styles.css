@@ -24,6 +24,59 @@ hr {margin:0 0 8px 10px;border:0;width:940px;height:1px;background-color:#e2e2e2
 
 /* PAGE STRUCTURE -----------
 ---------------------------*/
+nav#side-panel {
+	position:fixed;
+	top:0;
+	left:0;
+	width:0;
+	height:100%;
+	background-color:#fff;
+	border-right:1px solid #ccc;
+	box-shadow: 4px 0 6px 1px rgba(0,0,0,0.1);
+		-webkit-box-shadow:4px 0 6px 1px rgba(0,0,0,0.1);
+		-moz-box-shadow:4px 0 6px 1px rgba(0,0,0,0.1);
+	z-index:9999999;
+	display:none;
+}
+nav#side-panel.active {
+	display:block;
+	width:210px;
+	cursor:default;
+	z-index:10000000;
+}
+nav#side-panel .section {margin:20px 0;}
+nav#side-panel .section .header {margin:0 0 5px 19px;}
+nav#side-panel .section .header h6 {font-size:12px;line-height:14px;font-weight:500;text-transform:uppercase;color:#999;}
+nav#side-panel .section li {font-size:16px;line-height:18px;white-space:nowrap;}
+nav#side-panel .section.primary li a {font-weight:700;}
+nav#side-panel .section.secondary li a {font-size:14px;line-height:16px;font-weight:500;}
+nav#side-panel .section li a {display:block;margin:0 10px;padding:4px 9px 5px 9px;cursor:pointer;}
+nav#side-panel .section li a:hover {color:#000;background-color:#edf0f6;border-radius:5px;-webkit-border-radius:5px;-moz-border-radius:5px;}
+nav#side-panel .arrow-right {
+	display:inline-block;
+	position:absolute;
+	left:187px;
+	margin:5px 0 0 0;
+	width:0;
+	height:0;
+	border-top:4px solid transparent;
+	border-right:4px solid transparent;
+	border-bottom:4px solid transparent;
+	border-left:4px solid #bbb;
+}
+nav#side-panel .arrow-right .arrow-conceal {
+	display:inline-block;
+	position:absolute;
+	top:-4px;
+	left:-5px;
+	width:0;
+	height:0;
+	border-top:4px solid transparent;
+	border-right:4px solid transparent;
+	border-bottom:4px solid transparent;
+	border-left:4px solid #fff;
+}
+
 #page-wrapper {position:relative;margin:0 auto;width:940px;}
 header {padding:10px 0 0 0;margin: 0 0 8px 0;}
 header #top-links {position:relative;min-height:30px;margin:5px 0;padding:8px 0 0 0;text-align:center;}
@@ -37,13 +90,13 @@ header #classifieds ul li a {
 	margin:0;
 	background-color:#f3f3f3;
 	padding:25px 8px 9px 8px;
-	font-size:11px;
+	font-size:10px;
 	font-weight:600;
 	text-transform:uppercase;
 }
 header #classifieds ul li a:hover {
-	color:#fff;
-	background-color: #536aaa;
+	//color:#fff;
+	background-color: #edf0f6;
 }
 
 header #text-links {font-size:11px;}
@@ -84,20 +137,22 @@ header nav ul li.search a span:hover {color:#999;}
 header nav ul li.section-menu a:hover i,
 header nav ul li.search a:hover i,
 header nav ul li.search-mini-nav a:hover i {color:#536aaa;}
-header #nav-container .fixed {position:fixed;width:100%;max-height:41px;top:0;left:0;padding:8px 0 10px;background:#fff;border-bottom:1px solid #e2e2e2;box-shadow:1px 1px 8px rgba(102,102,102,0.3);z-index:999999999;}
+header #nav-container .fixed {position:fixed;width:100%;max-height:41px;top:0;left:0;padding:8px 0 10px;background:#fff;border-bottom:1px solid #e2e2e2;box-shadow:1px 1px 8px rgba(102,102,102,0.3);z-index:999999;}
 header #nav-container .fixed ul {width:940px;margin:0 auto;text-align:left;}
 header nav ul li a, .fixed ul li a {color:#000;text-transform:none;font-size:14px;font-weight:700;padding:2px 4px;margin:0 4px;}
-header .fixed ul li a:hover {color:#536aaa;}
-header .fixed ul li.section-menu a,
-header .fixed ul li .search a {position:relative;}
-header .fixed ul li.search {display:none;}
-header .fixed ul li.section-menu a span,
-header .fixed ul li.search a span {display:none;}
-header .fixed ul li.search-mini-nav {display:inline;}
-header .fixed ul li.search-mini-nav a {position:relative;top:1px;font-size:16px;}
+header #nav-container .fixed ul li a:hover {color:#536aaa;}
+header #nav-container .fixed ul li.section-menu a,
+header #nav-container .fixed ul li .search a {position:relative;}
+header #nav-container .fixed ul li.search {display:none;}
+header #nav-container .fixed ul li.section-menu a span,
+header #nav-container .fixed ul li.search a span {display:none;}
+header #nav-container .fixed ul li.search-mini-nav {display:inline;}
+header #nav-container .fixed ul li.search-mini-nav a {position:relative;top:1px;font-size:16px;}
 header nav .user-access {display:none;}
-header .fixed .user-access {display:inline-block;position:relative;top:-2px;float:right;width:190px;}
-header .fixed .user-access ul li a:hover {color:#fff;}
+header #nav-container .fixed .user-access {display:inline-block;position:relative;top:-2px;float:right;}
+header #nav-container .fixed .user-access ul {width:auto;}
+header #nav-container .fixed .user-access ul li a {margin:0;}
+header #nav-container .fixed .user-access ul li a:hover {color:#fff;}
 
 
 #main {clear:both;margin:0 -10px;}
