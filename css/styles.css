@@ -5,6 +5,7 @@ a:hover {color:#536AAA;}
 a.white {color:#ffffff;}
 h1,h2,h3,h4,h5,h6 {font-family:'Source Sans Pro',sans-serif;margin:0;padding:0;}
 h5.label {margin:0 0 8px 0;font-size:15px;font-weight:300;text-transform:uppercase;border-bottom:4px solid #536aaa;}
+h6.full-bar-label {padding:5px 10px;background-color:#536AAA;font-size:14px;font-weight:800;text-transform:uppercase;color:#FFF;}
 p {font-size:16px;line-height:20px;}
 p.posted {margin:2px 0 0 0;font-size:11px;line-height:20px;color:#6e6e6e;cursor:default;}
 p.tease {margin:2px 0 0 0;font-size:13px;line-height:17px;}
@@ -84,9 +85,9 @@ header #top-links * {display:inline;}
 /*#classifieds, #text-links, #user-access,
 #classifieds ul, #text-links ul, #user-access ul,
 #classifieds ul li, #text-links ul li, #user-access ul li {display:inline;} */
-header #classifieds {position:absolute;top:0;left:0;white-space:nowrap;}
-header #classifieds ul li:before {}
-header #classifieds ul li a {
+header .classified-links {position:absolute;top:0;left:0;white-space:nowrap;}
+header .classified-links ul li:before {}
+header .classified-links ul li a {
 	margin:0;
 	background-color:#f3f3f3;
 	padding:25px 8px 9px 8px;
@@ -94,13 +95,13 @@ header #classifieds ul li a {
 	font-weight:600;
 	text-transform:uppercase;
 }
-header #classifieds ul li a:hover {
+header .classified-links ul li a:hover {
 	//color:#fff;
 	background-color: #edf0f6;
 }
 
-header #text-links {font-size:11px;}
-header #text-links ul li+li:before {content:"|";color:#e2e2e2;padding:0 5px;}
+header .text-links {font-size:11px;}
+header .text-links ul li+li:before {content:"|";color:#e2e2e2;padding:0 5px;}
 
 header .user-access {position:absolute;top:0;right:0;white-space:nowrap;}
 header .user-access ul li+li:before {content:"";margin:0 0 0 6px;}
@@ -191,18 +192,15 @@ header #nav-container .fixed .user-access ul li a:hover {color:#fff;}
 #news-strip .col-3:first-child {margin-left:0;}
 #news-strip .col-3:last-child {margin-right:0;}
 
-#sports {padding:15px;border:1px solid #e2e2e2;}
+#sports, #opinion {padding:15px;border:1px solid #e2e2e2;}
 #sports h5.label {margin:-2px 0 8px 0;}
-#sports .story:last-child {margin:0;}
+#sports .story:last-child, #opinion .story:last-child {margin:0;}
 #sports .story img {float:right;margin:3px 0 0 8px;}
 #sports .story h3 {font-size:18px;line-height:20px;}
 #sports .story h4 {font-size:15px;line-height:17px;}
 
-#opinion {padding:15px;border:1px solid #e2e2e2;}
 #opinion h5.label {margin:-2px 0 10px 0;}
-#opinion .story:last-child {margin:0;}
 #opinion .story p.overline {margin:0 0 2px 0;font-size:11px;line-height:13px;text-transform:uppercase;color:#999;cursor:default;}
-#opinion .story h3 {font-size:18px;line-height:20px;}
 #opinion .story h4 {font-size:13px;line-height:15px;}
 
 #multimedia {overflow:auto;margin:40px 0;}
@@ -212,13 +210,6 @@ header #nav-container .fixed .user-access ul li a:hover {color:#fff;}
 /* global structures */
 .story {overflow:auto;margin:0 0 10px 0;padding:0 0 10px 0;border-bottom:1px solid #e2e2e2;}
 .story:last-child {padding:0;border:none;}
-
-#most-popular {margin:0 0 10px 0;background-color:#f8f8f8;}
-#most-popular h6 {padding:5px 10px;background-color:#536AAA;font-size:14px;font-weight:800;text-transform:uppercase;color:#FFF;}
-#most-popular ul li {border:1px solid #e2e2e2;border-bottom:none;}
-#most-popular ul li:last-child {border-bottom:1px solid #e2e2e2;}
-#most-popular ul li a {display:block;padding:10px;font-size:13px;line-height:15px;font-weight:600;}
-#most-popular ul li a:hover {color:#536aaa;text-decoration:none!important;}
 
 .mini-bucket {padding:0 10px;}
 .mini-bucket:first-child {padding-left:0;}
@@ -232,6 +223,31 @@ header #nav-container .fixed .user-access ul li a:hover {color:#fff;}
 .section-grid .mini-bucket {margin-bottom:25px;}
 .section-grid .mini-bucket:nth-child(4n+1) {padding-left:0;}
 .section-grid .mini-bucket:nth-child(4n+4) {padding-right:0;}
+
+#most-popular {margin:0 0 10px 0;background-color:#f8f8f8;}
+#most-popular ul li {border:1px solid #e2e2e2;border-bottom:none;}
+#most-popular ul li:last-child {border-bottom:1px solid #e2e2e2;}
+#most-popular ul li a {display:block;padding:10px;font-size:13px;line-height:15px;font-weight:600;}
+#most-popular ul li a:hover {color:#536aaa;text-decoration:none!important;}
+
+#events {margin:0 0 10px 0;}
+#events ul {border:1px solid #e2e2e2;}
+#events ul li {margin:0;padding:10px;border-bottom:1px solid #e2e2e2;}
+#events ul li:last-child {border:none;}
+#events ul li img {display:inline-block;margin:0 3px 0 0;vertical-align:top;}
+#events ul li .event-info {display:inline-block;width:70.5%;vertical-align:top;}
+#events ul li .event-info h5 {margin:0 0 4px 0;font-size:14px;line-height:15px;}
+#events ul li .event-info p {font-size:11px;line-height:13px;margin:0 0 2px 0;}
+#events ul.calendar-days {border-top:none;padding:10px;}
+#events ul.calendar-days li {display:inline-block;padding:0;border:none;vertical-align:top;}
+#events ul.calendar-days li+li:before {content:"";margin:0 0 0 0;}
+#events ul.calendar-days li a {display:block;padding:8px;width:43.5px;height:46px;background-color:#f3f3f3;}
+#events ul.calendar-days li a span {display:block;text-align:center;font-size:11px;line-height:12px;text-transform:uppercase;}
+#events ul.calendar-days li a span.date {font-size:16px;line-height:18px;font-weight:700;}
+#events ul.calendar-days li a span.day {font-size:12px;line-height:9px;}
+#events ul.calendar-days li:last-child a span {padding-top:3px;}
+
+#classifieds {height:208px;padding:15px;border:1px solid #e2e2e2;}
 
 
 /* COLUMN GRID */
