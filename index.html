@@ -120,7 +120,7 @@
                 <div id="nav-container">
                     <nav id="nav-sticky" role="navigation">
                         <ul>
-                            <li class="section-menu"><a href="#"><i class="fa fa-bars"></i><span>All sections</span></a></li>
+                            <li class="section-menu"><a href="#"><i class="fa fa-bars"></i><span>Sections</span></a></li>
                             <li class="search-mini-nav"><a href="#"><i class="fa fa-search"></i></a></li>
                             <li><a href="#">News</a></li>
                             <li><a href="#">Sports</a></li>
@@ -174,7 +174,7 @@
                             <p class="posted">Posted xx minutes ago</p>
                             <p class="tease">Scientists will sample kelp beds for radioactivity this summer. That's when they expect radioactive seawater, contaminated when a tsunami and earthquake damaged the Fukushima nuclear power plant in Japan, to hit Southern California beaches.</p>
                         </div><!-- /.lead-story -->
-                        <div class="col-8 topics">
+                        <div id="topics" class="col-8">
                             <span class="label"><p>In the news</p></span>
                             <ul>
                                 <li><a href="#">News Topic 1</a></li>
@@ -185,17 +185,23 @@
                             </ul>
                         </div>
                     </div>
+
                     <div class="col-4">
-                        <div id="most-popular">
-                            <h6 class="full-bar-label">Most popular</h6>
+                        <!-- MOST POPULAR -->
+                        <div class="box">
+                            <div class="label">
+                                <div class="icon"><i class="fa fa-star"></i></div>
+                                <h6>Most popular</h6>
+                            </div>
                             <ul>
-                                <li><a href="#">Lorem ipsum dolor sit amet consectetur</a></li>
-                                <li><a href="#">Lorem ipsum dolor sit amet consectetur adipisicing elit sed do</a></li>
-                                <li><a href="#">Lorem ipsum dolor sit amet consectetur elit</a></li>
-                                <li><a href="#">Lorem ipsum dolor sit amet consectetur</a></li>
-                                <li><a href="#">Lorem ipsum dolor sit amet consectetur adipisicing elit</a></li>
+                                <li><a href="#">Jail locked down after officials say inmates attacked deputies</a></li>
+                                <li><a href="#">Tragic end to search for missing service dog</a></li>
+                                <li><a href="#">Coroner: Woman beaten outside Santa Ana club died of blunt force trauma</a></li>
+                                <li><a href="#">Santa Ana nightclub beating: Mourning, questions after woman's death</a></li>
+                                <li><a href="#">Two detained after man shot at Anaheim apartment</a></li>
                             </ul>
-                        </div>
+                        </div><!-- /most popular -->
+
                         <div class="ad"><img src="http://placehold.it/300x250"></div>
                     </div>
                 </section><!-- /.container -->
@@ -322,91 +328,122 @@
                         <div id="" class="ad"><img src="http://placehold.it/300x467"></div>
                     </div>
                     <div id="events" class="col-4">
-                        <h6 class="full-bar-label">Things to do</h6>
-                        <ul>
-                            <li>
-                                <a href="#"><img src="http://placehold.it/70x53"></a>
-                                <div class="event-info">
-                                    <h5><a href="#">Event name</a></h5>
-                                    <p class="date">8 p.m. Wednesday, Sept. 30</p>
-                                    <p class="venue">City National Grove of Anaheim, Anaheim</p>
-                                </div>
-                            </li>
-                            <li>
-                                <a href="#"><img src="http://placehold.it/70x53"></a>
-                                <div class="event-info">
-                                    <h5><a href="#">Event name</a></h5>
-                                    <p class="date">8 p.m. Wednesday, Sept. 30</p>
-                                    <p class="venue">City National Grove of Anaheim, Anaheim</p>
-                                </div>
-                            </li>
-                            <li>
-                                <a href="#"><img src="http://placehold.it/70x53"></a>
-                                <div class="event-info">
-                                    <h5><a href="#">Event name</a></h5>
-                                    <p class="date">8 p.m. Wednesday, Sept. 30</p>
-                                    <p class="venue">City National Grove of Anaheim, Anaheim</p>
-                                </div>
-                            </li>
-                            <li>
-                                <a href="#"><img src="http://placehold.it/70x53"></a>
-                                <div class="event-info">
-                                    <h5><a href="#">Event name</a></h5>
-                                    <p class="date">8 p.m. Wednesday, Sept. 30</p>
-                                    <p class="venue">City National Grove of Anaheim, Anaheim</p>
-                                </div>
-                            </li>
-                            <li>
-                                <a href="#"><img src="http://placehold.it/70x53"></a>
-                                <div class="event-info">
-                                    <h5><a href="#">Event name</a></h5>
-                                    <p class="date">8 p.m. Wednesday, Sept. 30</p>
-                                    <p class="venue">City National Grove of Anaheim, Anaheim</p>
-                                </div>
-                            </li>
-                        </ul>
-                        <ul class="calendar-days">
-                            <li>
-                                <a href="#">
-                                    <span class="date">23</span>
-                                    <span class="day">Wed</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    <span class="date">24</span>
-                                    <span class="day">Thu</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    <span class="date">25</span>
-                                    <span class="day">Fri</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    <span class="date">26</span>
-                                    <span class="day">Sat</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    <span class="date">27</span>
-                                    <span class="day">Sun</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    <span>See more</span>
-                                </a>
-                            </li>
-                        </ul>
+                        <div class="box">
+                            <div class="label">
+                                <div class="icon"><i class="fa fa-calendar"></i></div>
+                                <h6>Things to do</h6>
+                            </div>
+                            <ul>
+                                <li>
+                                    <a href="#"><img src="http://placehold.it/70x53"></a>
+                                    <div class="event-info">
+                                        <div class="event-name">
+                                            <div class="sponsored">ad</div>
+                                            <h5><a href="#">Event name</a></h5>
+                                        </div>
+                                        <p class="date">8 p.m. Wednesday, Sept. 30</p>
+                                        <p class="venue">City National Grove of Anaheim, Anaheim</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <a href="#"><img src="http://placehold.it/70x53"></a>
+                                    <div class="event-info">
+                                        <div class="event-name">
+                                            <h5><a href="#">Event name</a></h5>
+                                        </div>
+                                        <p class="date">8 p.m. Wednesday, Sept. 30</p>
+                                        <p class="venue">City National Grove of Anaheim, Anaheim</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <a href="#"><img src="http://placehold.it/70x53"></a>
+                                    <div class="event-info">
+                                        <div class="event-name">
+                                            <h5><a href="#">Event name</a></h5>
+                                        </div>
+                                        <p class="date">8 p.m. Wednesday, Sept. 30</p>
+                                        <p class="venue">City National Grove of Anaheim, Anaheim</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <a href="#"><img src="http://placehold.it/70x53"></a>
+                                    <div class="event-info">
+                                        <div class="event-name">
+                                            <h5><a href="#">Event name</a></h5>
+                                        </div>
+                                        <p class="date">8 p.m. Wednesday, Sept. 30</p>
+                                        <p class="venue">City National Grove of Anaheim, Anaheim</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <a href="#"><img src="http://placehold.it/70x53"></a>
+                                    <div class="event-info">
+                                        <div class="event-name">
+                                            <h5><a href="#">Event name</a></h5>
+                                        </div>
+                                        <p class="date">8 p.m. Wednesday, Sept. 30</p>
+                                        <p class="venue">City National Grove of Anaheim, Anaheim</p>
+                                    </div>
+                                </li>
+                            </ul>
+                            <!-- calendar days -->
+                            <ul class="calendar-days">
+                                <li>
+                                    <a href="#">
+                                        <span class="date">23</span>
+                                        <span class="day">Wed</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <span class="date">24</span>
+                                        <span class="day">Thu</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <span class="date">25</span>
+                                        <span class="day">Fri</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <span class="date">26</span>
+                                        <span class="day">Sat</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <span class="date">27</span>
+                                        <span class="day">Sun</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <span>See more</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
                     </div>
                     <div class="col-4">
                         <div class="ad"><img src="http://placehold.it/300x250"></div>
-                        <div id="classifieds">
 
+                        <div id="classifieds">
+                            <div class="tabs">
+                                <a href="#" class="">Cars</a>
+                                <a href="#" class="">Jobs</a>
+                                <a href="#" class="active">Homes</a>
+                                <a href="#" class="">Deals</a>
+                                <a href="#" class="">Classifieds</a>
+                            </div>
+                            <div class="panel">
+                                <a href="#" class="search-group">
+                                    <i class="fa fa-home"></i>
+                                    <div class="search">Find a home</div>
+                                </a>
+                                <div class="links"></div>
+                            </div>
                         </div>
                     </div>
                 </section><!-- /.container -->
