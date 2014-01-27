@@ -283,7 +283,6 @@ header {
                 li {
                     display: inline;
                     a {
-                        text-transform: none;
                         font-size: 14px;
                         font-weight: 700;
                         padding: 2px 4px;
@@ -303,9 +302,9 @@ header {
                                 margin: 0 0 0 6px;
                                 font-size: 10px;
                                 font-weight: 400;
-                                color: @gray-dark;
+                                color: @gray-darker;
                                 text-transform: uppercase;
-                                &:hover {color: @gray-dark;}
+                                &:hover {color: @gray-darker;}
                             }
                             &:hover {
                                 i {
@@ -327,9 +326,9 @@ header {
                                 margin: 0 6px 0 0;
                                 font-size: 10px;
                                 font-weight: 400;
-                                color: @gray-dark;
+                                color: @gray-darker;
                                 text-transform: uppercase;
-                                &:hover {color: @gray-dark;}
+                                &:hover {color: @gray-darker;}
                             }
                             &:hover {
                                 i {
@@ -941,7 +940,6 @@ header.minified {
                 font-size: 13px;
                 line-height: 15px;
                 font-weight: 600;
-                color: #444;
             }
             &:hover {
                 h3 {
@@ -1026,7 +1024,7 @@ header.minified {
             }
         }
         &.large {
-            margin-bottom: 45px;
+            margin-bottom: 30px;
             width: @left-col-width;
             border-bottom: 1px solid @gray-light;
         }
@@ -1040,7 +1038,7 @@ header.minified {
             font-size: 14px;
             line-height: 16px;
             &.caption {
-                color: @gray-darkest;
+                color: @gray-darker;
             }
         }
     }
@@ -1085,12 +1083,43 @@ header.minified {
                 border-top: 1px solid @gray-light;
             }
         }
+        &.bottom {
+            position: absolute;
+            left: 0;
+            bottom: 0;
+        }
     }
     p.story-body-text {
         margin-left: 120px;
         font-size: 16px;
         line-height: 22px;
     }
+    #related-coverage {
+        li {
+            a {
+                display: block;
+                img {
+                    float: left;
+                    margin-right: 6px;
+                }
+                h3 {
+                    font-size: 13px;
+                    line-height: 15px;
+                    font-weight: 600;
+                }
+                p {
+                    font-weight: 400;
+                    cursor: pointer;
+                }
+                &:hover {
+                    h3 {
+                        color: @accent;
+                    }
+                }
+            }
+        }
+    }
+
     .col-8 {padding-right: 10px;}
     .box {margin-bottom: 30px;}
     .ad {margin-bottom: 30px;}

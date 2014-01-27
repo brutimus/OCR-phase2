@@ -222,10 +222,35 @@
                         <p class="story-body-text">Habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante.</p>
                         <p class="story-body-text">Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean vitae est eleifend leo.</p>
                         <p class="story-body-text">Pellentesque habitant morbi tristique senectus et netus ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris leo.</p>
-                        <p class="story-body-text">Mauris placerat eleifend leo. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est.</p>
-                        <p class="story-body-text">Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
-                        <p class="story-body-text">Senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies vitae est. Mauris placerat eleifend leo.</p>
-                        <p class="story-body-text">Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam eget, tempor sit amet ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
+                        <p class="story-body-text">Mauris placerat eleifend leo. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est dolor ac.</p>
+                        <div class="share-tools bottom">
+                            <ul>
+                                <li class="facebook">
+                                    <a href="#">
+                                        <i class="fa fa-facebook-square"></i>
+                                        <span>Facebook</span>
+                                    </a>
+                                </li>
+                                <li class="twitter">
+                                    <a href="#">
+                                        <i class="fa fa-twitter"></i>
+                                        <span>Twitter</span>
+                                    </a>
+                                </li>
+                                <li class="email">
+                                    <a href="#">
+                                        <i class="fa fa-envelope"></i>
+                                        <span>Email</span>
+                                    </a>
+                                </li>
+                                <li class="more">
+                                    <a href="#">
+                                        <i class="fa fa-share"></i>
+                                        <span>More</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
                     </div>
                     <!-- right -->
                     <div class="col-4">
@@ -247,12 +272,37 @@
                         <div class="ad default"><img src="http://placehold.it/300x250"></div>
                         <div class="ad default"><img src="http://placehold.it/300x250"></div>
 
-                        <aside class="box">
+                        <!-- RELATED COVERAGE -->
+                        <aside id="related-coverage" class="box">
                             <div class="label">
                                 <div class="icon"><i class="fa fa-star"></i></div>
                                 <h6>Related coverage</h6>
                             </div>
-                        </aside>
+                            <ul>
+                                <li class="clearfix">
+                                    <a href="#">
+                                        <img src="http://placehold.it/90x68">
+                                        <h3>Lorem ipsum dolor sit amet consectet elit sed do consectet elit sed do</h3>
+                                        <p class="posted">Jan. 20, 2014</p>
+                                    </a>
+                                </li>
+                                <li class="clearfix">
+                                    <a href="#">
+                                        <h3>Lorem ipsum dolor sit amet consectet elit sed do consect</h3>
+                                        <p class="posted">Jan. 18, 2014</p>
+                                    </a>
+                                </li>
+                                <li class="clearfix">
+                                    <a href="#">
+                                        <h3>Lorem ipsum dolor sit amet consectet elit sed</h3>
+                                        <p class="posted">Jan. 17, 2014</p>
+                                    </a>
+                                </li>
+                            </ul>
+                        </aside><!-- /related coverage -->
+
+                        <div id="ad-sponsored" class="ad default"><img src="http://placehold.it/300x90"></div>
+
                     </div>
                 </article>
 
@@ -319,13 +369,14 @@
 
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.2.min.js"><\/script>')</script>
+        <script src="js/vendor/jquery.sticky-kit.js"></script>
         <script src="js/plugins.js"></script>
         <script src="js/main.js"></script>
         <script>
             $(document).ready(function() {
                 var $window = $(window),
                     $navAnchor = $('#nav-anchor'),
-                    $nav = $('#nav-sticky');
+                    $nav = $('#nav-sticky'),
                     $header = $('header');
 
                 $window.scroll(function() {
@@ -334,17 +385,17 @@
                     if (window_top > nav_top) {
                         $nav.addClass('fixed');
                         $navAnchor.height($nav.height());
-
-
                     } else {
                         $nav.removeClass('fixed');
                         $navAnchor.height(0);
                     }
                 });
 
+            
                 $('#toggle-side-panel').click(function() {
                     $('#side-panel').addClass('active');
                 });
+
 
             });
         </script>
