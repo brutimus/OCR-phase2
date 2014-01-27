@@ -64,6 +64,11 @@ h5.label {
     font-weight: 300;
     text-transform: uppercase;
     border-bottom: 2px solid @accent;
+    &.no-border {
+        margin-bottom: 12px;
+        border:0;
+        cursor: default;
+    }
 }
 h5.overline {
     margin-bottom: 6px;
@@ -486,6 +491,223 @@ header {
 }
 
 
+// FLEX UNITS -----------------
+// ----------------------------
+#multimedia-slider {
+    .scroll-wrapper {
+        .scroll-inner {
+            .story {
+                display: inline-block;
+                margin: 0;
+                padding: 0;
+                border: 0;
+                h5.overline {
+                    a {
+                        display: inline;
+                        color: @black;
+                        &:hover {color: @accent;}
+                    }
+                }
+                a {
+                    display: block;
+                    img {
+                        margin:0 0 5px 0;
+                    }
+                    h6 {
+                        font-size: 13px;
+                        line-height: 15px;
+                        font-weight: 600;
+                    }
+                    &:hover {
+                        h6 {color: @accent;}
+                    }
+                }
+            }
+            .story+.story {
+                margin-left: 20px;
+            }
+        }
+    }
+}
+#events {
+    .box {
+        margin: 0;
+        ul {
+            li {padding: 10px 10px;}
+        }
+        a {display: inline-block;}
+    }
+    img {margin: 0 3px -5px 0;}
+    .event-info {
+        display: inline-block;
+        width: 72%;
+        vertical-align: top;
+        p {
+            font-size: 11px;
+            line-height: 13px;
+            margin: 0 0 2px 0;
+        }
+    }
+    .event-name {
+        .sponsored {
+            display: inline-block;
+            margin: 0 1px 0 0;
+            padding: 0 3px;
+            font-size: 12px;
+            font-weight: 400;
+            color: darken(@accent-hover-border, 15%);
+            background-color: darken(@accent-hover-light, 2%);
+            .RoundedBorders(2px);
+            cursor: default;
+        }
+        h5 {
+            display: inline-block;
+            margin: 0 0 3px 0;
+            font-size: 14px;
+            line-height: 15px;
+        }
+    }
+    ul.calendar-days {
+        padding: 10px;
+        border-top: 1px solid @gray-lighter;
+        li {
+            display: inline-block;
+            padding: 0;
+            border: none;
+            vertical-align: top;
+            a {
+                display: block;
+                padding: 8px;
+                width: 43.5px;
+                height: 46px;
+                background-color: @gray-lighter;
+                border: 1px solid @gray-light;
+                span {
+                    display: block;
+                    text-align: center;
+                    font-size: 11px;
+                    line-height: 12px;
+                    font-weight: 300;
+                    text-transform: uppercase;
+                    color: @gray-darker;
+                }
+                span.date {
+                    font-size: 16px;
+                    line-height: 18px;
+                    font-weight: 500;
+                }
+                span.day {
+                    font-size: 12px;
+                    line-height: 9px;
+                }
+                &:hover {
+                    background-color: @accent-hover-light;
+                    border-color: @accent-hover-border;
+                }
+            }
+            &:last-child {
+                a {
+                    span {padding-top: 3px;}
+                }
+            }
+        }
+    }
+}
+#classifieds {
+    height: auto;
+    .tabs {
+        width: 100%;
+        a {
+            position: relative;
+            display: table-cell;
+            width: 1%;
+            padding: 5px 10px;
+            font-size: 11px;
+            font-weight: 600;
+            text-transform: uppercase;
+            background-color: @gray-lightest;
+            border: 1px solid @gray-light;
+            &:hover {
+                background-color: @accent-hover-light;
+                border-color: @accent-hover-border;
+                color: @black;
+            }
+            &.active {
+                background-color: @white;
+                border-bottom: 0;
+                border-top: 0;
+                &:before {
+                    .TopBlueBorder ();
+                }
+            }
+        }
+        a+a {border-left:none;}
+    }
+    .panel {
+        padding: 15px;
+        border: 1px solid @gray-light;
+        border-top: 0;
+        .search-group {
+            display: table;
+            box-shadow: 0 0 10px 2px @gray-lighter;
+            .RoundedBorders(4px);
+            i {
+                display: table-cell;
+                width: 1%;
+                padding: 6px 12px;
+                font-size: 24px;
+                color: @gray-dark;
+                text-align: center;
+                vertical-align: middle;
+                white-space: nowrap;
+                background-color: @gray-lighter;
+                border: 1px solid @gray-light;
+                border-right: 0;
+                .RoundedBorders(4px 0 0 4px);
+            }
+            .search {
+                display: table-cell;
+                width: 100%;
+                padding: 6px 12px;
+                font-size: 16px;
+                font-weight: 300;
+                text-transform: uppercase;
+                vertical-align: middle;
+                background-color: @gray-lightest;
+                border: 1px solid @gray-light;
+                .RoundedBorders(0 4px 4px 0);
+            }
+            &:hover {
+                i {
+                    color: darken(@gray-dark, 10%);
+                    background-color: darken(@accent-hover-light, 2%);
+                    border-color: @accent-hover-border;
+                }
+                .search {
+                    background-color: lighten(@accent-hover-light, 1%);
+                    border-color: @accent-hover-border;
+                }
+            }
+        }
+        .links {
+            margin: 8px 0 0 0;
+            ul {
+                display: inline-block;
+                width: 50%;
+                list-style: disc inside;
+                li {
+                    font-size: 12px;
+                }
+                li+li {
+                    margin-top: 2px;
+                }
+                &.left {float: left;}
+                &.right {float: right; padding-left:15px;}
+            }
+        }
+    }
+}
+
 // HOMEPAGE STRUCTURES --------
 // ----------------------------
 #A-block {
@@ -626,192 +848,9 @@ header {
         }
     }
 }
-#D-block {
-    margin: 40px 0;
-}
-#E-block {
-    #events {
-        .box {
-            margin: 0;
-            ul {
-                li {padding: 10px 10px;}
-            }
-            a {display: inline-block;}
-        }
-        img {margin: 0 3px -5px 0;}
-        .event-info {
-            display: inline-block;
-            width: 72%;
-            vertical-align: top;
-            p {
-                font-size: 11px;
-                line-height: 13px;
-                margin: 0 0 2px 0;
-            }
-        }
-        .event-name {
-            .sponsored {
-                display: inline-block;
-                margin: 0 1px 0 0;
-                padding: 0 3px;
-                font-size: 12px;
-                font-weight: 400;
-                color: darken(@accent-hover-border, 15%);
-                background-color: darken(@accent-hover-light, 2%);
-                .RoundedBorders(2px);
-                cursor: default;
-            }
-            h5 {
-                display: inline-block;
-                margin: 0 0 3px 0;
-                font-size: 14px;
-                line-height: 15px;
-            }
-        }
-        ul.calendar-days {
-            padding: 10px;
-            border-top: 1px solid @gray-lighter;
-            li {
-                display: inline-block;
-                padding: 0;
-                border: none;
-                vertical-align: top;
-                a {
-                    display: block;
-                    padding: 8px;
-                    width: 43.5px;
-                    height: 46px;
-                    background-color: @gray-lighter;
-                    border: 1px solid @gray-light;
-                    span {
-                        display: block;
-                        text-align: center;
-                        font-size: 11px;
-                        line-height: 12px;
-                        font-weight: 300;
-                        text-transform: uppercase;
-                        color: @gray-darker;
-                    }
-                    span.date {
-                        font-size: 16px;
-                        line-height: 18px;
-                        font-weight: 500;
-                    }
-                    span.day {
-                        font-size: 12px;
-                        line-height: 9px;
-                    }
-                    &:hover {
-                        background-color: @accent-hover-light;
-                        border-color: @accent-hover-border;
-                    }
-                }
-                &:last-child {
-                    a {
-                        span {padding-top: 3px;}
-                    }
-                }
-            }
-        }
-    }
-    #classifieds {
-        height: auto;
-        .tabs {
-            width: 100%;
-            a {
-                position: relative;
-                display: table-cell;
-                width: 1%;
-                padding: 5px 10px;
-                font-size: 11px;
-                font-weight: 600;
-                text-transform: uppercase;
-                background-color: @gray-lightest;
-                border: 1px solid @gray-light;
-                &:hover {
-                    background-color: @accent-hover-light;
-                    border-color: @accent-hover-border;
-                    color: @black;
-                }
-                &.active {
-                    background-color: @white;
-                    border-bottom: 0;
-                    border-top: 0;
-                    &:before {
-                        .TopBlueBorder ();
-                    }
-                }
-            }
-            a+a {border-left:none;}
-        }
-        .panel {
-            padding: 15px;
-            border: 1px solid @gray-light;
-            border-top: 0;
-            .search-group {
-                display: table;
-                box-shadow: 0 0 10px 2px @gray-lighter;
-                .RoundedBorders(4px);
-                i {
-                    display: table-cell;
-                    width: 1%;
-                    padding: 6px 12px;
-                    font-size: 24px;
-                    color: @gray-dark;
-                    text-align: center;
-                    vertical-align: middle;
-                    white-space: nowrap;
-                    background-color: @gray-lighter;
-                    border: 1px solid @gray-light;
-                    border-right: 0;
-                    .RoundedBorders(4px 0 0 4px);
-                }
-                .search {
-                    display: table-cell;
-                    width: 100%;
-                    padding: 6px 12px;
-                    font-size: 16px;
-                    font-weight: 300;
-                    text-transform: uppercase;
-                    vertical-align: middle;
-                    background-color: @gray-lightest;
-                    border: 1px solid @gray-light;
-                    .RoundedBorders(0 4px 4px 0);
-                }
-                &:hover {
-                    i {
-                        color: darken(@gray-dark, 10%);
-                        background-color: darken(@accent-hover-light, 2%);
-                        border-color: @accent-hover-border;
-                    }
-                    .search {
-                        background-color: lighten(@accent-hover-light, 1%);
-                        border-color: @accent-hover-border;
-                    }
-                }
-            }
-            .links {
-                margin: 8px 0 0 0;
-                ul {
-                    display: inline-block;
-                    width: 50%;
-                    list-style: disc inside;
-                    li {
-                        font-size: 12px;
-                    }
-                    li+li {
-                        margin-top: 2px;
-                    }
-                    &.left {float: left;}
-                    &.right {float: right; padding-left:15px;}
-                }
-            }
-        }
-    }
-}
-#F-block {
-
-}
+#D-block {}
+#E-block {}
+#F-block {}
 
 
 // SECTION PAGE STRUCTURES ----
