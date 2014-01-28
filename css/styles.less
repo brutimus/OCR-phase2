@@ -2,7 +2,7 @@
 // ----------------------------
 @black:                 #222;
 @accent:                #41759a;
-@accent-hover-light:    lighten(@accent, 54%);
+@accent-hover-light:    lighten(@accent, 52%);
 @accent-hover-border:   lighten(@accent, 38%);
 @white:                 #fff;
 @gray-darkest:          #555;
@@ -237,12 +237,11 @@ nav#side-panel {
     width: @site-width;
 }
 header {
-    padding: 0 0 0 0;
-    margin: 20px 0;
+    margin: 10px 0 20px 0;
     cursor: default;
     #nameplate {
         position: relative;
-        margin: 0 0 8px 0;
+        margin: 0 0 6px 0;
         text-align: center;
         #flag {
             margin: 0 auto;
@@ -287,7 +286,7 @@ header {
     #nav-container {
         position: relative;
         nav {
-            padding: 4px;
+            padding: 4px 0;
             border: 1px solid @gray-light;
             &:before { .TopBlueBorder(); }
             ul {
@@ -302,6 +301,7 @@ header {
                         padding: 4px 6px;
                         margin: 0 2px;
                         &:hover {
+                            color: @black;
                             background-color: @accent-hover-light;
                             .RoundedBorders(4px);
                         }
@@ -312,7 +312,7 @@ header {
                             line-height: 16px;
                             cursor: pointer;
                             &:hover {
-                                i {color:@accent;}
+                                i {color:@black;}
                             }
                         }
                         &.home {
@@ -409,7 +409,9 @@ header {
                         }
                     }
                     &.icon {
-                        a {}
+                        ul {
+                            width: 123px;
+                        }
                     }
                 }
             }
@@ -951,25 +953,6 @@ header {
 // ----------------------------
 @left-col-width:        610px;
 
-
-header.minified {
-    margin-bottom: 0;
-    #tool-bar {
-        position: absolute;
-        top: 22px;
-        left: 0;
-        width: 100%;
-        z-index: 2;
-    }
-    #nameplate {
-        min-height: 50px;
-        padding-top: 0;
-        border-top: 0;
-        #flag {
-            margin: 0 auto;
-        }
-    }
-}
 .news-rail {
     margin-bottom: 20px;
     padding: 8px 0;
@@ -1187,8 +1170,8 @@ header.minified {
     }
     &.featured {
         width: 100%;
-        margin: 0 0 8px 0;
-        padding: 0 0 8px 0;
+        margin: -10px 0 10px 0;
+        padding: 0 0 10px 0;
         border-bottom: 1px solid @gray-light;
         img {
             margin: 0 auto;
