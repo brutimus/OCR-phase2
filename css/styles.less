@@ -244,6 +244,7 @@ header {
         * {display: inline;}
     }
     #nameplate {
+        position: relative;
         margin: 0 0 8px 0;
         text-align: center;
         #flag {
@@ -251,12 +252,28 @@ header {
             img {display:inline;}
         }
         .utility {
-            position: relative;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
             ul {
                 li {
                     display: inline;
                     font-size: 11px;
                     line-height: 13px;
+                    a {
+                        color: @gray-darker;
+                        &:hover {
+                            color: @accent;
+                        }
+                    }
+                }
+                li+li {
+                    &:before {
+                        content: "|";
+                        margin: 0 5px;
+                        color: @gray-light;
+                    }
                 }
             }
             .classifieds {
