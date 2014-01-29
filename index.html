@@ -464,14 +464,26 @@
                         <div class="ad default"><img src="http://placehold.it/300x250"></div>
 
                         <div id="classifieds" class="clearfix">
-                            <div class="tabs">
-                                <a href="#car-panel" class="">Cars</a>
-                                <a href="#job-panel" class="">Jobs</a>
-                                <a href="#home-panel" class="active">Homes</a>
-                                <a href="#deal-panel" class="">Deals</a>
-                                <a href="#classified-panel" class="">Classifieds</a>
+                            <ul class="tabs">
+                                <li><a href="#car-panel">Cars</a></li>
+                                <li><a href="#job-panel">Jobs</a></li>
+                                <li><a href="#home-panel">Homes</a></li>
+                                <li><a href="#deal-panel">Deals</a></li>
+                                <li><a href="#classified-panel">Classifieds</a></li>
+                            </ul>
+                            <div class="panel" id="car-panel">
+                                <a href="#" class="search-group">
+                                    <i class="fa fa-car"></i>
+                                    <div class="search">Find a car</div>
+                                </a>
                             </div>
-                            <div class="panel">
+                            <div class="panel" id="job-panel">
+                                <a href="#" class="search-group">
+                                    <i class="fa fa-job"></i>
+                                    <div class="search">Find a job (you lazy bum)</div>
+                                </a>
+                            </div>
+                            <div class="panel" id="home-panel">
                                 <a href="#" class="search-group">
                                     <i class="fa fa-home"></i>
                                     <div class="search">Find a home</div>
@@ -486,6 +498,18 @@
                                         <li><a href="#">New Homes</a></li>
                                     </ul>
                                 </div>
+                            </div>
+                            <div class="panel" id="deal-panel">
+                                <a href="#" class="search-group">
+                                    <i class="fa fa-deal"></i>
+                                    <div class="search">Find a deal</div>
+                                </a>
+                            </div>
+                            <div class="panel" id="classified-panel">
+                                <a href="#" class="search-group">
+                                    <i class="fa fa-classified"></i>
+                                    <div class="search">Find anything!</div>
+                                </a>
                             </div>
                         </div>
                     </div>
@@ -629,6 +653,8 @@
 
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.2.min.js"><\/script>')</script>
+        <script src="js/vendor/jquery-ui-1.10.4.custom.js"></script>
+        <script src="js/vendor/jquery.slides.js"></script>
         <script src="js/plugins.js"></script>
         <script src="js/main.js"></script>
         <script>
@@ -655,6 +681,7 @@
                 $('#toggle-side-panel').click(function() {
                     $('#side-panel').addClass('active');
                 });
+                $('#classifieds').tabs();
             });
         </script>
     </body>
