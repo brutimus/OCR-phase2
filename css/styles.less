@@ -11,7 +11,7 @@
 @gray:                  #d2d2d2;
 @gray-light:            #e2e2e2;
 @gray-lighter:          #f3f3f3;
-@gray-lightest:         #f8f8f8;
+@gray-lightest:         #fafafa;
 
 @site-width:            940px;
 
@@ -116,32 +116,29 @@ hr {
     height: 1px;
     background-color: @gray-light;
 }
-.btn-group {
-    a {
-        float: right;
-        padding: 4px 10px;
-        color: @gray-darker;
+.related {
+    margin: 25px 0 0 0;
+    h6 {
+        margin-bottom: 3px;
         font-size: 12px;
-        font-weight: 300;
+        letter-spacing: 1.5px;
         text-transform: uppercase;
-        background-color: @gray-lightest;
-        border: 1px solid @gray-light;
-        border-radius: 0;
-        &:last-child {
-            .RoundedBorders(4px 0 0 4px);
+        cursor: default;
+    }
+    ul {
+        list-style: disc inside;
+        li {
+            font-size: 13px;
+            line-height: 14px;
+            font-weight: 600;
+            a {
+                letter-spacing: 0.1px;
+            }
         }
-        &:first-child {
-            margin-right:0;
-            border-right: 1px solid @gray-light;
-            .RoundedBorders(0 4px 4px 0);
-        }
-        &:hover {
-            color: darken(@gray-darker, 15%);
-            background-color: @accent-hover-light;
-            border-color: @accent-hover-border;
+        li+li {
+            margin-top: 3px;
         }
     }
-    a+a {margin-right: -1px;}
 }
 
 // GLOBAL STRUCTURES ----------
@@ -237,50 +234,42 @@ nav#side-panel {
     width: @site-width;
 }
 header {
-    margin: 15px 0 20px 0;
+    margin: 5px 0 20px 0;
     cursor: default;
+    #tool-bar {
+        margin-bottom: 3px;
+        text-align: center;
+        ul {
+            li {
+                display: inline;
+                font-size: 11px;
+                line-height: 13px;
+                a {
+                    color: @gray-darker;
+                    &:hover {
+                        color: @accent;
+                    }
+                }
+            }
+            li+li {
+                &:before {
+                    content: "|";
+                    margin: 0 4px;
+                    color: @gray-light;
+                }
+            }
+        }
+        .classifieds {float: left;}
+        .user-access {float: right;}
+    }
     #nameplate {
         position: relative;
-        margin: 0 0 6px 0;
+        height: 101px;
         text-align: center;
+        border-top: 1px solid @gray-light;
         #flag {
-            margin: 0 auto;
-            padding-bottom: 3px;
+            margin: 15px auto 6px auto;
             img {display:inline;}
-        }
-        .utility {
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 100%;
-            ul {
-                li {
-                    display: inline;
-                    font-size: 11px;
-                    line-height: 13px;
-                    a {
-                        color: @gray-darker;
-                        &:hover {
-                            color: @accent;
-                        }
-                    }
-                }
-                li+li {
-                    &:before {
-                        content: "|";
-                        margin: 0 5px;
-                        color: @gray-light;
-                    }
-                }
-            }
-            .classifieds {
-                float: left;
-
-            }
-            .user-access {
-                float: right;
-
-            }
         }
     }
     #nav-container {
@@ -631,16 +620,19 @@ header {
             position: relative;
             display: table-cell;
             width: 1%;
-            padding: 5px 10px;
             font-size: 11px;
             font-weight: 600;
             text-transform: uppercase;
             background-color: @gray-lightest;
             border: 1px solid @gray-light;
+            a {
+                display: block;
+                padding: 5px 10px;
+            }
             &:hover {
                 background-color: @accent-hover-light;
                 border-color: @accent-hover-border;
-                color: @black;
+                a {color: @black;}
             }
             &.ui-tabs-active {
                 background-color: @white;
@@ -651,7 +643,7 @@ header {
                 }
             }
         }
-        a+a {border-left:none;}
+        li+li {border-left:none;}
     }
     .panel {
         padding: 15px;
@@ -894,30 +886,6 @@ header {
                     font-size: 30px;
                     line-height: 32px;
                 }
-                .related {
-                    margin: 25px 0 0 0;
-                    h6 {
-                        margin-bottom: 3px;
-                        font-size: 12px;
-                        letter-spacing: 1.5px;
-                        text-transform: uppercase;
-                        cursor: default;
-                    }
-                    ul {
-                        list-style: disc inside;
-                        li {
-                            font-size: 12px;
-                            line-height: 14px;
-                            font-weight: 600;
-                            a {
-                                letter-spacing: 0.2px;
-                            }
-                        }
-                        li+li {
-                            margin-top: 3px;
-                        }
-                    }
-                }
             }
         }
         .flex-content {
@@ -955,38 +923,27 @@ header {
 
 .news-rail {
     margin: -20px 0 40px 0;
-    padding: 10px 0;
+    padding: 20px 0;
     background-color: @gray-lightest;
     border: 1px solid @gray-light;
     border-top: 0;
-    .BoxShadow(0 4px 12px -5px @gray);
+    .BoxShadow(0 2px 3px -2px @gray);
     .story {
         display: table-cell;
+        margin: 0;
         padding: 0 20px;
+        width: 25%;
         border:0;
         a {
             display: block;
-            height: 68px;
             h3 {
-                padding-top: 10px;
-                font-size: 13px;
-                line-height: 15px;
-                font-weight: 600;
+                font-size: 14px;
+                line-height: 16px;
+                font-weight: 400;
             }
             &:hover {
-                h3 {
-                    color: @accent;
-                }
+                h3 {color: @accent;}
             }
-        }
-        &:first-child {
-            padding-left: 10px;
-            width: 300px;
-            img {
-                float: left;
-                margin-right: 6px;
-            }
-            h3 {}
         }
     }
     .story+.story {
@@ -1173,12 +1130,16 @@ header {
     display: inline-block;
     img {display: inline-block;}
     &.top-left {
+        position: absolute;
+        top: 5px;
+        left: 0;
         height: 90px;
-        float: left;
     }
     &.top-right {
+        position: absolute;
+        top: 5px;
+        right: 0;
         height: 90px;
-        float: right;
     }
     &.featured {
         width: 100%;

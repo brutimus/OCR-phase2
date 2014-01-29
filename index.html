@@ -89,12 +89,8 @@
 
         <div id="page-wrapper">
             <header>
-                <div id="nameplate">
-                    <div id="flag">
-                        <img width="250" height="" alt="Orange County Register" src="assets/ocr-flag.svg">
-                    </div>
-                    <div class="utility clearfix">
-                        <div class="classifieds">
+                <div id="tool-bar">
+                    <div class="classifieds">
                             <ul>
                                 <li><a href="#">Cars</a></li>
                                 <li><a href="#">Jobs</a></li>
@@ -109,7 +105,20 @@
                                 <li><a href="#">Log in</a></li>
                             </ul>
                         </div>
+                        <div class="text-links">
+                            <ul>
+                                <li><a href="#">Advertise</a></li>
+                                <li><a href="#">Customer Service</a></li>
+                                <li><a href="#">eRegister</a></li>
+                            </ul>
+                        </div>
+                </div>
+                <div id="nameplate" class="clearfix">
+                    <div id="flag">
+                        <img width="325" height="" alt="Orange County Register" src="assets/ocr-flag.svg">
                     </div>
+                    <div class="ad top-left"><img src="http://placehold.it/184x90"></div>
+                    <div class="ad top-right"><img src="http://placehold.it/184x90"></div>
                 </div>
                 <div id="nav-anchor"></div>
                 <div id="nav-container">
@@ -129,9 +138,10 @@
                                 <a href="#"><i class="fa fa-cog"></i></a>
                                 <ul>
                                     <li><a href="#">My Account</a></li>
+                                    <li><a href="#">Subscribe Today</a></li>
+                                    <li><a href="#">Register Connect</a></li>
                                     <li><a href="#">Customer Service</a></li>
                                     <li><a href="#">Contact Us</a></li>
-                                    <li><a href="#">Advertise With Us</a></li>
                                 </ul>
                             </li>
                             <li class="icon search"><a href="#"><i class="fa fa-search"></i></a></li>
@@ -153,6 +163,7 @@
                                 <div class="story">
                                     <h2><a href="#">New Register editor a huge fan of 'community newspapering'</a></h2>
                                     <p class="posted">Posted xx minutes ago</p>
+                                    <p class="tease">Lorem ipsum dolor sit amet consectetur elit sed do. Lorem ipsum dolor sit. Lorem ipsum elit sed do.</p>
                                 </div>
                                 <div class="story">
                                     <h3><a href="#">Hundreds gather to protest Kelly Thomas trial verdict</a></h3>
@@ -163,7 +174,7 @@
                                     <p class="posted">Posted xx minutes ago</p>
                                 </div>
                                 <div class="story">
-                                    <h3><a href="#">Passenger, driver critical after suspected DUI crash</a></h3>
+                                    <h3><a href="#">Passenger killed, driver in critical condition after suspected DUI crash</a></h3>
                                     <p class="posted">Posted xx minutes ago</p>
                                 </div>
                             </div><!-- /.lead-rail -->
@@ -172,6 +183,12 @@
                                 <h1><a href="#">Scientists looking to kelp to answer questions about radioactive seawater</a></h1>
                                 <p class="posted">Posted xx minutes ago</p>
                                 <p class="tease">Scientists will sample kelp beds for radioactivity this summer. That's when they expect radioactive seawater, contaminated when a tsunami and earthquake damaged the Fukushima power plant.</p>
+                                <div class="related">
+                                    <h6>Related</h6>
+                                    <ul>
+                                        <li><a href="#">Lorem ipsum dolor sit amet consectetur elit sed do</a></li>
+                                    </ul>
+                                </div>
                             </div><!-- /.lead-story -->
                         </div>
                         <div id="topics" class="col-8">
@@ -194,11 +211,11 @@
                                 <h6>Most popular</h6>
                             </div>
                             <ul>
-                                <li><a href="#">Agents intercept $6.7 million of cocaine of I-5</a></li>
-                                <li><a href="#">Why was beating recorded, but not stopped?</a></li>
-                                <li><a href="#">Million-dollar perk boosts firefighter overtime</a></li>
-                                <li><a href="#">Irvine man, 84, charged in cyclist's death</a></li>
-                                <li><a href="#">Federal regulators fault OC's CalOptima</a></li>
+                                <li><a href="#">Parents: Hacking in school reaches beyond 11 facing expulsion</a></li>
+                                <li><a href="#">Doctor pleads not guilty in Laguna Canyon crash that killed 2 men</a></li>
+                                <li><a href="#">Bottleneck opener? I-5 widening in South County starts Wednesday</a></li>
+                                <li><a href="#">Wedding ring rescue: Water district crew saves band lost down toilet</a></li>
+                                <li><a href="#">UC chief pushes immigration reform, student aid</a></li>
                             </ul>
                         </div><!-- /most popular -->
 
@@ -517,15 +534,35 @@
                             </ul>
                             <div class="panel" id="car-panel">
                                 <a href="#" class="search-group">
-                                    <i class="fa fa-car"></i>
+                                    <i class="fa fa-truck"></i>
                                     <div class="search">Find a car</div>
                                 </a>
+                                <div class="links clearfix">
+                                    <ul class="left">
+                                        <li><a href="#">Apartments &amp; Rentals</a></li>
+                                        <li><a href="#">Find an Agent</a></li>
+                                    </ul>
+                                    <ul class="right">
+                                        <li><a href="#">Mortgage Center</a></li>
+                                        <li><a href="#">New Homes</a></li>
+                                    </ul>
+                                </div>
                             </div>
                             <div class="panel" id="job-panel">
                                 <a href="#" class="search-group">
-                                    <i class="fa fa-job"></i>
-                                    <div class="search">Find a job (you lazy bum)</div>
+                                    <i class="fa fa-star"></i>
+                                    <div class="search">Find a job</div>
                                 </a>
+                                <div class="links clearfix">
+                                    <ul class="left">
+                                        <li><a href="#">Apartments &amp; Rentals</a></li>
+                                        <li><a href="#">Find an Agent</a></li>
+                                    </ul>
+                                    <ul class="right">
+                                        <li><a href="#">Mortgage Center</a></li>
+                                        <li><a href="#">New Homes</a></li>
+                                    </ul>
+                                </div>
                             </div>
                             <div class="panel" id="home-panel">
                                 <a href="#" class="search-group">
@@ -545,15 +582,35 @@
                             </div>
                             <div class="panel" id="deal-panel">
                                 <a href="#" class="search-group">
-                                    <i class="fa fa-deal"></i>
+                                    <i class="fa fa-star"></i>
                                     <div class="search">Find a deal</div>
                                 </a>
+                                <div class="links clearfix">
+                                    <ul class="left">
+                                        <li><a href="#">Apartments &amp; Rentals</a></li>
+                                        <li><a href="#">Find an Agent</a></li>
+                                    </ul>
+                                    <ul class="right">
+                                        <li><a href="#">Mortgage Center</a></li>
+                                        <li><a href="#">New Homes</a></li>
+                                    </ul>
+                                </div>
                             </div>
                             <div class="panel" id="classified-panel">
                                 <a href="#" class="search-group">
-                                    <i class="fa fa-classified"></i>
-                                    <div class="search">Find anything!</div>
+                                    <i class="fa fa-star"></i>
+                                    <div class="search">Search Classifieds</div>
                                 </a>
+                                <div class="links clearfix">
+                                    <ul class="left">
+                                        <li><a href="#">Apartments &amp; Rentals</a></li>
+                                        <li><a href="#">Find an Agent</a></li>
+                                    </ul>
+                                    <ul class="right">
+                                        <li><a href="#">Mortgage Center</a></li>
+                                        <li><a href="#">New Homes</a></li>
+                                    </ul>
+                                </div>
                             </div>
                         </div>
                     </div>
