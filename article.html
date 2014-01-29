@@ -14,6 +14,7 @@
         <link rel="stylesheet" href="css/normalize.css">
         <link rel="stylesheet" href="css/main.css">
         <link rel="stylesheet" href="css/styles.css">
+        <link rel="stylesheet" href="css/jquery.fancybox.css">
 
         <script src="js/vendor/modernizr-2.6.2.min.js"></script>
         <script data-main="js/main" src="js/require.js"></script>
@@ -213,7 +214,7 @@
                         <p class="story-body-text">Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris eleifend leo.</p>
                         <p class="story-body-text">Pellentesque habitant morbi tristique senectus et netus ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris leo et netus vitae dolor.</p>
                         <figure class="factbox inline">
-                            <h4>Lorem ipsum dolor</h4>
+                            <h4><a class="fancy" href="#fancy-1">Lorem</a> <a class="fancy" href="http://images.onset.freedom.com/ocregister//mz1o64-oc.focusmintcopy.gif">ipsum</a> dolor</h4>
                             <p>Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu sit amet quam egestas semper. Aenean mi vitae est. Mauris placerat eleifend leo.</p>
                             <p>Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu sit amet quam egestas semper.</p>
                         </figure>
@@ -423,9 +424,21 @@
             </section>
         </div>
 
+        <div id="fancy-1" class="fancy-inline">
+            <div class="slideshow">
+                <img src="http://placehold.it/600x400">
+                <img src="http://placehold.it/600x400">
+                <img src="http://placehold.it/600x400">
+                <img src="http://placehold.it/600x400">
+            </div>
+        </div>
+
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.2.min.js"><\/script>')</script>
         <script src="js/vendor/jquery.sticky-kit.js"></script>
+        <script src="js/vendor/jquery-ui-1.10.4.custom.js"></script>
+        <script src="js/vendor/jquery.slides.js"></script>
+        <script src="js/vendor/jquery.fancybox.js"></script>
         <script src="js/plugins.js"></script>
         <script src="js/main.js"></script>
         <script>
@@ -452,6 +465,25 @@
                     $('#side-panel').addClass('active');
                 });
 
+                $(".fancy").fancybox({
+                    fitToView   : false,
+                    width       : '90%',
+                    height      : '90%',
+                    autoSize    : false,
+                    openEffect  : 'none',
+                    closeEffect : 'none',
+                    afterShow   : function(){
+                        this.content && this.content.find(".slideshow").slidesjs({
+                            width: 600,
+                            height: 400,
+                            pagination: {
+                                active: false
+                            }
+                        });
+                    }
+                });
+                
+                // DOCS: http://www.slidesjs.com/
 
             });
         </script>
