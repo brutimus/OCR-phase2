@@ -177,10 +177,23 @@
                     </header>
                     <!-- left -->
                     <div class="col-8">
-                        <figure class="media large">
-                            <img src="http://placehold.it/800x600">
-                            <figcaption class="caption">Lorem ipsum dolor sit amet consectetur elit sed do. Lorem ipsum dolor sit. Lorem ipsum dolor sit amet consectetur elit sed do.</figcaption>
-                        </figure>
+                        <div class="leadart slideshow">
+                            <!-- Rebuild/restyle the buttons how you wish. The only requirement is that they retail the slidesjs classes and their location inside this DOM element. -->
+                            <img class="slidesjs-previous slidesjs-navigation" src="http://placehold.it/64/41759A/ffffff&text=<">
+                            <img class="slidesjs-next slidesjs-navigation" src="http://placehold.it/64/41759A/ffffff&text=>">
+                            <figure class="media large">
+                                <img src="http://placehold.it/800x600&text=This+is+a+slideshow!">
+                                <figcaption class="caption">Lorem ipsum dolor sit amet consectetur elit sed do. Lorem ipsum dolor sit. Lorem ipsum dolor sit amet consectetur elit sed do.</figcaption>
+                            </figure>
+                            <figure class="media large">
+                                <img src="http://placehold.it/800x600">
+                                <figcaption class="caption">Lorem ipsum dolor sit amet consectetur elit sed do. Lorem ipsum dolor sit. Lorem ipsum dolor sit amet consectetur elit sed do.</figcaption>
+                            </figure>
+                            <figure class="media large">
+                                <img src="http://placehold.it/800x600">
+                                <figcaption class="caption">Lorem ipsum dolor sit amet consectetur elit sed do. Lorem ipsum dolor sit. Lorem ipsum dolor sit amet consectetur elit sed do.</figcaption>
+                            </figure>
+                        </div>
                         <div class="share-tools">
                             <ul>
                                 <li class="facebook">
@@ -463,6 +476,18 @@
             
                 $('#toggle-side-panel').click(function() {
                     $('#side-panel').addClass('active');
+                });
+
+                // Fire off Article Lead spot slideshow
+                $('.leadart.slideshow').slidesjs({
+                    width: 600,
+                    height: 500,
+                    pagination: {
+                        active: false
+                    },
+                    navigation: {
+                        active: false
+                    }
                 });
 
                 $(".fancy").fancybox({

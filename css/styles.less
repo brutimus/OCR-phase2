@@ -959,7 +959,7 @@ header {
     background-color: @gray-lightest;
     border: 1px solid @gray-light;
     border-top: 0;
-    .BoxShadow(0 4px 12px -5px @gray);
+    .BoxShadow(0 2px 3px -2px @gray);
     .story {
         display: table-cell;
         padding: 0 20px;
@@ -1155,6 +1155,26 @@ header {
     .col-8 {padding-right: 10px;}
     .box {margin-bottom: 30px;}
     .ad {margin-bottom: 30px;}
+    .leadart.slideshow {
+        position: relative;
+
+        .slidesjs-previous.slidesjs-navigation {
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            z-index: 100;
+            width: 32px;
+            height: 32px;
+        }
+        .slidesjs-next.slidesjs-navigation {
+            position: absolute;
+            top: 0px;
+            right: 0px;
+            z-index: 100;
+            width: 32px;
+            height: 32px;
+        }
+    }
 }
 
 .fancy-inline {
