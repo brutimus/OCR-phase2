@@ -380,7 +380,7 @@ header {
             border: 0;
             border-bottom: 1px solid @gray-light;
             .BoxShadow(0 0 10px -1px @gray);
-            z-index: 999999;
+            z-index: 7000;
             ul {
                 width: @site-width;
                 margin: 0 auto;
@@ -1114,14 +1114,32 @@ header {
     .ad {margin-bottom: 30px;}
 }
 
-.fancy-inline {
+.lightbox-inline {
     display: none;
 }
 
 .slideshow {
     width: 600px;
     height: 500px;
-    display: none;
+    // display: none;
+    position: relative;
+
+    .slidesjs-previous.slidesjs-navigation {
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        z-index: 100;
+        width: 32px;
+        height: 32px;
+    }
+    .slidesjs-next.slidesjs-navigation {
+        position: absolute;
+        top: 0px;
+        right: 0px;
+        z-index: 100;
+        width: 32px;
+        height: 32px;
+    }
 }
 
 // ADVERTISING ----------------

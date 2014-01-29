@@ -184,10 +184,9 @@
                     </header>
                     <!-- left -->
                     <div class="col-8">
-                        <figure class="media large">
-                            <img src="http://placehold.it/800x600">
-                            <figcaption class="caption">Lorem ipsum dolor sit amet consectetur elit sed do. Lorem ipsum dolor sit. Lorem ipsum dolor sit amet consectetur elit sed do.</figcaption>
-                        </figure>
+                        <div class="leadart">
+                            <!-- @import "_kits/slideshow.html" -->
+                        </div>
                         <div class="share-tools">
                             <ul>
                                 <li class="facebook">
@@ -221,7 +220,7 @@
                         <p class="story-body-text">Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris eleifend leo.</p>
                         <p class="story-body-text">Pellentesque habitant morbi tristique senectus et netus ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris leo et netus vitae dolor.</p>
                         <figure class="factbox inline">
-                            <h4><a class="fancy" href="#fancy-1">Lorem</a> <a class="fancy" href="http://images.onset.freedom.com/ocregister//mz1o64-oc.focusmintcopy.gif">ipsum</a> dolor</h4>
+                            <h4><a class="slideshow-lightbox" href="#fancy-1">Lorem</a> <a class="graphic-lightbox" href="http://images.onset.freedom.com/ocregister//mz1o64-oc.focusmintcopy.gif">ipsum</a> dolor</h4>
                             <p>Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu sit amet quam egestas semper. Aenean mi vitae est. Mauris placerat eleifend leo.</p>
                             <p>Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu sit amet quam egestas semper.</p>
                         </figure>
@@ -431,13 +430,8 @@
             </section>
         </div>
 
-        <div id="fancy-1" class="fancy-inline">
-            <div class="slideshow">
-                <img src="http://placehold.it/600x400">
-                <img src="http://placehold.it/600x400">
-                <img src="http://placehold.it/600x400">
-                <img src="http://placehold.it/600x400">
-            </div>
+        <div id="fancy-1" class="lightbox-inline">
+            <!-- @import "_kits/slideshow.html" -->
         </div>
 
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
@@ -472,23 +466,52 @@
                     $('#side-panel').addClass('active');
                 });
 
-                $(".fancy").fancybox({
+                // Fire off Article Lead spot slideshow
+                $('.leadart .slideshow').length > 0 && $('.leadart .slideshow').slidesjs({
+                    width: 600,
+                    height: 500,
+                    pagination: {
+                        active: false
+                    },
+                    navigation: {
+                        active: false
+                    }
+                });
+
+                // Slideshow lightbox
+                $(".slideshow-lightbox").fancybox({
                     fitToView   : false,
-                    width       : '90%',
-                    height      : '90%',
-                    autoSize    : false,
+                    // width       : '90%',
+                    // height      : '90%',
+                    autoSize    : true,
                     openEffect  : 'none',
                     closeEffect : 'none',
                     afterShow   : function(){
                         this.content && this.content.find(".slideshow").slidesjs({
                             width: 600,
-                            height: 400,
+                            height: 500,
                             pagination: {
+                                active: false
+                            },
+                            navigation: {
                                 active: false
                             }
                         });
                     }
                 });
+
+                // Video lightbox
+
+                // Graphic lightbox
+                $(".graphic-lightbox").fancybox({
+                    fitToView   : false,
+                    // width       : '90%',
+                    // height      : '90%',
+                    autoSize    : true,
+                    openEffect  : 'none',
+                    closeEffect : 'none'
+                });
+                
                 
                 // DOCS: http://www.slidesjs.com/
 
