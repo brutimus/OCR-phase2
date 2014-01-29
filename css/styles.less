@@ -237,7 +237,7 @@ nav#side-panel {
     width: @site-width;
 }
 header {
-    margin: 10px 0 20px 0;
+    margin: 15px 0 20px 0;
     cursor: default;
     #nameplate {
         position: relative;
@@ -390,7 +390,7 @@ header {
             background: @white;
             border: 0;
             border-bottom: 1px solid @gray-light;
-            box-shadow: 1px 1px 8px rgba(102,102,102,0.3);
+            .BoxShadow(0 0 10px -1px @gray);
             z-index: 999999;
             ul {
                 width: @site-width;
@@ -954,10 +954,12 @@ header {
 @left-col-width:        610px;
 
 .news-rail {
-    margin-bottom: 20px;
-    padding: 8px 0;
+    margin: -20px 0 40px 0;
+    padding: 10px 0;
+    background-color: @gray-lightest;
     border: 1px solid @gray-light;
     border-top: 0;
+    .BoxShadow(0 4px 12px -5px @gray);
     .story {
         display: table-cell;
         padding: 0 20px;
@@ -978,7 +980,7 @@ header {
             }
         }
         &:first-child {
-            padding-left: 8px;
+            padding-left: 10px;
             width: 300px;
             img {
                 float: left;
