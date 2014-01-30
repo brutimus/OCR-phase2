@@ -19,6 +19,7 @@
         <script src="js/vendor/modernizr-2.6.2.min.js"></script>
         <script data-main="js/main" src="js/require.js"></script>
 
+
         <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,500,600,700,800' rel='stylesheet' type='text/css'>
         <link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
         
@@ -185,24 +186,29 @@
                     <!-- left -->
                     <div class="col-8">
                         <div class="leadart">
-                            <!-- @import "_kits/slideshow.html" -->
+                            <figure class="media large">
+                                <a class="slideshow-lightbox" href="#fancy-1">
+                                    <img src="http://placehold.it/800x600&text=Click+for+a+slideshow!">
+                                </a>
+                                <figcaption class="caption">Lorem ipsum dolor sit amet consectetur elit sed do. Lorem ipsum dolor sit. Lorem ipsum dolor sit amet consectetur elit sed do.</figcaption>
+                            </figure>
                         </div>
                         <div class="share-tools">
                             <ul>
                                 <li class="facebook">
-                                    <a href="#">
+                                    <a href="https://www.facebook.com/sharer/sharer.php?u=URL" target="_blank">
                                         <i class="fa fa-facebook-square"></i>
                                         <span>Facebook</span>
                                     </a>
                                 </li>
                                 <li class="twitter">
-                                    <a href="#">
+                                    <a href="https://twitter.com/share?url=URL" target="_blank">
                                         <i class="fa fa-twitter"></i>
                                         <span>Twitter</span>
                                     </a>
                                 </li>
                                 <li class="email">
-                                    <a href="#">
+                                    <a rel="nofollow" href="mailto:?subject=HEADLINE&amp;body=URL">
                                         <i class="fa fa-envelope"></i>
                                         <span>Email</span>
                                     </a>
@@ -433,89 +439,5 @@
         <div id="fancy-1" class="lightbox-inline">
             <!-- @import "_kits/slideshow.html" -->
         </div>
-
-        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.2.min.js"><\/script>')</script>
-        <script src="js/vendor/jquery.sticky-kit.js"></script>
-        <script src="js/vendor/jquery-ui-1.10.4.custom.js"></script>
-        <script src="js/vendor/jquery.slides.js"></script>
-        <script src="js/vendor/jquery.fancybox.js"></script>
-        <script src="js/plugins.js"></script>
-        <script src="js/main.js"></script>
-        <script>
-            $(document).ready(function() {
-                var $window = $(window),
-                    $navAnchor = $('#nav-anchor'),
-                    $nav = $('#nav-sticky'),
-                    $header = $('header');
-
-                $window.scroll(function() {
-                    var window_top = $window.scrollTop();
-                    var nav_top = $navAnchor.offset().top;
-                    if (window_top > nav_top) {
-                        $nav.addClass('fixed');
-                        $navAnchor.height($nav.height());
-                    } else {
-                        $nav.removeClass('fixed');
-                        $navAnchor.height(0);
-                    }
-                });
-
-            
-                $('#toggle-side-panel').click(function() {
-                    $('#side-panel').addClass('active');
-                });
-
-                // Fire off Article Lead spot slideshow
-                $('.leadart .slideshow').length > 0 && $('.leadart .slideshow').slidesjs({
-                    width: 600,
-                    height: 500,
-                    pagination: {
-                        active: false
-                    },
-                    navigation: {
-                        active: false
-                    }
-                });
-
-                // Slideshow lightbox
-                $(".slideshow-lightbox").fancybox({
-                    fitToView   : false,
-                    // width       : '90%',
-                    // height      : '90%',
-                    autoSize    : true,
-                    openEffect  : 'none',
-                    closeEffect : 'none',
-                    afterShow   : function(){
-                        this.content && this.content.find(".slideshow").slidesjs({
-                            width: 600,
-                            height: 500,
-                            pagination: {
-                                active: false
-                            },
-                            navigation: {
-                                active: false
-                            }
-                        });
-                    }
-                });
-
-                // Video lightbox
-
-                // Graphic lightbox
-                $(".graphic-lightbox").fancybox({
-                    fitToView   : false,
-                    // width       : '90%',
-                    // height      : '90%',
-                    autoSize    : true,
-                    openEffect  : 'none',
-                    closeEffect : 'none'
-                });
-                
-                
-                // DOCS: http://www.slidesjs.com/
-
-            });
-        </script>
     </body>
 </html>
