@@ -18,5 +18,6 @@ require([
     'app/news-rail-slider',
     'app/featured-multimedia-slider',
     'app/classifieds-tabs',
-    'app/article-inlines'
+    'app/article-inlines',
+    'app/side-panel'
 ]);
