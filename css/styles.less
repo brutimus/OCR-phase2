@@ -21,6 +21,7 @@
 // ----------------------------
 .TopBlueBorder() {
     content:" ";
+    display: block;
     position: absolute;
     top: 0;
     left: 0;
@@ -69,6 +70,7 @@ h5.label {
     font-weight: 300;
     text-transform: uppercase;
     border-bottom: 2px solid @accent;
+    cursor: default;
     &.no-border {
         margin-bottom: 12px;
         border:0;
@@ -85,8 +87,8 @@ h5.label {
     		display: none;
     		content: "These Register articles are selected for you based on your reading habits.";
     		position: absolute;
-    		top: -15px;
-    		right: -15px;
+    		top: -5px;
+    		right: -5px;
     		width: 100px;
     		padding: 15px;
     		font-size: 11px;
@@ -96,7 +98,7 @@ h5.label {
     		background-color: @gray-lightest;
     		border: 1px solid @gray-light;
     		.RoundedBorders(5px);
-    		.BoxShadow(0 0 10px -1px @gray);
+    		.BoxShadow(0 0 6px -1px @gray);
     	}
     	&:hover {
     		&:after {display: block;}
@@ -204,6 +206,7 @@ hr {
 		            }
 		        }
 		        li {
+                    position: relative;
 		            font-size: 16px;
 		            line-height: 18px;
 		            white-space: nowrap;
@@ -212,12 +215,79 @@ hr {
 		                margin: 0 10px;
 		                padding: 4px 9px 5px 9px;
 		                cursor: pointer;
-		                &:hover {
-		                    color: @black;
-		                    background-color: @accent-hover-light;
-		                    .RoundedBorders(4px);
-		                }
+                        .arrow-right {
+                            display: inline-block;
+                            position: absolute;
+                            left: 187px;
+                            margin: 5px 0 0 0;
+                            width: 0;
+                            height: 0;
+                            border-top: 4px solid transparent;
+                            border-right: 4px solid transparent;
+                            border-bottom: 4px solid transparent;
+                            border-left: 4px solid #bbb;
+                            .arrow-conceal {
+                                display: inline-block;
+                                position: absolute;
+                                top: -4px;
+                                left: -5px;
+                                width: 0;
+                                height: 0;
+                                border-top: 4px solid transparent;
+                                border-right: 4px solid transparent;
+                                border-bottom: 4px solid transparent;
+                                border-left: 4px solid #fff;
+                            }
+                        }
 		            }
+                    &:hover > a {
+                        color: @black;
+                        background-color: @accent-hover-light;
+                        .RoundedBorders(4px);
+                        .arrow-right {display: none;}
+                    }
+                    &:hover > ul.sub {display: block;}
+                    ul.sub {
+                        display: none;
+                        position: absolute;
+                        top: -11px;
+                        right: -140px;
+                        width: 150px;
+                        padding: 10px 0;
+                        background-color: @white;
+                        border: 1px solid @gray;
+                        .RoundedBorders(4px);
+                        .BoxShadow(0 0 6px 2px rgba(0,0,0,0.1));
+                        li {
+                            font-size: 14px;
+                            line-height: 16px;
+                            a {
+
+                            }
+                        }
+                        &:before {
+                            content: "";
+                            position: absolute;
+                            top: 11px;
+                            left: -12px;
+                            width: 0;
+                            height: 0;
+                            border-top: 12px solid transparent;
+                            border-bottom: 12px solid transparent;
+                            border-right: 12px solid @gray;
+                        }
+                        &:after {
+                            content: "";
+                            position: absolute;
+                            top: 11px;
+                            left: -11px;
+                            width: 0;
+                            height: 0;
+                            border-top: 12px solid transparent;
+                            border-bottom: 12px solid transparent;
+                            border-right: 12px solid @white;
+                        }
+                    }
 		        }
 		        &.primary {
 		            li {
@@ -227,35 +297,11 @@ hr {
 		        &.secondary {
 		            li {
 		                a {
-		                    font-size: 14px;
-		                    line-height: 16px;
+		                    font-size: 13px;
+		                    line-height: 15px;
 		                    font-weight: 500;
 		                }
 		            }
-		        }
-		    }
-		    .arrow-right {
-		        display: inline-block;
-		        position: absolute;
-		        left: 187px;
-		        margin: 5px 0 0 0;
-		        width: 0;
-		        height: 0;
-		        border-top: 4px solid transparent;
-		        border-right: 4px solid transparent;
-		        border-bottom: 4px solid transparent;
-		        border-left: 4px solid #bbb;
-		        .arrow-conceal {
-		            display: inline-block;
-		            position: absolute;
-		            top: -4px;
-		            left: -5px;
-		            width: 0;
-		            height: 0;
-		            border-top: 4px solid transparent;
-		            border-right: 4px solid transparent;
-		            border-bottom: 4px solid transparent;
-		            border-left: 4px solid #fff;
 		        }
 		    }
 		}
@@ -463,8 +509,10 @@ header {
     }
 }
 .box {
+    position: relative;
     margin: 0 0 10px 0;
     border: 1px solid @gray-light;
+    border-top: 0;
     .label {
         display: block;
         padding: 5px 10px;
@@ -505,13 +553,137 @@ header {
         li+li {
             border-top: 1px solid @gray-lighter;
         }
+        &.horiz-links {
+            padding: 5px 10px;
+            line-height: 11px;
+            border-top: 1px solid @gray-lighter;
+            li {
+                display: inline-block;
+                padding: 0;
+                a {
+                    padding: 0;
+                    display: inline;
+                    font-size: 12px;
+                    font-weight: 400;
+                    color: @accent;
+                    &:hover {
+                        text-decoration: underline;
+                    }
+                }
+            }
+            li+li {
+                border: 0;
+                &:before {
+                    content: "|";
+                    margin: 0 6px;
+                    font-size: 11px;
+                    color: @gray-light;
+                }
+            }
+        }
 
     }
     &:before {
         .TopBlueBorder ()
     }
+    form.newsletters {
+        padding: 10px;
+        border-top: 1px solid @gray-lighter;
+        p {
+            margin: 0 0 6px 0;
+            font-size: 13px;
+            line-height: 15px;
+            font-weight: 600;
+            cursor: default;
+        }
+        .input-group {
+            input {
+                display: inline;
+                padding: 9px 12px;
+                font-family: 'Source Sans Pro',sans-serif;
+                font-size: 13px;
+                vertical-align: middle;
+                border: 1px solid @gray-light;
+                &[type=submit] {
+                    color: @gray-dark;
+                    font-weight: 700;
+                    text-transform: uppercase;
+                    text-align: center;
+                    white-space: nowrap;
+                    background-color: @gray-lighter;
+                    border-right: 0;
+                    .RoundedBorders(4px 0 0 4px);
+                }
+                &[type=email] {
+                    width: 85%;
+                    margin: 0 0 0 -4px;
+                    font-weight: 400;
+                    background-color: @gray-lightest;
+                    color: @black;
+                    .RoundedBorders(0 4px 4px 0);
+                    &:focus {
+                        outline: 0;
+                    }
+                }
+                &::-webkit-input-placeholder {color: @gray-darker;font-weight: 300;}
+                &::-moz-placeholder {color: @gray-darker;font-weight: 300;}
+                &:-ms-input-placeholder {color: @gray-darker;font-weight: 300;}
+                &:-moz-placeholder {color: @gray-darker;font-weight: 300;}
+            }
+            &:hover, &:active {
+                input[type=submit] {
+                    color: darken(@gray-dark, 10%);
+                    background-color: darken(@accent-hover-light, 2%);
+                    border-color: @accent-hover-border;
+                }
+                input[type=email] {
+                    background-color: lighten(@accent-hover-light, 1%);
+                    border-color: @accent-hover-border;
+                }
+            }
+        }
+    }
 }
-
+footer {
+    margin: 40px 0;
+    text-align: center;
+    .flag {
+        margin: 0 0 2px 0;
+        padding-bottom: 8px;
+        border-bottom: 1px solid @gray-light;
+        img {
+            margin: 0 auto;
+        }
+    }
+    .links {
+        ul {
+            li {
+                display: inline;
+                font-size: 12px;
+                line-height: 14px;
+                a {
+                    display: inline;
+                    color: @accent;
+                    &:hover {text-decoration: underline;}
+                }
+            }
+            li+li {
+                &:before {
+                    content: "|";
+                    margin: 0 6px;
+                    color: @gray-light;
+                }
+            }
+        }
+    }
+    .legal {
+        margin-top: 5px;
+        span {
+            font-size: 11px;
+            color: @gray-darkest;
+        }
+    }
+}
 
 // FLEX UNITS -----------------
 // ----------------------------
@@ -693,7 +865,6 @@ header {
         border-top: 0;
         .search-group {
             display: table;
-            box-shadow: 0 0 10px 2px @gray-lighter;
             .RoundedBorders(4px);
             i {
                 display: table-cell;
