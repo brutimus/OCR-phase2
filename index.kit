@@ -763,51 +763,5 @@
 
             </section>
         </div>
-
-        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.2.min.js"><\/script>')</script>
-        <script src="js/vendor/jquery-ui-1.10.4.custom.js"></script>
-        <script src="js/vendor/jquery.slides.js"></script>
-        <script src="js/plugins.js"></script>
-        <script src="js/main.js"></script>
-        <script>
-            $(document).ready(function() {
-                var $window = $(window),
-                    $navAnchor = $('#nav-anchor'),
-                    $nav = $('#nav-sticky');
-                    $header = $('header');
-
-                $window.scroll(function() {
-                    var window_top = $window.scrollTop();
-                    var nav_top = $navAnchor.offset().top;
-                    if (window_top > nav_top) {
-                        $nav.addClass('fixed');
-                        $navAnchor.height(($nav.height())+10);
-                    } else {
-                        $nav.removeClass('fixed');
-                        $navAnchor.height(0);
-                    }
-                });
-
-                $('#toggle-side-panel').click(function() {
-                    $('#side-panel-wrapper').addClass('active');
-
-                    $('#side-panel-wrapper').click(function() {
-                        $(this).removeClass('active');
-                    }).children().click(function(e) {
-                        e.stopPropagation();
-                    });
-                });
-                $('#classifieds').tabs();
-                $("#multimedia-slider .scroll-wrapper").slidesjs({
-                    width: 940,
-                    height: 177,
-                    pagination: {
-                        active: false
-                    }
-                });
-                // DOCS: http://www.slidesjs.com/
-            });
-        </script>
     </body>
 </html>
