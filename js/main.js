@@ -14,10 +14,12 @@ require.config({
 });
 
 require([
-    'app/main',
+    // 'app/main',
+    'app/sticky-nav',
     'app/news-rail-slider',
     'app/featured-multimedia-slider',
     'app/classifieds-tabs',
     'app/article-inlines',
-    'app/side-panel'
+    'app/side-panel',
+    'app/comments'
 ]);

@@ -1,4 +1,4 @@
-define(['jquery', 'jquery.fancybox', 'jquery.slides'], function(){
+define(['jquery', 'jquery.fancybox', 'jquery.slides', 'domReady!'], function(){
     
     // Slideshow lightbox
     $(".slideshow-lightbox").fancybox({

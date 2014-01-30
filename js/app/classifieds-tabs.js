@@ -1,3 +1,3 @@
-define(['jquery', 'jquery-ui'], function(){
+define(['jquery', 'jquery-ui', 'domReady!'], function(){
 	$('#classifieds').tabs();
 });
