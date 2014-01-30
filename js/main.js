@@ -13,4 +13,10 @@ require.config({
     }
 });
 
-require(['app/main']);
+require([
+    'app/main',
+    'app/news-rail-slider',
+    'app/featured-multimedia-slider',
+    'app/classifieds-tabs',
+    'app/article-inlines'
+]);

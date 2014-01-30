@@ -922,8 +922,11 @@ header {
 @left-col-width:        610px;
 
 .news-rail {
+    position: relative;
     margin: -20px 0 40px 0;
     padding: 20px 0;
+    height: 89px;
+    // overflow: hidden;
     background-color: @gray-lightest;
     border: 1px solid @gray-light;
     border-top: 0;
@@ -948,6 +951,24 @@ header {
     }
     .story+.story {
         border-left: 1px solid @gray-light;
+    }
+    .slidesjs-navigation {
+        border-radius: 100%;
+        background-color: #FFF;
+        border: 1px solid #E2E2E2;
+        box-shadow: 1px 1px 1px -1px #D2D2D2;
+        display: block;
+        position: absolute;
+        top: 25px;
+        z-index: 100;
+        width: 32px;
+        height: 32px;
+    }
+    .slidesjs-previous.slidesjs-navigation {
+        left: -16px;
+    }
+    .slidesjs-next.slidesjs-navigation {
+        right: -16px;
     }
 }
 #story {
