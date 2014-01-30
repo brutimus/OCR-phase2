@@ -17,9 +17,9 @@ require([
     // 'app/main',
     'app/sticky-nav',
     'app/news-rail-slider',
-    'app/featured-multimedia-slider',
     'app/classifieds-tabs',
     'app/article-inlines',
     'app/side-panel',
-    'app/comments'
+    'app/comments',
+    'app/search-box'
 ]);

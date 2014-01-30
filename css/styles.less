@@ -516,57 +516,35 @@ header {
 // FLEX UNITS -----------------
 // ----------------------------
 #multimedia-slider {
-    .slidesjs-navigation {
-        border-radius: 100%;
-        background-color: #FFF;
-        border: 1px solid #E2E2E2;
-        box-shadow: 1px 1px 1px -1px #D2D2D2;
-        display: block;
-        position: absolute;
-        top: 95px;
-        z-index: 100;
-        width: 32px;
-        height: 32px;
-    }
-    .slidesjs-previous.slidesjs-navigation {
-        left: -16px;
-    }
-    .slidesjs-next.slidesjs-navigation {
-        right: -16px;
-    }
-    .scroll-wrapper {
-        .scroll-inner {
-            .story {
-                display: inline-block;
-                margin: 0;
-                padding: 0;
-                border: 0;
-                h5.overline {
-                    a {
-                        display: inline;
-                        color: @black;
-                        &:hover {color: @accent;}
-                    }
-                }
-                a {
-                    display: block;
-                    img {
-                        margin:0 0 5px 0;
-                    }
-                    h6 {
-                        font-size: 13px;
-                        line-height: 15px;
-                        font-weight: 600;
-                    }
-                    &:hover {
-                        h6 {color: @accent;}
-                    }
-                }
-            }
-            .story+.story {
-                margin-left: 20px;
+    .story {
+        display: inline-block;
+        margin: 0;
+        padding: 0;
+        border: 0;
+        h5.overline {
+            a {
+                display: inline;
+                color: @black;
+                &:hover {color: @accent;}
             }
         }
+        a {
+            display: block;
+            img {
+                margin:0 0 5px 0;
+            }
+            h6 {
+                font-size: 13px;
+                line-height: 15px;
+                font-weight: 600;
+            }
+            &:hover {
+                h6 {color: @accent;}
+            }
+        }
+    }
+    .story+.story {
+        margin-left: 20px;
     }
 }
 #events {
