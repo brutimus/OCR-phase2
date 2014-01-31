@@ -51,6 +51,14 @@
     -ms-transition: @transition;
     -o-transition: @transition;
 }
+.NoTextSelect {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
 
 
 // GLOBAL STYLES --------------
@@ -1357,6 +1365,7 @@ footer {
     border: 1px solid @gray-light;
     border-top: 0;
     .BoxShadow(0 2px 3px -2px @gray);
+    .NoTextSelect;
     .story {
         display: table-cell;
         margin: 0;
@@ -1539,10 +1548,17 @@ footer {
         }
         figcaption {
             padding: 3px 0 10px 0;
-            font-size: 14px;
+            font-size: 13px;
             line-height: 16px;
             &.caption {
                 color: @gray-darkest;
+                span.img-credit {
+                    margin-left: 10px;
+                    font-size: 11px;
+                    line-height: 16px;
+                    text-transform: uppercase;
+                    color: @gray-darker;
+                }
             }
         }
         &.media {
@@ -1718,18 +1734,27 @@ footer {
     height: 500px;
     display: none;
     position: relative;
-    //background-color: #e2e2e2;
     figure {
         max-width: 600px;
         height: 400px;
         figcaption {
             position: absolute;
-            top: 175px;
-            right: -140px;
-            width: 120px;
+            top: 160px;
+            right: -149px;
+            width: 135px;
             font-size: 13px;
             line-height: 16px;
-            color: @black;
+            &.caption {
+                color: @black;
+            }
+            span.img-credit {
+                display: inline-block;
+                margin-top: 12px;
+                font-size: 11px;
+                line-height: 13px;
+                text-transform: uppercase;
+                color: @gray-darker;
+            }
         }
     }
     .slidesjs-navigation {
@@ -1772,6 +1797,10 @@ footer {
     }
     span.buy {
         margin-left: 20px;
+        a {
+            color: @gray-darker;
+            &:hover {color: @accent;}
+        }
     }
 }
 
