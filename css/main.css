@@ -32,19 +32,6 @@ html {
 }
 
 /*
- * A better looking default horizontal rule
- */
-
-hr {
-    display: block;
-    height: 1px;
-    border: 0;
-    border-top: 1px solid #ccc;
-    margin: 1em 0;
-    padding: 0;
-}
-
-/*
  * Remove the gap between images, videos, audio and canvas and the bottom of
  * their containers: h5bp.com/i/440
  */
@@ -79,10 +66,10 @@ textarea {
    ========================================================================== */
 
 .browsehappy {
-    margin: 0.2em 0;
-    background: #ccc;
+    margin: 2em 0;
+    background: #eee;
     color: #000;
-    padding: 0.2em 0;
+    padding: 2em 0;
 }
 
 /* ==========================================================================

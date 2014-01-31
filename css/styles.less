@@ -358,17 +358,9 @@ header {
         border-top: 1px solid @gray-light;
         #flag {
             margin: 15px auto 6px auto;
-            img {display:inline;}
-            &.section {
-                margin: 12px auto 0 auto;
-                img {width: 125px;}
-                h1 {
-                    font-size: 60px;
-                    line-height: 54px;
-                    text-transform: uppercase;
-                    color: @accent;
-                    letter-spacing: -1.5px;
-                }
+            img {
+                display:inline;
+                width: 325px;
             }
         }
     }
@@ -569,6 +561,40 @@ header {
                         ul {width: 123px;}
                     }
                 }
+            }
+        }
+    }
+    &.section {
+        #nameplate {
+            #flag {
+                margin: 12px auto 0 auto;
+                img {width: 125px;}
+                h1 {
+                    font-size: 60px;
+                    line-height: 54px;
+                    text-transform: uppercase;
+                    color: @accent;
+                    letter-spacing: -1.5px;
+                }
+            }
+        }
+    }
+    &.article {
+        #tool-bar {
+            position: absolute;
+            top: 28px;
+            left: 0;
+            width: 100%;
+            z-index: 1;
+            .text-links {display: none;}
+        }
+        #nameplate {
+            height: auto;
+            border: 0;
+            z-index: 0;
+            #flag {
+                margin-top: 8px;
+                img {width: 175px;}
             }
         }
     }
