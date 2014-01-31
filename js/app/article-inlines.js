@@ -6,6 +6,7 @@ define(['jquery', 'jquery.fancybox', 'jquery.slides', 'domReady!'], function(){
         autoSize    : true,
         openEffect  : 'none',
         closeEffect : 'none',
+        leftRatio   : 0.66,
         afterShow   : function(){
             if (this.content) {
                 var ss = this.content.find(".slideshow");
@@ -17,8 +18,15 @@ define(['jquery', 'jquery.fancybox', 'jquery.slides', 'domReady!'], function(){
                     },
                     navigation: {
                         active: false
+                    },
+                    callback: {
+                        complete: function(current){
+                            jQuery('.current-slide').html(current);
+                        }
                     }
                 });
+                var total = jQuery('.slideshow figure').length;
+                jQuery('.total-slides').html(total);
             }
         }
     });

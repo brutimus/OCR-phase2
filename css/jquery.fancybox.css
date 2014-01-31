@@ -26,12 +26,9 @@
 
 .fancybox-skin {
 	position: relative;
-	background: #f9f9f9;
-	color: #444;
+	background: transparent;
+	color: #222;
 	text-shadow: none;
-	-webkit-border-radius: 0px;
-	   -moz-border-radius: 0px;
-	        border-radius: 0px;
 }
 
 .fancybox-opened {
@@ -39,9 +36,9 @@
 }
 
 .fancybox-opened .fancybox-skin {
-	-webkit-box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+	/*-webkit-box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
 	   -moz-box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
-	        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+	        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);*/
 }
 
 .fancybox-outer, .fancybox-inner {
@@ -184,7 +181,12 @@
 	overflow: hidden;
 	display: none;
 	z-index: 8010;
-	background: rgba(255,255,255,.95);
+	background-image: -ms-radial-gradient(center bottom, circle farthest-corner, #FFFFFF 55%, rgba(255,255,255,0.88) 100%); /* IE10 */
+	background-image: -moz-radial-gradient(center bottom, circle farthest-corner, #FFFFFF 55%, rgba(255,255,255,0.88) 100%); /* Firefox */
+	background-image: -o-radial-gradient(center bottom, circle farthest-corner, #FFFFFF 55%, rgba(255,255,255,0.88) 100%); /* Opera */
+	background-image: -webkit-gradient(linear, left bottom, right top, color-stop(0, #FFFFFF), color-stop(1, rgba(255,255,255,0.88))); /* Safari/Chrome 10 */
+	background-image: -webkit-radial-gradient(center bottom, circle farthest-corner, #FFFFFF 55%, rgba(255,255,255,0.88) 100%); /* Chrome 11+ */
+	background-image: radial-gradient(center bottom, circle farthest-corner,#FFFFFF 55%, rgba(255,255,255,0.88) 100%);
 }
 
 .fancybox-overlay-fixed {
