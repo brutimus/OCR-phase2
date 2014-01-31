@@ -8,9 +8,10 @@ define(['jquery', 'jquery.fancybox', 'jquery.slides', 'domReady!'], function(){
         closeEffect : 'none',
         afterShow   : function(){
             if (this.content) {
-                this.content.find(".slideshow").slidesjs({
-                    width: 600,
-                    height: 500,
+                var ss = this.content.find(".slideshow");
+                ss.slidesjs({
+                    width: ss.width(),
+                    height: ss.height(),
                     pagination: {
                         active: false
                     },
