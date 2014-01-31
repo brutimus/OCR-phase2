@@ -14,4 +14,7 @@ define([
 	// Menu for article share tools more button
 	tooltip('.share-tools:nth-of-type(1) .more > a', '.share-tools:nth-of-type(1) .more  ul');
 	tooltip('.share-tools:nth-of-type(2) .more > a', '.share-tools:nth-of-type(2) .more  ul');
+
+	// Menu for section page flex unit
+	tooltip('.box-menu','.box-menu ul');
 });

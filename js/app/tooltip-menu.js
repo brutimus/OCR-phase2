@@ -17,7 +17,7 @@ define(['jquery', 'domReady!'], function(){
                     if (mstate == 0) {
                         timer = setTimeout(function(){
                             deconstruct();
-                        }, 2000);
+                        }, 1000);
                     }
                 });
             },
