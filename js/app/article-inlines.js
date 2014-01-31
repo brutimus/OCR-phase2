@@ -22,6 +22,14 @@ define(['jquery', 'jquery.fancybox', 'jquery.slides', 'domReady!'], function(){
         }
     });
 
+    // Photo lightbox
+    $(".photo-lightbox").fancybox({
+        fitToView   : false,
+        autoSize    : true,
+        openEffect  : 'none',
+        closeEffect : 'none',
+    });
+
     // Video lightbox
 
     // Graphic lightbox
