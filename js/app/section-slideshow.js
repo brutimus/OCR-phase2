@@ -1,7 +1,8 @@
 define(['jquery', 'jquery.slides', 'domReady!'], function(){
-    $("#multimedia-slider .scroll-wrapper").slidesjs({
-        width: 940,
-        height: 177,
+    var ss = $(".section-slideshow .slideshow");
+    ss.slidesjs({
+        width: ss.width(),
+        height: ss.height(),
         pagination: {
             active: false
         },

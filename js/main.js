@@ -20,5 +20,6 @@ require([
     'app/classifieds-tabs',
     'app/article-inlines',
     'app/side-panel',
-    'app/comments'
+    'app/comments',
+    'app/section-slideshow'
 ]);

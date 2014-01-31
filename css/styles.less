@@ -894,7 +894,8 @@ footer {
     }
 }
 #classifieds {
-    height: auto;
+    height: 138px;
+    overflow: hidden;
     .tabs {
         width: 100%;
         li {
@@ -1194,6 +1195,41 @@ footer {
                 }
             }
         }
+    }
+}
+#C-block-section {
+    .slideshow {
+        width: 620px;
+        height: 550px;
+        // display: none;
+        position: relative;
+
+        .slidesjs-previous.slidesjs-navigation {
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            z-index: 100;
+            width: 32px;
+            height: 32px;
+        }
+        .slidesjs-next.slidesjs-navigation {
+            position: absolute;
+            top: 0px;
+            right: 0px;
+            z-index: 100;
+            width: 32px;
+            height: 32px;
+        }
+    }
+    .additional-slideshows div:first-child {
+        margin-left: 0 !important;
+    }
+    .additional-slideshows div:last-child {
+        margin-right: 0 !important;
+    }
+
+    #classifieds {
+        margin-bottom: 8px;
     }
 }
 
@@ -1562,33 +1598,33 @@ footer {
     .col-8 {padding-right: 10px;}
     .box {margin-bottom: 30px;}
     .ad {margin-bottom: 30px;}
-}
 
-.lightbox-inline {
-    display: none;
-}
-
-.slideshow {
-    width: 600px;
-    height: 500px;
-    // display: none;
-    position: relative;
-
-    .slidesjs-previous.slidesjs-navigation {
-        position: absolute;
-        top: 0px;
-        left: 0px;
-        z-index: 100;
-        width: 32px;
-        height: 32px;
+    .lightbox-inline {
+        display: none;
     }
-    .slidesjs-next.slidesjs-navigation {
-        position: absolute;
-        top: 0px;
-        right: 0px;
-        z-index: 100;
-        width: 32px;
-        height: 32px;
+
+    .slideshow {
+        width: 600px;
+        height: 500px;
+        // display: none;
+        position: relative;
+
+        .slidesjs-previous.slidesjs-navigation {
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            z-index: 100;
+            width: 32px;
+            height: 32px;
+        }
+        .slidesjs-next.slidesjs-navigation {
+            position: absolute;
+            top: 0px;
+            right: 0px;
+            z-index: 100;
+            width: 32px;
+            height: 32px;
+        }
     }
 }
 
