@@ -2,17 +2,16 @@ define(['jquery', 'domReady!'], function(){
     return function(button, menu){
         var button  = $(button),
             menu    = $(menu),
+            body    = $('body'),
             cls     = 'ttm-active',
             timer   = null,
             mstate  = 0,
-            me      = null,
-            ml      = null,
             mouser  = function(el){
-                me = el.mouseenter(function(){
+                el.mouseenter(function(){
                     mstate++;
                     clearTimeout(timer);
                 });
-                ml = el.mouseleave(function(){
+                el.mouseleave(function(){
                     mstate--;
                     if (mstate == 0) {
                         timer = setTimeout(function(){
@@ -24,8 +23,9 @@ define(['jquery', 'domReady!'], function(){
             deconstruct = function(){
                 clearTimeout(timer);
                 menu.removeClass(cls);
-                menu.unbind('mouseenter mouseleave');
+                menu.unbind('mouseenter mouseleave click');
                 button.unbind('mouseenter mouseleave');
+                body.unbind('click');
                 mstate = 0;
             };
         button.click(function(event){
@@ -34,6 +34,12 @@ define(['jquery', 'domReady!'], function(){
                 deconstruct();
             } else{
                 menu.addClass(cls);
+                setTimeout(function(){
+                    body.click(deconstruct);
+                    menu.click(function(e){
+                        e.stopPropagation();
+                    })
+                }, 50);
                 mouser(menu);
                 mouser(button);
                 mstate++;
