@@ -17,4 +17,7 @@ define([
 
 	// Menu for section page flex unit
 	tooltip('.box-menu','.box-menu ul');
+
+	// Menu for archive page
+	tooltip('.menu','.menu ul');
 });
