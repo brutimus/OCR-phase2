@@ -3,21 +3,22 @@ define([
     'jquery'
 ], function(tooltip) {
 	// Menu for navbar tool button
-    tooltip('nav .tools a', 'nav .tools ul');
+    tooltip('nav .tools.tooltip-menu .button', 'nav .tools.tooltip-menu .menu');
 
     // Menu for the navbar search button
-	tooltip('nav .search a', 'nav .search .input-group');
+	tooltip('nav .search.tooltip-menu .button', 'nav .search.tooltip-menu .menu');
 
 	// Menu for the newstogram widget help button
-	tooltip('.newstogram .help-button', '.newstogram .help');
+	tooltip('.newstogram .tooltip-menu .button', '.newstogram .tooltip-menu .menu');
 
 	// Menu for article share tools more button
-	tooltip('.share-tools:nth-of-type(1) .more > a', '.share-tools:nth-of-type(1) .more  ul');
-	tooltip('.share-tools:nth-of-type(2) .more > a', '.share-tools:nth-of-type(2) .more  ul');
+	tooltip('.share-tools:nth-of-type(1) .tooltip-menu .button', '.share-tools:nth-of-type(1) .tooltip-menu .menu');
+	tooltip('.share-tools:nth-of-type(2) .tooltip-menu .button', '.share-tools:nth-of-type(2) .tooltip-menu  .menu');
 
 	// Menu for section page flex unit
-	tooltip('.box-menu','.box-menu ul');
+	tooltip('.box-menu','.box-menu .menu');
 
 	// Menu for archive page
-	tooltip('.menu','.menu ul');
+	// TODO: align this one with the rest of them
+	tooltip('.archive-header .tooltip-menu','.archive-header .tooltip-menu .menu');
 });
