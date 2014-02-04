@@ -1521,7 +1521,7 @@ footer {
         z-index: 100;
         i {
             position: absolute;
-            top: 4px;
+            top: 2px;
             font-size: 18px;
             color: @gray-light;
         }
@@ -1535,11 +1535,11 @@ footer {
     }
     .slidesjs-previous.slidesjs-navigation {
         left: -13px;
-        i {right: 6px;}
+        i {right: 4px;}
     }
     .slidesjs-next.slidesjs-navigation {
         right: -13px;
-        i {left: 6px;}
+        i {left: 4px;}
     }
     .category-label {
         position: absolute;
@@ -1873,8 +1873,8 @@ footer {
         position: absolute;
         bottom: 0px;
         z-index: 100;
-        width: 40px;
-        height: 40px;
+        width: 42px;
+        height: 42px;
         text-align: center;
         vertical-align: middle;
         background-color: @gray-lightest;
@@ -1883,14 +1883,21 @@ footer {
         i {
             font-size: 32px;
             line-height: 43px;
-            color: @gray-light;
-
+            color: @gray;
+            .Transition(all 0.2s ease);
         }
-        &.slidesjs-previous {left: 510px;}
-        &.slidesjs-next {left: 561px;}
+        &.slidesjs-previous {
+            left: 510px;
+            i {padding-right: 5px;}
+        }
+        &.slidesjs-next {
+            left: 561px;
+            i {padding-left: 5px;}
+        }
         &:hover {
-            background-color: @gray-lighter;
-            i {color: @gray-dark;}
+            background-color: @gray-light;
+            i {color: @gray-darkest;}
+            .Transition(all 0.2s ease);
         }
     }
 }
