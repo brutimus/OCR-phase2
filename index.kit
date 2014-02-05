@@ -24,9 +24,10 @@
                         <a href="./index.html">
                             <img width="325" height="" alt="Orange County Register" src="assets/ocr-flag.svg">
                         </a>
+                        <h1></h1>
                     </div>
-                    <div class="ad top-left"><img src="http://placehold.it/184x90&text=Bookend+Left"></div>
-                    <div class="ad top-right"><img src="http://placehold.it/184x90&text=Bookend+Right"></div>
+                    <div class="ad bookend-left"><img src="http://placehold.it/184x90&text=Bookend+Left"></div>
+                    <div class="ad bookend-right"><img src="http://placehold.it/184x90&text=Bookend+Right"></div>
                 </div>
                 <div id="nav-anchor"></div>
                 <div id="nav-container">
@@ -49,15 +50,16 @@
                 </div>
             </header>
             
-            <div class="ad featured"><img src="http://placehold.it/940x90&text=Super+Leaderboard"></div>
+            <div class="ad super-leaderboard"><img src="http://placehold.it/940x90&text=Super+Leaderboard"></div>
 
             <section id="content-wrapper">
                 <!-- A-BLOCK -->
-                <section id="A-block" class="clearfix">
-                    <div id="featured" class="col-8">
-                        <div class="lead clearfix"> 
-                            <div class="col-3 rail">
-                                <h4 class="list-label"><a href="./archive.html">Today's news &raquo;</a></h4>
+                <section class="clearfix">
+                    <div class="col-8">
+                        <!-- wraps lead story and rail -->
+                        <div class="clearfix">
+                            <div class="col-3 module list pull-left">
+                                <h4 class="label"><a href="./archive.html">Today's news &raquo;</a></h4>
                                 <div class="story">
                                     <h2><a href="./article.html">New Register editor a huge fan of 'community newspapering'</a></h2>
                                     <p class="timestamp">Posted xx minutes ago</p>
@@ -75,8 +77,8 @@
                                     <h4><a href="#">Passenger killed, driver in critical condition after suspected DUI crash</a></h4>
                                     <p class="timestamp">Posted xx minutes ago</p>
                                 </div>
-                            </div><!-- /.lead-rail -->
-                            <div class="col-5 lead-tall">
+                            </div>
+                            <div class="col-5 module lead pull-right">
                                 <a href="#"><img src="http://placehold.it/400x300"></a>
                                 <h1><a href="./article.html">Scientists looking to kelp to answer questions about radioactive seawater</a></h1>
                                 <p class="timestamp">Posted xx minutes ago</p>
@@ -85,9 +87,10 @@
                                     <h6>Related</h6>
                                     <ul>
                                         <li><a href="#">Lorem ipsum dolor sit amet consectetur elit sed do</a></li>
+                                        <li><a href="#">Lorem ipsum dolor sit amet consectetur elit</a></li>
                                     </ul>
                                 </div>
-                            </div><!-- /.lead-tall -->
+                            </div>
                         </div>
                         <div id="topics" class="col-8">
                             <span class="label">In the news</span>
@@ -100,35 +103,34 @@
                             </ul>
                         </div>
                     </div>
-
                     <div class="col-4">
                         <!-- @import "_kits/most-popular.html" -->
 
-                        <div class="ad default"><img src="http://placehold.it/300x250&text=ABox+Position+One"></div>
+                        <div class="ad rectangle"><img src="http://placehold.it/300x250&text=ABox+Position+One"></div>
                     </div>
-                </section><!-- /a-block -->
+                </section><!-- /A-BLOCK -->
 
                 <hr>
 
                 <!-- B-BLOCK: news buckets -->
-                <section id="B-block" class="clearfix">
+                <section class="brief-grid">
                     <!-- $title = City news -->
                     <!-- @import _kits/brief_4.kit -->
                     <!-- $title = Crime & Courts -->
                     <!-- @import _kits/brief_4.kit -->
                     <!-- $title = State news -->
                     <!-- @import _kits/brief_4.kit -->
-                    <div class="col-3 brief newstogram">
-                        <h4 class="list-label tooltip-menu">
+                    <div class="col-3 module list brief">
+                        <h4 class="label tooltip-menu">
                             Recommended for you
                             <i class="icon-info help-button button"></i>
-                            <span class="menu help">These Register articles are selected for you based on your reading habits.</span>
+                            <span class="menu info">These Register articles are selected for you based on your reading habits.</span>
                         </h4>
                         <ul>
-                            <li><a href="#">Lorem ipsum dolor sit amet consectetur elit sed do</a></li>
-                            <li><a href="#">Lorem ipsum dolor sit amet consectetur elit sed do</a></li>
-                            <li><a href="#">Lorem ipsum dolor sit amet consectetur elit sed do</a></li>
-                            <li><a href="#">Lorem ipsum dolor sit amet consectetur elit sed do</a></li>
+                            <li class="story"><a href="#">Lorem ipsum dolor sit amet consectetur elit sed do</a></li>
+                            <li class="story"><a href="#">Lorem ipsum dolor sit amet consectetur elit sed do</a></li>
+                            <li class="story"><a href="#">Lorem ipsum dolor sit amet consectetur elit sed do</a></li>
+                            <li class="story"><a href="#">Lorem ipsum dolor sit amet consectetur elit sed do</a></li>
                         </ul>
                     </div>
                 </section><!-- /b-block -->
@@ -136,77 +138,73 @@
                 <hr>
 
                 <!-- C-BLOCK: sports, opinion -->
-                <section id="C-block" class="clearfix">
-                    <div id="sports" class="col-5 rail">
-                        <h4 class="list-label"><a href="#">Sports &raquo;</a></h4>
-                        <div class="story">
-                            <img src="http://placehold.it/160x120" width="160px">
+                <section class="clearfix">
+                    <div class="col-5 module list sports">
+                        <h4 class="label"><a href="#">Sports &raquo;</a></h4>
+                        <div class="story clearfix">
+                            <a href="#"><img src="http://placehold.it/160x120" width="160px"></a>
                             <h3><a href="#">Lorem ipsum dolor sit amet lorem ipsum dolor sit</a></h3>
                             <p class="tease">Lorem ipsum dolor sit amet consectetur elit sed do. Lorem ipsum dolor sit amet dolor elit.</p>
                         </div>
-                        <div class="story">
-                            <img src="http://placehold.it/160x120" width="160px">
+                        <div class="story clearfix">
+                            <a href="#"><img src="http://placehold.it/160x120" width="160px"></a>
                             <h3><a href="#">Lorem ipsum dolor sit amet lorem ipsum dolor sit</a></h3>
                             <p class="tease">Lorem ipsum dolor sit amet consectetur elit sed do. Lorem ipsum dolor sit amet dolor.</p>
                         </div>
-                        <div class="story">
-                            <img src="http://placehold.it/160x120" width="160px">
+                        <div class="story clearfix">
+                            <a href="#"><img src="http://placehold.it/160x120" width="160px"></a>
                             <h3><a href="#">Lorem ipsum dolor sit amet lorem ipsum dolor sit</a></h3>
                             <p class="tease">Lorem ipsum dolor sit amet consectetur elit sed do. Lorem ipsum dolor sit amet dolor.</p>
                         </div>
-                        
-
                     </div>
-                    <div id="opinion" class="col-3 rail">
-                        <h4 class="list-label"><a href="#">Opinion &raquo;</a></h4>
-
+                    <div class="col-3 module list opinion">
+                        <h4 class="label"><a href="#">Opinion &raquo;</a></h4>
                         <div class="story">
-                            <p class="overline">Editorial</p>
+                            <p class="kicker">Editorial</p>
                             <h4><a href="#">Lorem ipsum dolor sit amet consectetur elit sed do</a></h4>
                         </div>
                         <div class="story">
-                            <p class="overline">Conor Friedersdorf</p>
+                            <p class="kicker">Editorial</p>
                             <h4><a href="#">Lorem ipsum dolor sit amet consectetur elit sed do</a></h4>
                         </div>
                         <div class="story">
-                            <p class="overline">Mark Landsbaum</p>
+                            <p class="kicker">Editorial</p>
                             <h4><a href="#">Lorem ipsum dolor sit amet consectetur elit sed do</a></h4>
                         </div>
                         <div class="story">
-                            <p class="overline">Letters</p>
+                            <p class="kicker">Editorial</p>
                             <h4><a href="#">Lorem ipsum dolor sit amet consectetur elit sed do</a></h4>
                         </div>
                         <div class="story">
-                            <p class="overline">John Phillips</p>
+                            <p class="kicker">Editorial</p>
                             <h4><a href="#">Lorem ipsum dolor sit amet consectetur elit sed do</a></h4>
                         </div>
                         <div class="story">
-                            <p class="overline">Troy Senik</p>
+                            <p class="kicker">Editorial</p>
                             <h4><a href="#">Lorem ipsum dolor sit amet consectetur elit sed do</a></h4>
                         </div>
                         <div class="story">
-                            <p class="overline">Editorial</p>
+                            <p class="kicker">Editorial</p>
                             <h4><a href="#">Lorem ipsum dolor sit amet consectetur elit sed do</a></h4>
                         </div>
-
                     </div>
                     <div class="col-4">
-                        <div class="ad default"><img src="http://placehold.it/300x250&text=Expandable+Rectangle"></div>
-                        <div class="ad default"><img src="http://placehold.it/300x250&text=Expandable+Rectangle"></div>
+                        <div class="ad rectangle"><img src="http://placehold.it/300x250&text=Expandable+Rectangle"></div>
+                        <div class="ad rectangle"><img src="http://placehold.it/300x250&text=Expandable+Rectangle"></div>
                     </div>
                 </section><!-- /c-block -->
 
                 <hr>
 
                 <!-- D-BLOCK: multimedia -->
-                <section id="D-block" class="clearfix">
+                <section class="clearfix">
                     <!-- @import "_kits/featured-multimedia.html" -->
                 </section><!-- /d-block -->
 
                 <hr>
 
                 <!-- E-BLOCK: marketing, events, classifieds -->
-                <section id="E-block" class="clearfix">
+                <section class="clearfix">
                     <div class="col-4">
                         <!-- @import "_kits/register-connect.html" -->
                     </div>
@@ -214,7 +212,7 @@
                         <!-- @import "_kits/events.html" -->
                     </div>
                     <div class="col-4">
-                        <div class="ad default"><img src="http://placehold.it/300x250&text=Google+Rectangle"></div>
+                        <div class="ad rectangle"><img src="http://placehold.it/300x250&text=Google+Rectangle"></div>
 
                         <!-- @import "_kits/classifieds.html" -->
                     </div>
@@ -223,7 +221,7 @@
                 <hr>
 
                 <!-- F-BLOCK: buckets -->
-                <section id="F-block" class="section-grid">
+                <section class="brief-grid">
                     <!-- row one -->
                     <!-- $title = Government -->
                     <!-- @import _kits/brief.kit -->
@@ -253,12 +251,12 @@
 
                 <hr>
 
-                <div class="ad strip"><img src="http://placehold.it/940x90&text=Super+Leaderboard+Mid"></div>
+                <div class="ad leaderboard"><img src="http://placehold.it/940x90&text=Super+Leaderboard+Mid"></div>
 
                 <hr>
 
                 <!-- G-BLOCK: buckets -->
-                <section id="G-block" class="section-grid">
+                <section class="brief-grid">
                     <!-- row three -->
                     <!-- $title = Pets -->
                     <!-- @import _kits/brief.kit -->
@@ -284,7 +282,7 @@
 
                     <!-- $title = Celebrities -->
                     <!-- @import _kits/brief.kit -->
-                </section><!-- /.section-grid -->
+                </section><!-- /.brief-grid -->
             </section><!-- /#content-wrapper -->
             <!-- @import "_kits/footer.html" -->
         </div>

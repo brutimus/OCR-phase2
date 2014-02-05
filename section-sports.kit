@@ -17,7 +17,7 @@
         <!-- @import "_kits/side-panel.html" -->
 
         <div id="page-wrapper">
-            <header class="section">
+            <header>
                 <!-- @import _kits/toolbar.html -->
                 <div id="nameplate" class="clearfix">
                     <div id="flag">
@@ -26,8 +26,8 @@
                         </a>
                         <h1>Sports</h1>
                     </div>
-                    <div class="ad top-left"><img src="http://placehold.it/184x90&text=Bookend+Left"></div>
-                    <div class="ad top-right"><img src="http://placehold.it/184x90&text=Bookend+Right"></div>
+                    <div class="ad bookend-left"><img src="http://placehold.it/184x90&text=Bookend+Left"></div>
+                    <div class="ad bookend-right"><img src="http://placehold.it/184x90&text=Bookend+Right"></div>
                 </div>
                 <div id="nav-anchor"></div>
                 <div id="nav-container">
@@ -52,20 +52,48 @@
                 </div>
             </header>
             
-            <div class="ad featured"><img src="http://placehold.it/940x90&text=Super+Leaderboard"></div>
+            <div class="ad super-leaderboard"><img src="http://placehold.it/940x90&text=Super+Leaderboard"></div>
 
             <section id="content-wrapper">
 
                 <!-- A-BLOCK -->
-                <section id="A-block-section" class="clearfix">
-                    <!-- $title = Local Sports -->
-                    <!-- @import _kits/bold-rail.kit -->
-
-                    <div class="right col-9">
-                        <div class="featured clearfix">
+                <section class="clearfix">
+                    <div class="col-3 module list pull-left">
+                        <h4 class="label"><a href="#">Local sports &raquo;</a></h4>
+                        <div class="story">
+                            <h2><a href="#">Lorem ipsum dolor sit consectet elit sed doamet</a></h2>
+                            <p class="timestamp">Posted xx minutes ago</p>
+                        </div>
+                        <div class="story">
+                            <h3><a href="#">Lorem ipsum dolor sit consectet elit sed doamet</a></h3>
+                            <p class="timestamp">Posted xx minutes ago</p>
+                        </div>
+                        <div class="story">
+                            <h3><a href="#">Lorem ipsum dolor sit consectet elit sed doamet</a></h3>
+                            <p class="timestamp">Posted xx minutes ago</p>
+                        </div>
+                        <div class="story">
+                            <h3><a href="#">Lorem ipsum dolor sit consectet elit sed doamet</a></h3>
+                            <p class="timestamp">Posted xx minutes ago</p>
+                        </div>
+                        <div class="story">
+                            <h3><a href="#">Lorem ipsum dolor sit consectet elit sed doamet</a></h3>
+                            <p class="timestamp">Posted xx minutes ago</p>
+                        </div>
+                        <div class="story">
+                            <h3><a href="#">Lorem ipsum dolor sit consectet elit sed doamet</a></h3>
+                            <p class="timestamp">Posted xx minutes ago</p>
+                        </div>
+                        <div class="story">
+                            <h3><a href="#">Lorem ipsum dolor sit consectet elit sed doamet</a></h3>
+                            <p class="timestamp">Posted xx minutes ago</p>
+                        </div>
+                    </div>
+                    <div class="clearfix">
+                        <div class="col-9 module lead">
                             <img src="http://placehold.it/400x300">
                             <div class="story">
-                                <h5 class="overline"><a href="#">Clippers</a></h5>
+                                <p class="kicker"><a href="#">Clippers</a></p>
                                 <h1><a href="./article.html">Lorem ipsum dolor sit amet consectet elit sed do</a></h1>
                                 <p class="timestamp">Posted 32 minutes ago</p>
                                 <p class="tease">Lorem ipsum dolor sit amet consectetur elit sed do. Lorem ipsum dolor sit amet consectetur elit sed do. Lorem ipsum dolor sit amet consectetur elit sed do.</p>
@@ -78,66 +106,62 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="flex-content col-5">
-                            <div class="box">
-                                <div class="label">
-                                    <h6><i class="icon-write"></i>Sports columnists</h6>
-                                    <div class="box-menu tooltip-menu">
-                                        <span>More</span>
-                                        <i class="fa fa-toggle-down"></i>
-                                        <div class="menu">
-                                            <ul>
-                                                <li><a href="#">Jeff Miller</a></li>
-                                                <li><a href="#">Marcia C. Smith</a></li>
-                                                <li><a href="#">Mark Whicker</a></li>
-                                                <li><a href="#">Michael Lev</a></li>
-                                                <li><a href="#">Steve Fryer</a></li>
-                                                <li><a href="#">T.J. Simers</a></li><li><a href="#">Jeff Miller</a></li>
-                                                <li><a href="#">Marcia C. Smith</a></li>
-                                                <li><a href="#">Mark Whicker</a></li>
-                                                <li><a href="#">Michael Lev</a></li>
-                                                <li><a href="#">Steve Fryer</a></li>
-                                                <li><a href="#">T.J. Simers</a></li>
-                                            </ul>
-                                        </div>
+                        <div class="col-5 module box">
+                            <h4 class="label"><i class="icon-write"></i>Sports columnists</h4>
+                                <!-- <div class="box-menu tooltip-menu">
+                                    <span>More</span>
+                                    <i class="fa fa-toggle-down"></i>
+                                    <div class="menu">
+                                        <ul>
+                                            <li><a href="#">Jeff Miller</a></li>
+                                            <li><a href="#">Marcia C. Smith</a></li>
+                                            <li><a href="#">Mark Whicker</a></li>
+                                            <li><a href="#">Michael Lev</a></li>
+                                            <li><a href="#">Steve Fryer</a></li>
+                                            <li><a href="#">T.J. Simers</a></li><li><a href="#">Jeff Miller</a></li>
+                                            <li><a href="#">Marcia C. Smith</a></li>
+                                            <li><a href="#">Mark Whicker</a></li>
+                                            <li><a href="#">Michael Lev</a></li>
+                                            <li><a href="#">Steve Fryer</a></li>
+                                            <li><a href="#">T.J. Simers</a></li>
+                                        </ul>
                                     </div>
-                                </div>
-                                <ul class="columnists">
-                                    <li class="clearfix">
-                                        <img src="http://placehold.it/56x56">
-                                        <div class="story">
-                                            <h6><a href="#">Steve Fryer</a></h6>
-                                            <h4><a href="#">Time has come for NFL to kick PAT to the curb</a></h4>
-                                        </div>
-                                    </li>
-                                    <li class="clearfix">
-                                        <img src="http://placehold.it/56x56">
-                                        <div class="story">
-                                            <h6><a href="#">T.J. Simers</a></h6>
-                                            <h4><a href="#">These Angels are winners</a></h4>
-                                        </div>
-                                    </li>
-                                    <li class="clearfix">
-                                        <img src="http://placehold.it/56x56">
-                                        <div class="story">
-                                            <h6><a href="#">Michael Lev</a></h6>
-                                            <h4><a href="#">Ducks deserve more national-TV exposure</a></h4>
-                                        </div>
-                                    </li>
-                                </ul>
-                            </div>
+                                </div> -->
+                            <ul class="columnists">
+                                <li class="clearfix">
+                                    <img src="http://placehold.it/56x56">
+                                    <div class="story">
+                                        <h6><a href="#">Steve Fryer</a></h6>
+                                        <h4><a href="#">Time has come for NFL to kick PAT to the curb</a></h4>
+                                    </div>
+                                </li>
+                                <li class="clearfix">
+                                    <img src="http://placehold.it/56x56">
+                                    <div class="story">
+                                        <h6><a href="#">T.J. Simers</a></h6>
+                                        <h4><a href="#">These Angels are winners</a></h4>
+                                    </div>
+                                </li>
+                                <li class="clearfix">
+                                    <img src="http://placehold.it/56x56">
+                                    <div class="story">
+                                        <h6><a href="#">Michael Lev</a></h6>
+                                        <h4><a href="#">Ducks deserve more national-TV exposure</a></h4>
+                                    </div>
+                                </li>
+                            </ul>
                         </div>
-                        <div class="ad default"><img src="http://placehold.it/300x250&text=ABox+Position+One"></div>
+                        <div class="col-4 ad default"><img src="http://placehold.it/300x250&text=ABox+Position+One"></div>
                     </div>
                 </section><!-- /a-block -->
 
                 <hr>
 
-                <div class="ad strip"><img src="http://placehold.it/940x90&text=Super+Leaderboard+Mid"></div>
+                <div class="ad leaderboard"><img src="http://placehold.it/940x90&text=Super+Leaderboard+Mid"></div>
 
                 <hr>
 
-                <section class="section-grid">
+                <section class="brief-grid">
                     <!-- row one -->
                     <!-- $title = Section -->
                     <!-- @import _kits/brief.kit -->
@@ -157,7 +181,7 @@
                     <!-- @import _kits/brief.kit -->
                     <!-- $title = Section -->
                     <!-- @import _kits/brief.kit -->
-                </section><!-- /.section-grid -->
+                </section><!-- /.brief-grid -->
 
                 <hr>
 
@@ -172,8 +196,8 @@
                         </div>
                     </div>
                     <div class="col-4">
-                        <div class="ad default"><img src="http://placehold.it/300x250&text=Expandable+Rectangle"></div>
-                        <div class="ad default"><img src="http://placehold.it/300x250&text=Expandable+Rectangle"></div>
+                        <div class="ad rectangle"><img src="http://placehold.it/300x250&text=Expandable+Rectangle"></div>
+                        <div class="ad rectangle"><img src="http://placehold.it/300x250&text=Expandable+Rectangle"></div>
                         <!-- @import "_kits/classifieds.html" -->
                         <!-- @import "_kits/most-popular.html" -->
                     </div>
