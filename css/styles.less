@@ -114,94 +114,91 @@ i {
     line-height: 1;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    &.icon-write:before {
+        content: "\f001";
+    }
+    &.icon-video:before {
+        content: "\f002";
+    }
+    &.icon-twitter:before {
+        content: "\f003";
+    }
+    &.icon-star:before {
+        content: "\f004";
+    }
+    &.icon-slideshow:before {
+        content: "\f005";
+    }
+    &.icon-search:before {
+        content: "\f006";
+    }
+    &.icon-reg-connect:before {
+        content: "\f007";
+    }
+    &.icon-print:before {
+        content: "\f008";
+    }
+    &.icon-newspaper:before {
+        content: "\f009";
+    }
+    &.icon-more:before {
+        content: "\f00a";
+    }
+    &.icon-menu:before {
+        content: "\f00b";
+    }
+    &.icon-mail:before {
+        content: "\f00c";
+    }
+    &.icon-linked:before {
+        content: "\f00d";
+    }
+    &.icon-jobs:before {
+        content: "\f00e";
+    }
+    &.icon-info:before {
+        content: "\f00f";
+    }
+    &.icon-home:before {
+        content: "\f010";
+    }
+    &.icon-gear:before {
+        content: "\f011";
+    }
+    &.icon-flag:before {
+        content: "\f012";
+    }
+    &.icon-facebook:before {
+        content: "\f013";
+    }
+    &.icon-enlarge:before {
+        content: "\f014";
+    }
+    &.icon-dropdown:before {
+        content: "\f015";
+    }
+    &.icon-deals:before {
+        content: "\f016";
+    }
+    &.icon-comment:before {
+        content: "\f017";
+    }
+    &.icon-close:before {
+        content: "\f018";
+    }
+    &.icon-chevron-right:before {
+        content: "\f019";
+    }
+    &.icon-chevron-left:before {
+        content: "\f01a";
+    }
+    &.icon-cars:before {
+        content: "\f01b";
+    }
+    &.icon-calendar:before {
+        content: "\f01c";
+    }
 }
-
-.icon-write:before {
-    content: "\f001";
-}
-.icon-video:before {
-    content: "\f002";
-}
-.icon-twitter:before {
-    content: "\f003";
-}
-.icon-star:before {
-    content: "\f004";
-}
-.icon-slideshow:before {
-    content: "\f005";
-}
-.icon-search:before {
-    content: "\f006";
-}
-.icon-reg-connect:before {
-    content: "\f007";
-}
-.icon-print:before {
-    content: "\f008";
-}
-.icon-newspaper:before {
-    content: "\f009";
-}
-.icon-more:before {
-    content: "\f00a";
-}
-.icon-menu:before {
-    content: "\f00b";
-}
-.icon-mail:before {
-    content: "\f00c";
-}
-.icon-linked:before {
-    content: "\f00d";
-}
-.icon-jobs:before {
-    content: "\f00e";
-}
-.icon-info:before {
-    content: "\f00f";
-}
-.icon-home:before {
-    content: "\f010";
-}
-.icon-gear:before {
-    content: "\f011";
-}
-.icon-flag:before {
-    content: "\f012";
-}
-.icon-facebook:before {
-    content: "\f013";
-}
-.icon-enlarge:before {
-    content: "\f014";
-}
-.icon-dropdown:before {
-    content: "\f015";
-}
-.icon-deals:before {
-    content: "\f016";
-}
-.icon-comment:before {
-    content: "\f017";
-}
-.icon-close:before {
-    content: "\f018";
-}
-.icon-chevron-right:before {
-    content: "\f019";
-}
-.icon-chevron-left:before {
-    content: "\f01a";
-}
-.icon-cars:before {
-    content: "\f01b";
-}
-.icon-calendar:before {
-    content: "\f01c";
-}
-
-
 
 
 // GLOBAL STYLES --------------
@@ -212,13 +209,13 @@ i {
     font-family: 'Source Sans Pro',sans-serif;
     letter-spacing: 0.05px;
     color: @black;
-    box-sizing: border-box;
     -moz-box-sizing: border-box;
+    box-sizing: border-box;
 }
 a {
     text-decoration: none;
     color: @black;
-    &:hover {color: @accent;}
+    &:hover {color:@accent;}
     &.white {color:@white;}
 }
 h1,h2,h3,h4,h5,h6 {
@@ -284,9 +281,9 @@ p {
     line-height: 17px;
 }
 
+
 // COMPONENTS -----------------
 // ----------------------------
-
 .tooltip-menu {
     position: relative;
     .button {}
@@ -304,7 +301,6 @@ p {
             content: "";
             position: absolute;
             top: -6px;
-            right: 40px;
             width: 0;
             height: 0;
             border-left: 6px solid transparent;
@@ -315,7 +311,6 @@ p {
             content: "";
             position: absolute;
             top: -5px;
-            right: 40px;
             width: 0;
             height: 0;
             border-left: 6px solid transparent;
@@ -511,14 +506,6 @@ p {
         display: block;
         padding: 5px 10px;
         cursor: default;
-        .icon {
-            display: inline-block;
-            margin: 0 2px 0 0;
-            font-size: 12px;
-            .fa {
-                color: @gray-darker;
-            }
-        }
         h6 {
             display: inline-block;
             font-size: 12px;
@@ -528,6 +515,11 @@ p {
             font-smoothing: antialiased;
             -webkit-font-smoothing: antialiased;
             -moz-osx-font-smoothing: grayscale;
+            i {
+                margin: 0 4px 0 0;
+                font-size: 12px;
+                color: @gray-darker;
+            }
             a {
                 color: @gray-darker;
                 &:hover {color: @accent;}

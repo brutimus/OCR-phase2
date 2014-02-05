@@ -35,7 +35,9 @@
 	z-index: 8030;
 }
 
-.fancybox-opened .fancybox-skin {}
+.fancybox-opened .fancybox-skin {
+
+}
 
 .fancybox-outer, .fancybox-inner {
 	position: relative;
