@@ -269,37 +269,15 @@ p {
     font-size:16px;
     line-height:20px;
 }
-.timestamp {
-    margin: 2px 0 0 0;
-    font-size: 11px;
-    line-height: 20px;
-    color: @gray-dark;
-    cursor: default;
-}
-.tease {
-    margin: 2px 0 0 0;
-    font-size: 13px;
-    line-height: 17px;
-}
-.label {
-    cursor: default;
-    position: relative;
+.dropdown {
+    font-size: 12px;
+    font-weight: 300;
     text-transform: uppercase;
+    span {color: @gray-dark;}
     i {
         color: @gray-dark;
-        font-size: 12px;
-        line-height: 14px;
-        margin: 0 4px 0 0;
-    }
-}
-.kicker {
-    margin: 0 0 6px 0;
-    font-size: 12px;
-    line-height: 14px;
-    font-weight: 700;
-    text-transform: uppercase;
-    a {
-        color: @accent;
+        font-size: 10px;
+        margin: 0 0 0 2px;
     }
 }
 .info {
@@ -317,6 +295,39 @@ p {
     &.ttm-active {
         display: block;
     }
+}
+.kicker {
+    margin: 0 0 6px 0;
+    font-size: 12px;
+    line-height: 14px;
+    font-weight: 700;
+    text-transform: uppercase;
+    a {
+        color: @accent;
+    }
+}
+.label {
+    cursor: default;
+    position: relative;
+    text-transform: uppercase;
+    i {
+        color: @gray-dark;
+        font-size: 12px;
+        line-height: 14px;
+        margin: 0 4px 0 0;
+    }
+}
+.tease {
+    margin: 2px 0 0 0;
+    font-size: 13px;
+    line-height: 17px;
+}
+.timestamp {
+    margin: 2px 0 0 0;
+    font-size: 11px;
+    line-height: 20px;
+    color: @gray-dark;
+    cursor: default;
 }
 
 // MODIFIES ----------------------
@@ -457,6 +468,11 @@ p {
                 color: @gray-darker;
                 &:hover {color: @accent;}
             }
+        }
+        .tooltip-menu {
+            position: absolute;
+            top: 5px;
+            right: 10px;
         }
         ul {
             li {
@@ -1165,8 +1181,6 @@ footer {
     }
 }
 
-
-
 // PAGE-SPECIFIC STRUCTURES ---
 // ----------------------------
 .article {
@@ -1754,7 +1768,6 @@ footer {
     }
 }
 
-
 // SECTION PAGE STRUCTURES ----
 // ----------------------------
 #C-block-section {
@@ -1791,7 +1804,6 @@ footer {
 
 // ARCHIVE PAGE ---------------
 // ----------------------------
-
 #archive {
     margin-bottom: 20px;
     .archive-header {

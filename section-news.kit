@@ -13,43 +13,11 @@
     <![endif]-->
 
         <a name="top"></a>
-
         <!-- @import "_kits/side-panel.html" -->
 
         <div id="page-wrapper">
-            <header>
-                <!-- @import _kits/toolbar.html -->
-                <div id="nameplate" class="clearfix">
-                    <div id="flag">
-                        <a href="./index.html">
-                            <img width="325" height="" alt="Orange County Register" src="assets/ocr-flag.svg">
-                        </a>
-                        <h1>News</h1>
-                    </div>
-                    <div class="ad bookend-left"><img src="http://placehold.it/184x90&text=Bookend+Left"></div>
-                    <div class="ad bookend-right"><img src="http://placehold.it/184x90&text=Bookend+Right"></div>
-                </div>
-                <div id="nav-anchor"></div>
-                <div id="nav-container">
-                    <nav id="nav-sticky" role="navigation">
-                        <ul>
-                            <li class="icon home"><a href="./index.html"><i class="icon-home"></i></a></li>
-                            <li class="icon menu"><a id="toggle-side-panel"><i class="icon-menu"></i></a></li>
-                            <li><a href="#">Cities</a></li>
-                            <li><a href="#">Crime</a></li>
-                            <li><a href="#">Traffic</a></li>
-                            <li><a href="#">Education</a></li>
-                            <li><a href="#">Watchdog</a></li>
-                            <li><a href="#">Science</a></li>
-                            <li><a href="#">Government</a></li>
-                            <li><a href="#">California</a></li>
-                            <li><a href="#">Military</a></li>
-                            <li><a href="#">Nation</a></li>
-                            <!-- @import "_kits/nav-tools-right.html" -->
-                        </ul>
-                    </nav>
-                </div>
-            </header>
+            <!-- $title = News -->
+            <!-- @import "_kits/site-header.kit" -->
             
             <div class="ad super-leaderboard"><img src="http://placehold.it/940x90&text=Super+Leaderboard"></div>
 
@@ -107,9 +75,11 @@
                         </div>
                         <div class="col-5 module box">
                             <h4 class="label"><i class="icon-star"></i>City news</h4>
-                            <!-- <div class="box-menu tooltip-menu">
-                                <span>Select city</span>
-                                <i class="icon-dropdown"></i>
+                            <div class="tooltip-menu">
+                                <a href="#" class="dropdown">
+                                    <span>Select city</span>
+                                    <i class="icon-dropdown"></i>
+                                </a>
                                 <div class="menu">
                                     <ul>
                                         <li><a href="#">Aliso Viejo</a></li>
@@ -158,7 +128,7 @@
                                         <li><a href="#">Yorba Linda</a></li>
                                     </ul>
                                 </div>
-                            </div> -->
+                            </div>
                             <ul>
                                 <li><a href="#">Small crowd hears Anaheim's pitch for Angels' deal</a></li>
                                 <li><a href="#">Anaheim's chief administrator poised to head L.A.'s utilities</a></li>

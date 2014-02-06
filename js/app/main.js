@@ -3,7 +3,7 @@ define([
     'jquery'
 ], function(tooltip) {
 	// Menu for navbar tool button
-    tooltip('nav .tools.tooltip-menu .button', 'nav .tools.tooltip-menu .menu');
+    tooltip('.tooltip-menu .button', '.tooltip-menu .menu');
 
     // Menu for the navbar search button
 	tooltip('nav .search.tooltip-menu .button', 'nav .search.tooltip-menu .menu');
