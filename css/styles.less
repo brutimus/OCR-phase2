@@ -348,7 +348,7 @@ p {
     position: relative;
     .button {}
     .menu {
-        display: none;
+        //display: none;
         position: absolute;
         top: 25px;
         padding: 5px;
@@ -470,10 +470,12 @@ p {
                 &:hover {color: @accent;}
             }
         }
-        .tooltip-menu {
-            position: absolute;
-            top: 5px;
-            right: 10px;
+        .info {
+            .info-button {
+                position: absolute;
+                top: 5px;
+                right: 10px;
+            }
         }
         ul {
             li {
@@ -1007,7 +1009,6 @@ p {
     #content-wrapper {
         margin: 0 -10px;
         .brief-grid {
-            overflow: auto;
             margin: 40px 0 -10px 0;
         }
     }
