@@ -1,6 +1,6 @@
 define([
-	'app/tooltip-menu',
+	'app/tooltip',
     'jquery'
 ], function(tooltip) {
-    tooltip('.tooltip-menu');
+    tooltip('.tooltip');
 });

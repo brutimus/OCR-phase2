@@ -1,8 +1,8 @@
 define(['jquery', 'domReady!'], function(){
     return function(selector){
         $(selector).each(function(index, el) {
-            var button  = $(el).find('.button'),
-                menu    = $(el).find('.menu'),
+            var button  = $(el).find('.tooltip-button'),
+                menu    = $(el).find('.tooltip-menu'),
                 body    = $('body'),
                 cls     = 'ttm-active',
                 mWidth  = null,
