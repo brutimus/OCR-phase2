@@ -344,19 +344,44 @@ p {
 
 // COMPONENTS -----------------
 // ----------------------------
-.tooltip-menu {
+.tooltip {
     position: relative;
-    .button {}
-    .menu {
+    .tooltip-button {}
+    .tooltip-menu {
         display: none;
         position: absolute;
         top: 25px;
-        padding: 5px;
+        padding: 10px;
         background-color: @white;
         border: 1px solid @gray-light;
         .BoxShadow(0 0 10px -1px @gray);
         z-index: 9999;
         &.ttm-active {display: inline;}
+        ul.tooltip-list {
+            height: 154px;
+            overflow: scroll;
+            min-width: 120px;
+            max-width: 200px;
+            li {
+                margin:0;
+                padding: 0;
+                border: 0;
+                text-align: left;
+                a {
+                    display: block;
+                    font-size: 12px;
+                    line-height: 14px;
+                    font-weight: 400;
+                    padding: 4px 6px;
+                    margin: 0 1px;
+                    &:hover {
+                        color: @black;
+                        background-color: @accent-hover-light;
+                        .RoundedBorders(4px);
+                    }
+                }
+            }
+        }
         &:before {
             content: "";
             position: absolute;
@@ -470,7 +495,7 @@ p {
                 &:hover {color: @accent;}
             }
         }
-        .tooltip-menu {
+        .tooltip {
             position: absolute;
             top: 5px;
             right: 10px;
@@ -527,6 +552,14 @@ p {
                 font-weight: 600;
                 cursor: default;
             }
+        }
+        &.reg-connect {
+            max-height: 166px;
+            overflow: hidden;
+        }
+        &.promotions {
+            max-height: 221px;
+            overflow: hidden;
         }
     }
     &.lead {
@@ -863,6 +896,12 @@ p {
         }
     }
 }
+#reg-connect {
+    max-height: 166px;
+}
+#promotions {
+    max-height: 221px;
+}
 
 // GLOBAL STRUCTURES ----------
 // ----------------------------
@@ -1067,11 +1106,11 @@ header {
             padding: 4px 0;
             border: 1px solid @gray-light;
             &:before { .TopBlueBorder(); }
-            ul {
+            & > ul {
                 text-align: center;
-                li {
+                & > li {
                     display: inline-block;
-                    a {
+                    & > a {
                         display: block;
                         font-size: 14px;
                         line-height: 14px;
@@ -1085,7 +1124,7 @@ header {
                         }
                     }
                     &.icon {
-                        a {
+                        & > a {
                             font-size: 16px;
                             line-height: 16px;
                             cursor: pointer;
@@ -1102,28 +1141,16 @@ header {
                         }
                         &.tools {
                             float: right;
-                            .menu {
+                            .tooltip-menu {
                                 width: inherit;
-                            }
-                            ul {
-                                li {
-                                    display: block;
-                                    text-align: left;
-                                    a {
-                                        display: block;
-                                        margin: 2px;
-                                        padding: 4px 9px 5px 9px;
-                                        font-size: 12px;
-                                        line-height: 14px;
-                                        font-weight: 400;
-                                        white-space: nowrap;
-                                    }
+                                ul.tooltip-list {
+                                    height: auto;
                                 }
                             }
                         }
                         &.search {
                             float: right;
-                            .menu {
+                            .tooltip-menu {
                                 width: 300px;
                             }
                         }
