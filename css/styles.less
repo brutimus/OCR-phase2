@@ -103,7 +103,6 @@
     font-weight: normal;
     font-style: normal;
 }
-
 i {
     font-family: 'ocr-icons';
     speak: none;
@@ -200,7 +199,6 @@ i {
     }
 }
 
-
 // GLOBAL STYLES --------------
 // ----------------------------
 * {
@@ -281,19 +279,22 @@ p {
     }
 }
 .info {
-    right: -40px;
-    width: 200px;
-    padding: 15px;
-    font-size: 11px;
-    line-height: 13px;
-    text-transform: none;
-    color: @gray-darkest;
-    background-color: @gray-lightest;
-    border: 1px solid @gray-light;
-    .RoundedBorders(5px);
-    .BoxShadow(0 0 6px -1px @gray);
-    &.ttm-active {
-        display: block;
+    .info-button {}
+    .info-menu {
+        background-color: @gray-lightest;
+        border: 1px solid @gray-light;
+        color: @gray-darkest;
+        font-size: 11px;
+        line-height: 13px;
+        padding: 15px;
+        right: -40px;
+        text-transform: none;
+        width: 200px;
+        .RoundedBorders(5px);
+        .BoxShadow(0 0 6px -1px @gray);
+        &.ttm-active {
+            display: block;
+        }
     }
 }
 .kicker {
@@ -565,6 +566,21 @@ p {
         &.brief {
             margin-bottom: 40px;
             padding: 0 10px;
+            .label {
+                &.info {
+                    .info-button {
+                        position: absolute;
+                        top: 4px;
+                        right: 0;
+                        margin: 0;
+                        color: @gray;
+                        &:hover {
+                            color: @gray-dark;
+                            cursor: pointer;
+                        }
+                    }
+                }
+            }
             ul {
                 li {
                     font-size: 13px;
