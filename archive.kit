@@ -17,35 +17,8 @@
         <!-- @import "_kits/side-panel.html" -->
 
         <div id="page-wrapper">
-            <header>
-                <!-- @import _kits/toolbar.html -->
-                <div id="nameplate" class="clearfix">
-                    <div id="flag">
-                        <img width="325" height="" alt="Orange County Register" src="assets/ocr-flag.svg">
-                    </div>
-                    <div class="ad bookend-left"><img src="http://placehold.it/184x90&text=Bookend+Left"></div>
-                    <div class="ad bookend-right"><img src="http://placehold.it/184x90&text=Bookend+Right"></div>
-                </div>
-                <div id="nav-anchor"></div>
-                <div id="nav-container">
-                    <nav id="nav-sticky" role="navigation">
-                        <ul>
-                            <li class="icon home"><a href="./index.html"><i class="icon-home"></i></a></li>
-                            <li class="icon menu"><a id="toggle-side-panel"><i class="icon-menu"></i></a></li>
-                            <li><a href="./section.html">News</a></li>
-                            <li><a href="#">Sports</a></li>
-                            <li><a href="#">Business</a></li>
-                            <li><a href="#">Entertainment</a></li>
-                            <li><a href="#">Life</a></li>
-                            <li><a href="#">Opinion</a></li>
-                            <li><a href="#">Obits</a></li>
-                            <li><a href="#">Today's Paper</a></li>
-                            <li><a href="#">Knowledge Cafe</a></li>
-                            <!-- @import "_kits/nav-tools-right.html" -->
-                        </ul>
-                    </nav>
-                </div>
-            </header>
+            <!-- $title = Archive -->
+            <!-- @import "_kits/site-header.kit" -->
             
             <div class="ad super-leaderboard"><img src="http://placehold.it/940x90&text=Super+Leaderboard"></div>
 
@@ -54,17 +27,20 @@
                 <section id="archive" class="col-8 clearfix">
                     <div class="archive-header">
                         <h1>Real Estate stories</h1>
-                        <div class="tooltip-menu">
-                            <span>Select category</span>
-                            <i class="fa fa-toggle-down"></i>
-                            <div class="menu">
-                                <ul>
+                        <div class="tooltip">
+                            <a href="#" class="dropdown tooltip-button">
+                                <span>Select category</span>
+                                <i class="icon-dropdown"></i>
+                            </a>
+                            <div class="tooltip-menu">
+                                <ul class="tooltip-list">
                                     <li><a href="#">News</a></li>
                                     <li><a href="#">Sports</a></li>
                                     <li><a href="#">Business</a></li>
                                     <li><a href="#">Entertainment</a></li>
                                     <li><a href="#">Life</a></li>
                                     <li><a href="#">Opinion</a></li>
+                                    <li><a href="#">More</a></li>
                                 </ul>
                             </div>
                         </div>
@@ -77,55 +53,104 @@
  
                     <div class="story-list">
                         <article class="story">
-                        <p class="timestamp">Jan. 24, 2014</p>
-                            <h2><a href="#">Lorem ipsum dolor sit amet consectetur elit sed do dolor amet</a></h2>
-                            <p class="tease">Lorem ipsum dolor sit amet consectetur elit sed. Elitsed do dolor amer lorem ipsum.</p>
+                            <p class="timestamp">Feb. 3, 2014</p>
+                            <div class="wrapper">
+                                <h2><a href="#">Lorem ipsum dolor sit amet consectetur elit sed do dolor amet</a></h2>
+                                <p class="tease">Lorem ipsum dolor sit amet consectetur elit sed. Elitsed do dolor amer lorem ipsum.</p>
+                            </div>
                         </article>
                         <article class="story">
-                            <p class="timestamp">Jan. 22, 2014</p>
-                            <h2><a href="#">Lorem ipsum dolor sit amet consectetur elit sed do dolor amet</a></h2>
-                            <p class="tease">Lorem ipsum dolor sit amet consectetur elit sed. Elitsed do dolor amer lorem ipsum.</p>
+                            <p class="timestamp">Feb. 5, 2014</p>
+                            <div class="wrapper">
+                                <h2><a href="#">Lorem ipsum dolor sit amet consectetur elit sed do dolor amet</a></h2>
+                                <p class="tease">Lorem ipsum dolor sit amet consectetur elit sed. Elitsed do dolor amer lorem ipsum.</p>
+                            </div>
                         </article>
                         <article class="story">
-                            <p class="timestamp">Jan. 21, 2014</p>
-                            <h2><a href="#">Lorem ipsum dolor sit amet consectetur elit sed do dolor amet</a></h2>
-                            <p class="tease">Lorem ipsum dolor sit amet consectetur elit sed. Elitsed do dolor amer lorem ipsum.</p>
+                            <p class="timestamp">Feb. 6, 2014</p>
+                            <div class="wrapper">
+                                <h2><a href="#">Lorem ipsum dolor sit amet consectetur elit sed do dolor amet</a></h2>
+                                <p class="tease">Lorem ipsum dolor sit amet consectetur elit sed. Elitsed do dolor amer lorem ipsum.</p>
+                            </div>
                         </article>
                         <article class="story">
-                            <p class="timestamp">Jan. 16, 2014</p>
-                            <h2><a href="#">Lorem ipsum dolor sit amet consectetur elit sed do dolor amet</a></h2>
-                            <p class="tease">Lorem ipsum dolor sit amet consectetur elit sed. Elitsed do dolor amer lorem ipsum.</p>
+                            <p class="timestamp">Feb. 6, 2014</p>
+                            <div class="wrapper">
+                                <h2><a href="#">Lorem ipsum dolor sit amet consectetur elit sed do dolor amet</a></h2>
+                                <p class="tease">Lorem ipsum dolor sit amet consectetur elit sed. Elitsed do dolor amer lorem ipsum.</p>
+                            </div>
                         </article>
                         <article class="story">
-                        <p class="timestamp">Jan. 15, 2014</p>
-                            <h2><a href="#">Lorem ipsum dolor sit amet consectetur elit sed do dolor amet</a></h2>
-                            <p class="tease">Lorem ipsum dolor sit amet consectetur elit sed. Elitsed do dolor amer lorem ipsum.</p>
+                            <p class="timestamp">Feb. 8, 2014</p>
+                            <div class="wrapper">
+                                <h2><a href="#">Lorem ipsum dolor sit amet consectetur elit sed do dolor amet</a></h2>
+                                <p class="tease">Lorem ipsum dolor sit amet consectetur elit sed. Elitsed do dolor amer lorem ipsum.</p>
+                            </div>
                         </article>
                         <article class="story">
-                            <p class="timestamp">Jan. 11, 2014</p>
-                            <h2><a href="#">Lorem ipsum dolor sit amet consectetur elit sed do dolor amet</a></h2>
-                            <p class="tease">Lorem ipsum dolor sit amet consectetur elit sed. Elitsed do dolor amer lorem ipsum.</p>
+                            <p class="timestamp">Feb. 9, 2014</p>
+                            <div class="wrapper">
+                                <h2><a href="#">Lorem ipsum dolor sit amet consectetur elit sed do dolor amet</a></h2>
+                                <p class="tease">Lorem ipsum dolor sit amet consectetur elit sed. Elitsed do dolor amer lorem ipsum.</p>
+                            </div>
                         </article>
                         <article class="story">
-                            <p class="timestamp">Jan. 9, 2014</p>
-                            <h2><a href="#">Lorem ipsum dolor sit amet consectetur elit sed do dolor amet</a></h2>
-                            <p class="tease">Lorem ipsum dolor sit amet consectetur elit sed. Elitsed do dolor amer lorem ipsum.</p>
+                            <p class="timestamp">Feb. 11, 2014</p>
+                            <div class="wrapper">
+                                <h2><a href="#">Lorem ipsum dolor sit amet consectetur elit sed do dolor amet</a></h2>
+                                <p class="tease">Lorem ipsum dolor sit amet consectetur elit sed. Elitsed do dolor amer lorem ipsum.</p>
+                            </div>
                         </article>
                         <article class="story">
-                            <p class="timestamp">Jan. 8, 2014</p>
-                            <h2><a href="#">Lorem ipsum dolor sit amet consectetur elit sed do dolor amet</a></h2>
-                            <p class="tease">Lorem ipsum dolor sit amet consectetur elit sed. Elitsed do dolor amer lorem ipsum.</p>
+                            <p class="timestamp">Feb. 12, 2014</p>
+                            <div class="wrapper">
+                                <h2><a href="#">Lorem ipsum dolor sit amet consectetur elit sed do dolor amet</a></h2>
+                                <p class="tease">Lorem ipsum dolor sit amet consectetur elit sed. Elitsed do dolor amer lorem ipsum.</p>
+                            </div>
                         </article>
                         <article class="story">
-                            <p class="timestamp">Jan. 6, 2014</p>
-                            <h2><a href="#">Lorem ipsum dolor sit amet consectetur elit sed do dolor amet</a></h2>
-                            <p class="tease">Lorem ipsum dolor sit amet consectetur elit sed. Elitsed do dolor amer lorem ipsum.</p>
+                            <p class="timestamp">Feb. 12, 2014</p>
+                            <div class="wrapper">
+                                <h2><a href="#">Lorem ipsum dolor sit amet consectetur elit sed do dolor amet</a></h2>
+                                <p class="tease">Lorem ipsum dolor sit amet consectetur elit sed. Elitsed do dolor amer lorem ipsum.</p>
+                            </div>
                         </article>
                         <article class="story">
-                            <p class="timestamp">Jan. 3, 2014</p>
-                            <h2><a href="#">Lorem ipsum dolor sit amet consectetur elit sed do dolor amet</a></h2>
-                            <p class="tease">Lorem ipsum dolor sit amet consectetur elit sed. Elitsed do dolor amer lorem ipsum.</p>
+                            <p class="timestamp">Feb. 13, 2014</p>
+                            <div class="wrapper">
+                                <h2><a href="#">Lorem ipsum dolor sit amet consectetur elit sed do dolor amet</a></h2>
+                                <p class="tease">Lorem ipsum dolor sit amet consectetur elit sed. Elitsed do dolor amer lorem ipsum.</p>
+                            </div>
                         </article>
+                        <article class="story">
+                            <p class="timestamp">Feb. 14, 2014</p>
+                            <div class="wrapper">
+                                <h2><a href="#">Lorem ipsum dolor sit amet consectetur elit sed do dolor amet</a></h2>
+                                <p class="tease">Lorem ipsum dolor sit amet consectetur elit sed. Elitsed do dolor amer lorem ipsum.</p>
+                            </div>
+                        </article>
+                        <article class="story">
+                            <p class="timestamp">Feb. 15, 2014</p>
+                            <div class="wrapper">
+                                <h2><a href="#">Lorem ipsum dolor sit amet consectetur elit sed do dolor amet</a></h2>
+                                <p class="tease">Lorem ipsum dolor sit amet consectetur elit sed. Elitsed do dolor amer lorem ipsum.</p>
+                            </div>
+                        </article>
+                        <article class="story">
+                            <p class="timestamp">Feb. 16, 2014</p>
+                            <div class="wrapper">
+                                <h2><a href="#">Lorem ipsum dolor sit amet consectetur elit sed do dolor amet</a></h2>
+                                <p class="tease">Lorem ipsum dolor sit amet consectetur elit sed. Elitsed do dolor amer lorem ipsum.</p>
+                            </div>
+                        </article>
+                        <article class="story">
+                            <p class="timestamp">Feb. 16, 2014</p>
+                            <div class="wrapper">
+                                <h2><a href="#">Lorem ipsum dolor sit amet consectetur elit sed do dolor amet</a></h2>
+                                <p class="tease">Lorem ipsum dolor sit amet consectetur elit sed. Elitsed do dolor amer lorem ipsum.</p>
+                            </div>
+                        </article>
+
                     </div><!-- /story list -->
 
                     <div class="pagination">
