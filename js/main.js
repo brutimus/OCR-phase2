@@ -9,7 +9,8 @@ require.config({
         'jquery-ui': ['jquery'],
         'jquery.fancybox': ['jquery'],
         'jquery.slides': ['jquery'],
-        'jquery.sticky-kit': ['jquery']
+        'jquery.sticky-kit': ['jquery'],
+        'jquery-impromptu/dist/jquery-impromptu': ['jquery']
     }
 });
 
@@ -21,5 +22,6 @@ require([
     'app/article-inlines',
     'app/side-panel',
     'app/comments',
-    'app/section-slideshow'
+    'app/section-slideshow',
+    'app/tour'
 ]);
