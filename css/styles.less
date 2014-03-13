@@ -210,6 +210,9 @@ i {
     box-sizing: border-box;
         -moz-box-sizing: border-box;
 }
+body {
+    background: url("../assets/header-bg.jpg") no-repeat center top;
+}
 a {
     text-decoration: none;
     color: @black;
@@ -1042,7 +1045,9 @@ p {
 #page-wrapper {
     position: relative;
     margin: 0 auto;
-    width: @site-width;
+    width: @site-width + 40;
+    background-color: @white;
+    padding: 20px 20px 0 20px;
     #content-wrapper {
         margin: 0 -10px;
         .brief-grid {
@@ -1051,44 +1056,52 @@ p {
     }
 }
 header {
-    margin: 5px 0 20px 0;
+    margin-bottom: 10px;
     cursor: default;
     #tool-bar {
         margin-bottom: 3px;
         text-align: center;
-        ul {
-            li {
-                display: inline;
-                font-size: 11px;
-                line-height: 13px;
-                a {
-                    color: @gray-darker;
-                    &:hover {
-                        color: @accent;
+        height: 22px;
+        background-color: rgba(255, 255, 255, 0.5);
+        .tool-bar-inner {
+            width: @site-width;
+            margin: 0 auto;
+            ul {
+                li {
+                    display: inline;
+                    font-size: 11px;
+                    line-height: 13px;
+                    a {
+                        color: @black;
+                        font-weight: 600;
+                        &:hover {
+                            color: @accent;
+                        }
+                    }
+                }
+                li+li {
+                    &:before {
+                        content: "|";
+                        margin: 0 4px;
+                        color: @gray-light;
                     }
                 }
             }
-            li+li {
-                &:before {
-                    content: "|";
-                    margin: 0 4px;
-                    color: @gray-light;
-                }
-            }
+            .classifieds {float: left;}
+            .user-access {float: right;}
         }
-        .classifieds {float: left;}
-        .user-access {float: right;}
     }
     #nameplate {
         position: relative;
         height: 101px;
         text-align: center;
-        border-top: 1px solid @gray-light;
+        width: @site-width;
+        margin: 0 auto;
         #flag {
-            margin: 15px auto 6px auto;
+            margin: 5px auto 6px auto;
             img {
                 display:inline;
-                width: 325px;
+                width: 400px;
             }
             h1 {
                 display: none;
@@ -1100,83 +1113,84 @@ header {
             }
         }
     }
-    #nav-container {
-        position: relative;
-        nav {
-            padding: 4px 0;
-            border: 1px solid @gray-light;
-            &:before { .TopBlueBorder(); }
-            & > ul {
-                text-align: center;
-                & > li {
-                    display: inline-block;
+}
+#nav-container {
+    position: relative;
+    margin-bottom: 20px;
+    nav {
+        padding: 4px 0;
+        border: 1px solid @gray-light;
+        &:before { .TopBlueBorder(); }
+        & > ul {
+            text-align: center;
+            & > li {
+                display: inline-block;
+                & > a {
+                    display: block;
+                    font-size: 14px;
+                    line-height: 14px;
+                    font-weight: 700;
+                    padding: 4px 6px;
+                    margin: 0 1px;
+                    &:hover {
+                        color: @black;
+                        background-color: @accent-hover-light;
+                        .RoundedBorders(4px);
+                    }
+                }
+                &.icon {
                     & > a {
-                        display: block;
-                        font-size: 14px;
-                        line-height: 14px;
-                        font-weight: 700;
-                        padding: 4px 6px;
-                        margin: 0 1px;
+                        font-size: 16px;
+                        line-height: 16px;
+                        cursor: pointer;
+                        margin: 0 2px;
                         &:hover {
-                            color: @black;
-                            background-color: @accent-hover-light;
-                            .RoundedBorders(4px);
+                            i {color:@black;}
                         }
                     }
-                    &.icon {
-                        & > a {
-                            font-size: 16px;
-                            line-height: 16px;
-                            cursor: pointer;
-                            margin: 0 2px;
-                            &:hover {
-                                i {color:@black;}
+                    &.home {
+                        float: left;
+                    }
+                    &.menu {
+                        float: left;
+                    }
+                    &.tools {
+                        float: right;
+                        .tooltip-menu {
+                            width: inherit;
+                            ul.tooltip-list {
+                                height: auto;
                             }
                         }
-                        &.home {
-                            float: left;
-                        }
-                        &.menu {
-                            float: left;
-                        }
-                        &.tools {
-                            float: right;
-                            .tooltip-menu {
-                                width: inherit;
-                                ul.tooltip-list {
-                                    height: auto;
-                                }
-                            }
-                        }
-                        &.search {
-                            float: right;
-                            .tooltip-menu {
-                                width: 300px;
-                            }
+                    }
+                    &.search {
+                        float: right;
+                        .tooltip-menu {
+                            width: 300px;
                         }
                     }
                 }
             }
         }
-        .fixed {
-            position: fixed;
-            width: 100%;
-            max-height: 41px;
-            top: 0;
-            left: 0;
-            padding: 4px;
-            background: @white;
-            border: 0;
-            border-bottom: 1px solid @gray-light;
-            .BoxShadow(0 0 10px -1px @gray);
-            z-index: 7000;
-            ul {
-                width: @site-width;
-                margin: 0 auto;
-                li {
-                    &.icon {
-                        ul {width: 123px;}
-                    }
+    }
+    .fixed {
+        position: fixed;
+        width: 100%;
+        max-height: 41px;
+        top: 0;
+        left: 0;
+        padding: 4px;
+        background: @white;
+        border: 0;
+        border-bottom: 1px solid @gray-light;
+        .BoxShadow(0 0 10px -1px @gray);
+        z-index: 7000;
+        ul {
+            width: @site-width;
+            margin: 0 auto;
+            li {
+                &.icon {
+                    ul {width: 123px;}
                 }
             }
         }
@@ -1939,12 +1953,14 @@ footer {
     display: inline-block;
     img {display: inline-block;}
     &.bookend-left {
+        display: none;
         position: absolute;
         top: 5px;
         left: 0;
         height: 90px;
     }
     &.bookend-right {
+        display: none;
         position: absolute;
         top: 5px;
         right: 0;
