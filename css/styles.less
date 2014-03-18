@@ -210,9 +210,6 @@ i {
     box-sizing: border-box;
         -moz-box-sizing: border-box;
 }
-body {
-    background: url("../assets/header-bg.jpg") no-repeat center top;
-}
 a {
     text-decoration: none;
     color: @black;
@@ -1099,10 +1096,15 @@ header {
         margin: 0 auto;
         #flag {
             margin: 5px auto 6px auto;
-            img {
-                display:inline;
+            a {
+                display: inline-block;
                 width: 400px;
+                height: 89px;
             }
+            // img {
+            //     display:inline;
+            //     width: 400px;
+            // }
             h1 {
                 display: none;
                 font-size: 60px;
@@ -1241,21 +1243,51 @@ footer {
 // ----------------------------
 .article {
     header {
+        margin: 4px 0 0 0;
         #tool-bar {
+            position: absolute;
+            top: 32px;
+            left: 0;
+            margin: 0;
             width: 100%;
             z-index: 1;
+            background: none;
             .text-links {display: none;}
+            ul {
+                li {
+                    a {
+                        color: @gray-darker;
+                        font-weight: 400;
+                        &:hover {
+                            color: @accent;
+                        }
+                    }
+                }
+                li+li {
+                    &:before {
+                        color: @gray;
+                    }
+                }
+            }
         }
         #nameplate {
             height: auto;
             border: 0;
             z-index: 0;
             #flag {
-                margin: 5px auto 0px auto;
-                img {width: 175px;}
+                margin: 9px auto 0px auto;
+                a {
+                    width: 179px;
+                    height: 39px;
+                    background: url("../assets/ocr-flag.svg") no-repeat;
+                    background-size: contain;
+                }
             }
             .ad {display: none;}
         }
+    }
+    #page-wrapper {
+        padding-top: 0;
     }
     .news-rail {
         position: relative;
@@ -1762,8 +1794,11 @@ footer {
     header {
         #nameplate {
             #flag {
-                margin: 12px auto 0 auto;
-                img {width: 125px;}
+                margin: 0 auto;
+                a {
+                    width: 179px;
+                    height: 39px;
+                }
                 h1 {display: block;}
             }
         }
