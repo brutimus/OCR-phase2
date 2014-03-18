@@ -216,6 +216,116 @@ a {
     &:hover {color:@accent;}
     &.white {color:@white;}
 }
+figure {
+    position: relative;
+    clear: both;
+    p {
+        margin: 0;
+        font-size: 13px;
+        line-height: 17px;
+        color: @gray-darkest;
+        a {
+            color: @accent;
+            &:hover {text-decoration: underline;}
+        }
+    }
+    p+p {
+        margin-top: 15px;
+    }
+    .img-wrapper {
+        display: block;
+        position: relative;
+        &:hover > .overlay.enlarge {
+            .Opacity(1);
+            .Transition(opacity 0.2s ease-in-out);
+        }
+        &:hover > .overlay.view-label {
+            i, span { .Opacity(1); }
+        }
+        .overlay {
+            position: absolute;
+            bottom: 20px;
+            right: 20px;
+            padding: 5px 10px;
+            background-color: rgba(0, 0, 0, 0.3);
+            border: 1px solid @black;
+            border-color: rgba(0,0,0,0.1);
+            .RoundedBorders(4px);
+            i {
+                vertical-align: middle;
+                font-size: 24px;
+                color: @white;
+                .Opacity(.8);
+            }
+            &.view-label {
+                padding: 10px;
+                span {
+                    margin-left: 4px;
+                    vertical-align: middle;
+                    font-size: 18px;
+                    line-height: 20px;
+                    font-weight: 300;
+                    text-transform: uppercase;
+                    color: @white;
+                    .Opacity(.8);
+                }
+            }
+            &.enlarge {
+                .Opacity(0);
+                .Transition(opacity 0.2s ease-in-out);
+            }
+        }
+    }
+    h3 {
+        font-size: 22px;
+        line-height: 24px;
+        margin-bottom: 10px;
+    }
+    figcaption {
+        padding: 3px 0 10px 0;
+        font-size: 13px;
+        line-height: 16px;
+        &.caption {
+            color: @gray-darkest;
+            span.img-credit {
+                margin-left: 10px;
+                font-size: 11px;
+                line-height: 16px;
+                text-transform: uppercase;
+                color: @gray-darker;
+            }
+        }
+    }
+    &.media {
+        &.inline { border-top: 0; }
+    }
+    &.factbox {
+        h4 {
+            margin-bottom: 10px;
+            font-size: 18px;
+            line-height: 18px;
+            font-weight: 600;
+            color: @gray-darkest;
+        }
+    }
+    &.large {
+        margin-bottom: 30px;
+        figcaption { border-bottom: 1px solid @gray-light; }
+    }
+    &.inline {
+        padding: 15px 0;
+        border-top: 1px solid @gray-light;
+        border-bottom: 1px solid @gray-light;
+        float: left;
+        margin: 20px 45px 20px 0;
+        width: 250px;
+        figcaption {
+            padding-bottom: 0;
+            font-size: 13px;
+            line-height: 15px;
+        }
+    }
+}
 h1,h2,h3,h4,h5,h6 {
     margin: 0;
     letter-spacing: 0;
@@ -1395,118 +1505,6 @@ footer {
                 }
             }
         }
-        figure {
-            position: relative;
-            clear: both;
-            p {
-                margin: 0;
-                font-size: 13px;
-                line-height: 17px;
-                color: @gray-darkest;
-                a {
-                    color: @accent;
-                    &:hover {text-decoration: underline;}
-                }
-            }
-            p+p {
-                margin-top: 15px;
-            }
-            .img-wrapper {
-                display: block;
-                position: relative;
-                &:hover > .overlay.enlarge {
-                    .Opacity(1);
-                    .Transition(opacity 0.2s ease-in-out);
-                }
-                &:hover > .overlay.view-label {
-                    i, span {
-                        .Opacity(1);
-                    }
-                }
-                .overlay {
-                    position: absolute;
-                    bottom: 20px;
-                    right: 20px;
-                    padding: 5px 10px;
-                    background-color: rgba(0, 0, 0, 0.3);
-                    border: 1px solid @black;
-                    border-color: rgba(0,0,0,0.1);
-                    .RoundedBorders(4px);
-                    i {
-                        vertical-align: middle;
-                        font-size: 24px;
-                        color: @white;
-                        .Opacity(.8);
-                    }
-                    &.view-label {
-                        padding: 10px;
-                        span {
-                            margin-left: 4px;
-                            vertical-align: middle;
-                            font-size: 18px;
-                            line-height: 20px;
-                            font-weight: 300;
-                            text-transform: uppercase;
-                            color: @white;
-                            .Opacity(.8);
-                        }
-                    }
-                    &.enlarge {
-                        .Opacity(0);
-                        .Transition(opacity 0.2s ease-in-out);
-                    }
-                }
-            }
-            figcaption {
-                padding: 3px 0 10px 0;
-                font-size: 13px;
-                line-height: 16px;
-                &.caption {
-                    color: @gray-darkest;
-                    span.img-credit {
-                        margin-left: 10px;
-                        font-size: 11px;
-                        line-height: 16px;
-                        text-transform: uppercase;
-                        color: @gray-darker;
-                    }
-                }
-            }
-            &.media {
-                &.inline {
-                    border-top: 0;
-                }
-            }
-            &.factbox {
-                h4 {
-                    margin-bottom: 10px;
-                    font-size: 18px;
-                    line-height: 18px;
-                    font-weight: 600;
-                    color: @gray-darkest;
-                }
-            }
-            &.large {
-                margin-bottom: 30px;
-                width: 610px;
-                figcaption {
-                    border-bottom: 1px solid @gray-light;
-                }
-            }
-            &.inline {
-                padding: 15px 0;
-                border-top: 1px solid @gray-light;
-                border-bottom: 1px solid @gray-light;
-                float: left;
-                margin: 20px 45px 20px 0;
-                width: 250px;
-                figcaption {
-                    padding-bottom: 0;
-                    font-size: 13px;
-                    line-height: 15px;
-                }
-            }
-        }
         .byline-mug {
             clear: left;
             float: left;
@@ -1833,39 +1831,46 @@ footer {
             }
         }
     }
-}
-
-// SECTION PAGE STRUCTURES ----
-// ----------------------------
-#C-block-section {
-    .slideshow {
-        width: 620px;
-        height: 550px;
-        // display: none;
-        position: relative;
-
-        .slidesjs-previous.slidesjs-navigation {
-            position: absolute;
-            top: 0px;
-            left: 0px;
-            z-index: 100;
-            width: 32px;
-            height: 32px;
-        }
-        .slidesjs-next.slidesjs-navigation {
-            position: absolute;
-            top: 0px;
-            right: 0px;
-            z-index: 100;
-            width: 32px;
-            height: 32px;
-        }
+    figure {
+        &.large { margin-bottom: 20px; }
     }
-    .additional-slideshows div:first-child {
-        margin-left: 0 !important;
-    }
-    .additional-slideshows div:last-child {
-        margin-right: 0 !important;
+    .slideshows-wrapper {
+        .slideshow {
+            position: relative;
+
+            .slidesjs-previous.slidesjs-navigation {
+                position: absolute;
+                top: 0px;
+                left: 0px;
+                z-index: 100;
+                width: 32px;
+                height: 32px;
+            }
+            .slidesjs-next.slidesjs-navigation {
+                position: absolute;
+                top: 0px;
+                right: 0px;
+                z-index: 100;
+                width: 32px;
+                height: 32px;
+            }
+        }
+        .additional-slideshows {
+            a {
+                .kicker {
+                    color: @gray-dark;
+                    font-weight: 400;
+                    margin-bottom: 4px;
+                }
+                &:hover { .kicker { color: @accent; } }
+            }
+            div:first-child {
+                margin-left: 0 !important;
+            }
+            div:last-child {
+                margin-right: 0 !important;
+            }
+        }
     }
 }
 
