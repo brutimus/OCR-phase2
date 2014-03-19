@@ -6,6 +6,7 @@
     <head>
         <title>Today's Paper - OCRegister.com</title>
         <!-- @import _kits/head.html -->
+        <!-- @import _kits/body-background.html -->
     </head>
     <body class="todays-paper">
     <!--[if lt IE 7]>
@@ -15,11 +16,12 @@
         <a name="top"></a>
 
         <!-- @import "_kits/side-panel.html" -->
+        <!-- $title = Today's Paper -->
+        <!-- $flag = ocr-flag-outline-white.svg -->
+        <!-- @import "_kits/site-header.kit" -->
 
         <div id="page-wrapper">
-            <!-- $title = Today's Paper -->
-            <!-- @import "_kits/site-header.kit" -->
-            
+            <!-- @import "_kits/site-nav.kit" -->
             <div class="ad super-leaderboard"><img src="http://placehold.it/940x90&text=Super+Leaderboard"></div>
 
             <section id="content-wrapper" class="clearfix">
@@ -29,7 +31,7 @@
                         <h1>Today's Paper</h1>
                         <div class="tooltip">
                             <a href="#" class="dropdown tooltip-button">
-                                <span>Select category</span>
+                                <span>Select date</span>
                                 <i class="icon-dropdown"></i>
                             </a>
                             <div class="tooltip-menu">
@@ -46,7 +48,7 @@
                         </div>
                     </div><!-- / archive header -->
 
-                    <ul class="section-nav">
+                    <ul class="todays-paper-nav">
                         <li><a href="#">A-section</a></li>
                         <li><a href="#">Local</a></li>
                         <li><a href="#">Business</a></li>
