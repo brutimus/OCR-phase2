@@ -1,5 +1,5 @@
 define(['jquery', 'jquery.slides', 'domReady!'], function(){
-    var ss = $(".section-slideshow .slideshow");
+    var ss = $(".slideshows-wrapper .slideshow");
     ss.slidesjs({
         width: ss.width(),
         height: ss.height(),
