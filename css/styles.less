@@ -1905,6 +1905,34 @@ footer {
         }
     }
 }
+.todays-paper {
+    .archive-header {
+        border-bottom: 1px solid @gray-light;
+        margin-bottom: 10px;
+        padding-bottom: 10px;
+        position: relative;
+        .tooltip {
+            position: absolute;
+            bottom: 12px;
+            right: 0px;
+        }
+    }
+    ul.section-nav {
+        li {
+            display: inline-block;
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 18px;
+            margin-right: 20px;
+            text-transform: uppercase;
+            &:last-child { margin-right: 0px; }
+            a {
+                color: @gray-dark;
+                &:hover { color: @accent; }
+            }
+        }
+    }
+}
 
 // ADVERTISING ----------------
 // ----------------------------
