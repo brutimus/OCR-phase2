@@ -1299,43 +1299,6 @@ footer {
     }
 }
 .article {
-    header {
-        margin: 4px 0 0 0;
-        #tool-bar {
-            background: none;
-            margin: 0;
-            position: absolute;
-                left: 0;
-                top: 32px;
-            width: 100%;
-            z-index: 1;
-            .text-links {display: none;}
-            ul {
-                li {
-                    a {
-                        color: @gray-darker;
-                        font-weight: 400;
-                        &:hover { color: @accent; }
-                    }
-                }
-                li+li { &:before { color: @gray; } }
-            }
-        }
-        #nameplate {
-            border: 0;
-            height: auto;
-            z-index: 0;
-            #flag {
-                margin: 9px auto 0px auto;
-                img {
-                    height: 39px;
-                    width: 179px;
-                }
-            }
-            .ad { display: none; }
-        }
-    }
-    #page-wrapper { padding-top: 5px; }
     .news-rail {
         background-color: @gray-lightest;
         border: 1px solid @gray-light;
@@ -1778,6 +1741,45 @@ footer {
             div:last-child { margin-right: 0 !important; }
         }
     }
+}
+.small-header {
+    header {
+        margin: 4px 0 0 0;
+        #tool-bar {
+            background: none;
+            margin: 0;
+            position: absolute;
+                left: 0;
+                top: 32px;
+            width: 100%;
+            z-index: 1;
+            .text-links {display: none;}
+            ul {
+                li {
+                    a {
+                        color: @gray-darker;
+                        font-weight: 400;
+                        &:hover { color: @accent; }
+                    }
+                }
+                li+li { &:before { color: @gray; } }
+            }
+        }
+        #nameplate {
+            border: 0;
+            height: auto;
+            z-index: 0;
+            #flag {
+                margin: 9px auto 0px auto;
+                img {
+                    height: 39px;
+                    width: 179px;
+                }
+            }
+            .ad { display: none; }
+        }
+    }
+    #page-wrapper { padding-top: 5px; }
 }
 .todays-paper {
     .archive-header {

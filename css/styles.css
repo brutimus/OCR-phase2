@@ -1485,49 +1485,6 @@ footer .legal span {
 .archive #left-col #pagination {
   float: right;
 }
-.article header {
-  margin: 4px 0 0 0;
-}
-.article header #tool-bar {
-  background: none;
-  margin: 0;
-  position: absolute;
-  left: 0;
-  top: 32px;
-  width: 100%;
-  z-index: 1;
-}
-.article header #tool-bar .text-links {
-  display: none;
-}
-.article header #tool-bar ul li a {
-  color: #777777;
-  font-weight: 400;
-}
-.article header #tool-bar ul li a:hover {
-  color: #41759a;
-}
-.article header #tool-bar ul li + li:before {
-  color: #d2d2d2;
-}
-.article header #nameplate {
-  border: 0;
-  height: auto;
-  z-index: 0;
-}
-.article header #nameplate #flag {
-  margin: 9px auto 0px auto;
-}
-.article header #nameplate #flag img {
-  height: 39px;
-  width: 179px;
-}
-.article header #nameplate .ad {
-  display: none;
-}
-.article #page-wrapper {
-  padding-top: 5px;
-}
 .article .news-rail {
   background-color: #fafafa;
   border: 1px solid #e2e2e2;
@@ -1996,6 +1953,49 @@ footer .legal span {
 }
 .section .slideshows-wrapper .additional-slideshows div:last-child {
   margin-right: 0 !important;
+}
+.small-header header {
+  margin: 4px 0 0 0;
+}
+.small-header header #tool-bar {
+  background: none;
+  margin: 0;
+  position: absolute;
+  left: 0;
+  top: 32px;
+  width: 100%;
+  z-index: 1;
+}
+.small-header header #tool-bar .text-links {
+  display: none;
+}
+.small-header header #tool-bar ul li a {
+  color: #777777;
+  font-weight: 400;
+}
+.small-header header #tool-bar ul li a:hover {
+  color: #41759a;
+}
+.small-header header #tool-bar ul li + li:before {
+  color: #d2d2d2;
+}
+.small-header header #nameplate {
+  border: 0;
+  height: auto;
+  z-index: 0;
+}
+.small-header header #nameplate #flag {
+  margin: 9px auto 0px auto;
+}
+.small-header header #nameplate #flag img {
+  height: 39px;
+  width: 179px;
+}
+.small-header header #nameplate .ad {
+  display: none;
+}
+.small-header #page-wrapper {
+  padding-top: 5px;
 }
 .todays-paper .archive-header {
   border-bottom: 1px solid #e2e2e2;
