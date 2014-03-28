@@ -1603,6 +1603,46 @@ footer {
         }
     }
 }
+.free {
+    .free-overlay {
+        position: fixed;
+        background-color: rgba(255, 255, 255, 0.97);
+        width: 100%;
+        height: 1000px;
+        z-index: 999999999999999;
+        .counter {
+            position: fixed;
+            top:15px;
+            left: 15px;
+            color: @gray-dark;
+        }
+        i.icon-close {
+            position: fixed;
+            top: 15px;
+            right: 15px;
+            font-size: 50px;
+            color: #e2e2e2;
+            cursor: pointer;
+            &:hover { color: #777; };
+        }
+        .inner {
+            display: block;
+            margin: 100px auto 0 auto;
+            width: 768px;
+            //background-color: red;
+            p {
+                font-weight: 300;
+                &.intro { font-size: 26px; }
+                &.promo {
+                    margin-top: 50px;
+                    font-size: 15px;
+                    font-weight: 400;
+                }
+            }
+        }
+    }
+    header { #tool-bar { z-index: -1; } }
+}
 .home {
     .module {
         &.lead {
