@@ -1,0 +1,95 @@
+/** RESET AND LAYOUT
+===================================*/
+ .bx-wrapper {
+    clear: both;
+    margin: 0px auto 25px 120px;
+    padding: 35px 0;
+    position: relative;
+    *zoom: 1;
+}
+.bx-wrapper img {
+    max-width:100%;
+    display:block;
+}
+.bx-wrapper .bx-controls {
+    border-top: 2px solid #41759a;
+    border-bottom: 1px solid #e2e2e2;
+    height: 40px;
+    margin-top: 0;
+    padding-bottom: 6px;
+    position: absolute;
+        top: 0;
+        left: 0;
+    width: 100%;
+}
+.bx-wrapper .bx-controls-bottom {
+    border-bottom: 2px solid #41759a;
+    border-top: 1px solid #e2e2e2;
+    height: 40px;
+    position: absolute;
+    margin-top: 0;
+        top: inherit;
+        bottom: 0;
+        left: 0;
+    width: 100%;
+}
+/* LOADER */
+ .bx-wrapper .bx-loading {
+    background: url(images/bx_loader.gif) center center no-repeat #fff;
+    height: 100%;
+    min-height: 50px;
+    position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+    z-index: 2000;
+}
+/* PAGER: The nav dots */
+ .bx-wrapper .bx-pager {
+    position: relative;
+        top: 13px;
+    text-align: center;
+    width: 100%;
+}
+.bx-wrapper .bx-pager .bx-pager-item {
+    display: inline-block;
+    *display: inline;
+    *zoom: 1;
+}
+.bx-wrapper .bx-pager a {
+    background: #999;
+    border-radius: 50%;
+        -moz-border-radius: 50%;
+        -webkit-border-radius: 50%;
+    display: block;
+    height: 10px;
+    margin: 0 5px;
+    outline: 0;
+    text-indent: -9999px;
+    width: 10px;
+}
+.bx-wrapper .bx-pager a:hover, 
+.bx-wrapper .bx-pager a.active { background: #202020; }
+.bx-wrapper .bx-controls-bottom .bx-pager {}
+
+/* DIRECTION CONTROLS (NEXT / PREV) */
+ .bx-wrapper .bx-prev {
+    background: url(images/controls.png) no-repeat 0 -32px;
+    left: 10px;
+}
+.bx-wrapper .bx-next {
+    background:url(images/controls.png) no-repeat -43px -32px;
+    right: 10px;
+}
+.bx-wrapper .bx-prev:hover { background-position: 0 0; }
+.bx-wrapper .bx-next:hover { background-position: -43px 0; }
+.bx-wrapper .bx-controls-direction a {
+    height: 32px;
+    outline: 0;
+    position: absolute;
+        top: 3px;
+    text-indent: -9999px;
+    width: 32px;
+    z-index: 99;
+}
+.bx-wrapper .bx-controls-direction a.disabled { display: none; }
