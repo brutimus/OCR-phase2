@@ -1,6 +1,7 @@
 // VARIABLES ------------------
 // ----------------------------
 @black:                 #222;
+@red:                   #AF1E2C;
 @accent:                #41759a;
 @accent-hover-light:    lighten(@accent, 52%);
 @accent-hover-border:   lighten(@accent, 38%);
@@ -702,9 +703,38 @@ p {
 // FLEX MODULES ---------------
 // ----------------------------
 #breaking-news {
-    border: 1px solid red;
-    padding: 5px;
+    background-color: @gray-lighter;
+    //border: 1px solid @gray-light;
+    padding: 8px 12px;
     margin-bottom: 20px;
+    span {
+        font-size: 13px;
+        margin-right: 12px;
+        &.label {
+            color: @red;
+            letter-spacing: -0.15px;
+            font-weight: 700;
+            text-transform: uppercase;
+        }
+        &.headline {
+            font-size: 15px;
+            font-weight: 700;
+        }
+        &.timestamp {
+            color: @red;
+            font-weight: 400;
+            margin-right: 0;
+        }
+    }
+    i {
+        color: @gray;
+        cursor: pointer;
+        font-size: 14px;
+        position: absolute;
+            top: 14px;
+            right: 8px;
+        &:hover { color: @gray-darker; }
+    }
 }
 #cck { 
     ul { max-height: 217px; overflow: auto; } 
