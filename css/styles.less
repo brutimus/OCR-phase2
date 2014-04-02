@@ -1971,6 +1971,39 @@ footer {
     #page-wrapper { padding-top: 5px; }
 }
 .todays-paper {
+    #eRegister {
+        background: url('../assets/eReg-sample.png') no-repeat;
+        background-position: 600px 30px;
+        background-size: 280px;
+        background-color: @gray-lighter;
+        height: 200px;
+        margin-bottom: 20px;
+        .promo-text {
+            margin: 25px;
+            width: 58%;
+            //background-color: red;
+            h3 {
+                font-size: 40px;
+                font-weight: 300;
+                line-height: 40px;
+            }
+            button {
+                background-color: @accent;
+                border: 1px solid darken(@accent, 2%);
+                color: @white;
+                font-size: 15px;
+                font-weight: 400;
+                padding: 10px 12px;
+                text-transform: none;
+                .RoundedBorders(4px);
+                &:hover, &:active {
+                    background-color: darken(@accent, 10%);
+                    border-color: darken(@accent, 12%);
+                    color: @white;
+                }
+            }
+        }
+    }
     .archive-header {
         border-bottom: 1px solid @gray-light;
         margin-bottom: 10px;
