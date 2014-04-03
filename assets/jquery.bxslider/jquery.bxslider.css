@@ -73,16 +73,6 @@
 .bx-wrapper .bx-controls-bottom .bx-pager {}
 
 /* DIRECTION CONTROLS (NEXT / PREV) */
- .bx-wrapper .bx-prev {
-    background: url(images/controls.png) no-repeat 0 -32px;
-    left: 10px;
-}
-.bx-wrapper .bx-next {
-    background:url(images/controls.png) no-repeat -43px -32px;
-    right: 10px;
-}
-.bx-wrapper .bx-prev:hover { background-position: 0 0; }
-.bx-wrapper .bx-next:hover { background-position: -43px 0; }
 .bx-wrapper .bx-controls-direction a {
     height: 32px;
     outline: 0;
@@ -93,3 +83,16 @@
     z-index: 99;
 }
 .bx-wrapper .bx-controls-direction a.disabled { display: none; }
+.bx-wrapper .bx-prev {
+    background: url(images/controls.png) no-repeat 0 -32px;
+    left: 10px;
+}
+.bx-wrapper .bx-next {
+    background:url(images/controls.png) no-repeat -43px -32px;
+    right: 10px;
+}
+.bx-wrapper .bx-prev:hover { background-position: 0 0; }
+.bx-wrapper .bx-next:hover { background-position: -43px 0; }
+
+
+

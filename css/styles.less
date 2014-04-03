@@ -1494,14 +1494,33 @@ footer {
         p.story-body-text {
             font-size: 16px;
             line-height: 22px;
-            margin-left: 120px;
+            margin: 0 0 16px 120px;
             a {
                 color: @accent;
                 &:hover { text-decoration: underline; }
             }
         }
-        .bx-wrapper p.story-body-text {
+        .bx-wrapper p.story-body-text { 
+            font-size: 15px;
+            line-height: 21px;
             margin-left: 0;
+        }
+        .multiplier-slide {
+            img {
+                border-top: 1px solid @gray-light;
+                margin: 25px 0 10px 120px;
+                max-width: 490px;
+                padding-top: 30px;
+            }
+            h3 { margin: 0 0 10px 120px; }
+        }
+        .bx-wrapper .multiplier-slide {
+            img {
+                border: 0;
+                margin: 0 0 15px 0px;
+                padding: 0;
+            }
+            h3 { margin-left: 0; }
         }
         #pagination { margin: 50px 0px 40px 120px; }
         #related-coverage {
