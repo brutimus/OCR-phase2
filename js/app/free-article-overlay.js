@@ -1,4 +1,4 @@
-define(['jquery', 'jquery-ui', 'jquery.fancybox', 'jquery.slides', 'domReady!'], function(){
+define(['jquery', 'jquery.fancybox', 'domReady!'], function(){
 
     // Add in logic to only fire this once per user per day
 
