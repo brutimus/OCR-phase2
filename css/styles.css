@@ -2295,6 +2295,7 @@ footer .legal span {
   width: 184px;
 }
 .ad.bookend-right {
+  display: none;
   height: 90px;
   position: absolute;
   right: 0;
