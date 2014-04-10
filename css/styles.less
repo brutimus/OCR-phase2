@@ -1347,9 +1347,13 @@ header {
                 display: inline-block;
                 height: 89px;
                 width: 400px;
+                background-image: url('../assets/flag-outline-white.png');
                 background-size: contain;
                 background-repeat: no-repeat;
-                background-image: url('../assets/flag-outline-white.png');
+                filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(
+                src='../assets/flag-outline-white.png',
+                sizingMethod='scale');
+                -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../assets/flag-outline-white.png',sizingMethod='scale')";
                 @media @retina {
                     background-image: url('../assets/flag-outline-white.svg');
                     -webkit-filter: drop-shadow(0 0 1px #333);
@@ -1381,6 +1385,10 @@ footer {
             background-image: url('../assets/flag-outline-black.png');
             background-size: contain;
             background-repeat: no-repeat;
+            filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(
+            src='../assets/flag-outline-black.png',
+            sizingMethod='scale');
+            -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../assets/flag-outline-black.png',sizingMethod='scale')";
             @media @retina {
                 background-image: url('../assets/flag-outline-black.svg');
             }
@@ -1851,6 +1859,10 @@ footer {
                     width: 179px;
                     margin-bottom: -5px;
                     background-image: url('../assets/flag-white.png');
+                    filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(
+                    src='../assets/flag-white.png',
+                    sizingMethod='scale');
+                    -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../assets/flag-white.png',sizingMethod='scale')";
                     @media @retina {
                         background-image: url('../assets/flag-white.svg');
                         -webkit-filter: drop-shadow(0 0 0.5px #333);
@@ -1983,6 +1995,10 @@ footer {
                     width: 179px;
                     margin-bottom: -5px;
                     background-image: url('../assets/flag-black.png');
+                    filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(
+                    src='../assets/flag-black.png',
+                    sizingMethod='scale');
+                    -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../assets/flag-black.png',sizingMethod='scale')";
                     @media @retina {
                         background-image: url('../assets/flag-black.svg');
                         -webkit-filter: none;
