@@ -1548,10 +1548,22 @@ header #nameplate {
 header #nameplate #flag {
   margin: 5px auto 6px auto;
 }
-header #nameplate #flag img {
-  display: inline;
+header #nameplate #flag #logo {
+  display: inline-block;
   height: 89px;
   width: 400px;
+  background-image: url('../assets/flag-outline-white.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../assets/flag-outline-white.png', sizingMethod='scale');
+  -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../assets/flag-outline-white.png',sizingMethod='scale')";
+}
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  header #nameplate #flag #logo {
+    background-image: url('../assets/flag-outline-white.svg');
+    -webkit-filter: drop-shadow(0 0 1px #333333);
+    -webkit-transform: translateZ(0px);
+  }
 }
 header #nameplate #flag h1 {
   color: #ffffff;
@@ -1570,8 +1582,20 @@ footer .flag {
   margin: 0 0 2px 0;
   padding-bottom: 8px;
 }
-footer .flag img {
-  margin: 0 auto;
+footer .flag #logo {
+  display: inline-block;
+  width: 225px;
+  height: 50px;
+  background-image: url('../assets/flag-outline-black.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../assets/flag-outline-black.png', sizingMethod='scale');
+  -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../assets/flag-outline-black.png',sizingMethod='scale')";
+}
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  footer .flag #logo {
+    background-image: url('../assets/flag-outline-black.svg');
+  }
 }
 footer .links ul li {
   display: inline;
@@ -2063,12 +2087,24 @@ footer .legal span {
 .section header #nameplate #flag {
   margin: 0 auto;
 }
-.section header #nameplate #flag img {
+.section header #nameplate #flag #logo {
   height: 39px;
   width: 179px;
+  margin-bottom: -5px;
+  background-image: url('../assets/flag-white.png');
+  filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../assets/flag-white.png', sizingMethod='scale');
+  -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../assets/flag-white.png',sizingMethod='scale')";
+}
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  .section header #nameplate #flag #logo {
+    background-image: url('../assets/flag-white.svg');
+    -webkit-filter: drop-shadow(0 0 0.5px #333333);
+    -webkit-transform: translateZ(0px);
+  }
 }
 .section header #nameplate #flag h1 {
   display: block;
+  text-shadow: 0 0 1px #333;
 }
 .section .module.box ul.columnists li img {
   float: left;
@@ -2178,9 +2214,20 @@ footer .legal span {
 .small-header header #nameplate #flag {
   margin: 9px auto 0px auto;
 }
-.small-header header #nameplate #flag img {
+.small-header header #nameplate #flag #logo {
   height: 39px;
   width: 179px;
+  margin-bottom: -5px;
+  background-image: url('../assets/flag-black.png');
+  filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../assets/flag-black.png', sizingMethod='scale');
+  -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../assets/flag-black.png',sizingMethod='scale')";
+}
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  .small-header header #nameplate #flag #logo {
+    background-image: url('../assets/flag-black.svg');
+    -webkit-filter: none;
+    -webkit-transform: none;
+  }
 }
 .small-header header #nameplate .ad {
   display: none;
