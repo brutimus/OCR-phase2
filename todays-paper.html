@@ -23,6 +23,7 @@
 <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,500,600,700,800' rel='stylesheet' type='text/css'>        <style>
     body {
         background: url("assets/header-bg.jpg") no-repeat center top;
+        background-size: 1600px;
     }
 </style>    </head>
     <body class="todays-paper">
@@ -201,25 +202,25 @@
         <div class="tool-bar-inner">
             <div class="classifieds">
                 <ul>
+                    <li><a href="#">Advertise</a></li>
                     <li><a href="#">Cars</a></li>
                     <li><a href="#">Jobs</a></li>
                     <li><a href="#">Homes</a></li>
-                    <li><a href="#">Classifieds</a></li>
+                    <li><a href="#">Knowledge Cafe</a></li>
                 </ul>
             </div>
             <div class="user-access">
                 <ul>
                     <li><a href="#">Register Connect</a></li>
                     <li><a href="#">Subscribe</a></li>
-                    <li><a href="#">Log in</a></li>
+                    <li><a href="./login.html">Log in</a></li>
                 </ul>
             </div>
         </div>
     </div>
     <div id="nameplate" class="clearfix">
         <div id="flag">
-            <a href="./index.html">
-                <img alt="Orange County Register" src="assets/ocr-flag-outline-white.svg">
+            <a id="logo" href="./index.html">
             </a>
             <h1>Today's Paper</h1>
         </div>
@@ -242,7 +243,7 @@
             <li><a href="#">Opinion</a></li>
             <li><a href="#">Obits</a></li>
             <li><a href="./todays-paper.html">Today's Paper</a></li>
-            <li><a href="#">Knowledge Cafe</a></li>
+            <li><a href="#">Classifieds</a></li>
             <li class="icon tools tooltip">
                 <a href="#" class="tooltip-button"><i class="icon-gear"></i></a>
                 <div class="tooltip-menu">
@@ -265,9 +266,16 @@
             </li>
         </ul>
     </nav>
-</div>            <div class="ad super-leaderboard"><img src="http://placehold.it/940x90&text=Super+Leaderboard"></div>
-
+</div>
             <section id="content-wrapper" class="clearfix">
+
+                <section id="eRegister" class="col-12 clearfix">
+                    <div class="promo-text">
+                        <h3>The print experience, on screen</h3>
+                        <p>Enjoy the Register's award-winning design and newspaper features with eRegister, a new way to read today's paper. Available now for subscribers.</p>
+                        <button>Launch eRegister</button>
+                    </div>
+                </section>
                 
                 <section id="left-col" class="col-8 clearfix">
                     <div class="archive-header">
@@ -678,9 +686,7 @@
 
             <footer class="clearfix">
     <div class="flag">
-        <a href="./index.html">
-            <img width="225" height="" alt="Orange County Register" src="assets/ocr-flag-outline.svg">
-        </a>
+        <a id="logo" href="./index.html"></a>
     </div>
     <div class="links">
         <ul>

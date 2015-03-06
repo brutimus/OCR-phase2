@@ -21,7 +21,7 @@
 <script data-main="js/main" src="js/require.js"></script>
 
 <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,500,600,700,800' rel='stylesheet' type='text/css'>    </head>
-    <body class="login small-header">
+    <body class="small-header">
     <!--[if lt IE 7]>
         <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
@@ -196,10 +196,11 @@
         <div class="tool-bar-inner">
             <div class="classifieds">
                 <ul>
+                    <li><a href="#">Advertise</a></li>
                     <li><a href="#">Cars</a></li>
                     <li><a href="#">Jobs</a></li>
                     <li><a href="#">Homes</a></li>
-                    <li><a href="#">Classifieds</a></li>
+                    <li><a href="#">Knowledge Cafe</a></li>
                 </ul>
             </div>
             <div class="user-access">
@@ -213,8 +214,7 @@
     </div>
     <div id="nameplate" class="clearfix">
         <div id="flag">
-            <a href="./index.html">
-                <img alt="Orange County Register" src="assets/ocr-flag-outline.svg">
+            <a id="logo" href="./index.html">
             </a>
             <h1>Log In</h1>
         </div>
@@ -237,7 +237,7 @@
             <li><a href="#">Opinion</a></li>
             <li><a href="#">Obits</a></li>
             <li><a href="./todays-paper.html">Today's Paper</a></li>
-            <li><a href="#">Knowledge Cafe</a></li>
+            <li><a href="#">Classifieds</a></li>
             <li class="icon tools tooltip">
                 <a href="#" class="tooltip-button"><i class="icon-gear"></i></a>
                 <div class="tooltip-menu">
@@ -261,7 +261,7 @@
         </ul>
     </nav>
 </div>
-            <section id="content-wrapper" class="clearfix">
+            <section id="content-wrapper" class="login clearfix">
 
                     <div class="col-12 center">
                         <h1>Enjoy full digital access</h1>
@@ -272,7 +272,7 @@
                             <h4 class="label center">Please log in with your Register account</h4>
                             <div class="input-bar">
                                 <input class="text" type="text" name="search" value="" placeholder="Username">
-                                <input class="text" type="text" name="search" value="" placeholder="Password">
+                                <input class="text" type="password" name="search" value="" placeholder="Password">
                                 <input type="submit" name="login" value="Log in">
                                 <input type="checkbox" name="remember" value="remember" checked><span class="checkbox-text">Remember me</span>
                                 <span class="forgot-password"><a href="#">Forgot your password?</a></span>
@@ -290,9 +290,7 @@
 
             <footer class="clearfix">
     <div class="flag">
-        <a href="./index.html">
-            <img width="225" height="" alt="Orange County Register" src="assets/ocr-flag-outline.svg">
-        </a>
+        <a id="logo" href="./index.html"></a>
     </div>
     <div class="links">
         <ul>

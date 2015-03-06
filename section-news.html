@@ -23,6 +23,7 @@
 <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,500,600,700,800' rel='stylesheet' type='text/css'>        <style>
     body {
         background: url("assets/header-bg.jpg") no-repeat center top;
+        background-size: 1600px;
     }
 </style>    </head>
     <body class="section">
@@ -200,25 +201,25 @@
         <div class="tool-bar-inner">
             <div class="classifieds">
                 <ul>
+                    <li><a href="#">Advertise</a></li>
                     <li><a href="#">Cars</a></li>
                     <li><a href="#">Jobs</a></li>
                     <li><a href="#">Homes</a></li>
-                    <li><a href="#">Classifieds</a></li>
+                    <li><a href="#">Knowledge Cafe</a></li>
                 </ul>
             </div>
             <div class="user-access">
                 <ul>
                     <li><a href="#">Register Connect</a></li>
                     <li><a href="#">Subscribe</a></li>
-                    <li><a href="#">Log in</a></li>
+                    <li><a href="./login.html">Log in</a></li>
                 </ul>
             </div>
         </div>
     </div>
     <div id="nameplate" class="clearfix">
         <div id="flag">
-            <a href="./index.html">
-                <img alt="Orange County Register" src="assets/ocr-flag-outline-white.svg">
+            <a id="logo" href="./index.html">
             </a>
             <h1>News</h1>
         </div>
@@ -241,7 +242,7 @@
             <li><a href="#">Opinion</a></li>
             <li><a href="#">Obits</a></li>
             <li><a href="./todays-paper.html">Today's Paper</a></li>
-            <li><a href="#">Knowledge Cafe</a></li>
+            <li><a href="#">Classifieds</a></li>
             <li class="icon tools tooltip">
                 <a href="#" class="tooltip-button"><i class="icon-gear"></i></a>
                 <div class="tooltip-menu">
@@ -269,16 +270,24 @@
 
             <section id="content-wrapper">
 
+                <section class="clearfix">
+    <div id="breaking-news" class="col-12">
+        <span class="label">Breaking News</span>
+        <span class="headline"><a href="./article.html">Woman, 90, safely rescued from Yorba Linda house fire; 4 other residents injured</a></span>
+        <span class="timestamp">2:40 p.m.</span>
+        <i class="icon-close"></i>
+    </div>
+</section>
                 <!-- A-BLOCK -->
                 <section class="clearfix">
                     <div class="col-3 module list pull-left">
                         <h4 class="label"><a href="#">Local news &raquo;</a></h4>
                         <div class="story">
-                            <h2><a href="#">Lorem ipsum dolor sit consectet elit sed doamet</a></h2>
+                            <h2><a href="./article.html">Lorem ipsum dolor sit consectet elit sed doamet</a></h2>
                             <p class="timestamp">Posted xx minutes ago</p>
                         </div>
                         <div class="story">
-                            <h3><a href="#">Lorem ipsum dolor sit consectet elit sed doamet</a></h3>
+                            <h3><a href="./article.html">Lorem ipsum dolor sit consectet elit sed doamet</a></h3>
                             <p class="timestamp">Posted xx minutes ago</p>
                         </div>
                         <div class="story">
@@ -304,9 +313,9 @@
                     </div>
                     <div class="clearfix">
                         <div class="col-9 module lead">
-                            <img src="http://placehold.it/400x300">
+                            <a href="./article.html"><img src="http://placehold.it/400x300"></a>
                             <div class="story">
-                                <p class="kicker"><a href="#">Clippers</a></p>
+                                <p class="kicker"><a href="#">Education</a></p>
                                 <h1><a href="./article.html">Lorem ipsum dolor sit amet consectet elit sed do</a></h1>
                                 <p class="timestamp">Posted 32 minutes ago</p>
                                 <p class="tease">Lorem ipsum dolor sit amet consectetur elit sed do. Lorem ipsum dolor sit amet consectetur elit sed do. Lorem ipsum dolor sit amet consectetur elit sed do.</p>
@@ -760,9 +769,7 @@
             </section>
             <footer class="clearfix">
     <div class="flag">
-        <a href="./index.html">
-            <img width="225" height="" alt="Orange County Register" src="assets/ocr-flag-outline.svg">
-        </a>
+        <a id="logo" href="./index.html"></a>
     </div>
     <div class="links">
         <ul>
