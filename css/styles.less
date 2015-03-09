@@ -1722,7 +1722,49 @@ footer {
         .ad { margin-bottom: 30px; }
     }
     #comments { display: none; }
-    .lightbox-inline { display: none; }
+    .lightbox-inline {
+        display: none;
+        .slideshow {
+            height: 100%;
+            figure {
+                max-height: 100vh;
+                max-width: 100%;
+            }
+        }
+    }
+    .slideshows-wrapper.no-lightbox {
+        .slideshow {
+            height: 575px;
+            width: 600px;
+            border-bottom: 1px solid #e2e2e2;
+            figure {
+                height: inherit;
+                figcaption {
+                    position: relative;
+                    padding: 5px 50px 0 50px;
+                    width: 100%;
+                    height: 95px;
+                    right: inherit;
+                    top: inherit;
+                    border-bottom: none;
+                }
+            }
+            .slidesjs-navigation {
+                bottom: 60px;
+                &.slidesjs-previous {
+                    left: 0;
+                }
+                &.slidesjs-next {
+                    left: inherit;
+                    right: 0;
+                }
+            }
+        }
+        .slideshow-tools {
+            bottom: 5px;
+            left: 0;
+        }
+    }
     .slideshow {
         display: none;
         height: 500px;
@@ -1750,6 +1792,7 @@ footer {
                 }
             }
         }
+        
         .slidesjs-navigation {
             background-color: @gray-lightest;
             cursor: pointer;

@@ -21,6 +21,7 @@ require([
     'app/article-inlines',
     'app/side-panel',
     'app/comments',
+    'app/article-lead-slideshow',
     'app/section-slideshow',
     'app/free-article-overlay'
 ]);
