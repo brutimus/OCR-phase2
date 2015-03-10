@@ -1,27 +1,8 @@
 define(['jquery', 'jquery.fancybox', 'jquery.slides', 'domReady!'], function(){
-    $('.slideshow2').slick({
+    $('.lead-slideshow').slick({
         dots: true,
         respondTo: 'slider'
-        // centerMode: true,
     });
-    // var ss = $("article#story .slideshows-wrapper .slideshow");
-    // var total = jQuery('article#story .slideshows-wrapper .slideshow figure').length;
-    // jQuery('article#story .slideshows-wrapper .total-slides').html(total);
-    // ss.slidesjs({
-    //     // width: 600,
-    //     // height: 575,
-    //     pagination: {
-    //         active: false
-    //     },
-    //     navigation: {
-    //         active: false
-    //     },
-    //     callback: {
-    //         complete: function(current){
-    //             jQuery('article#story .slideshows-wrapper .current-slide').html(current);
-    //         }
-    //     }
-    // });
     $('article#story .slideshows-wrapper .fullscreen-button a').fancybox({
         margin: 0,
         padding: 0,
@@ -30,12 +11,12 @@ define(['jquery', 'jquery.fancybox', 'jquery.slides', 'domReady!'], function(){
         height: 'auto',
         afterShow: function(){
             $('.slideshows-wrapper').addClass('fullscreen');
-            $('.slideshow2').slick('setPosition');
+            $('.lead-slideshow').slick('setPosition');
         },
         afterClose: function(){
             $(this.href).removeClass('fullscreen');
             $(this.href).show();
-            $('.slideshow2').slick('setPosition');
+            $('.lead-slideshow').slick('setPosition');
         }
     });
     // $('article#story .slideshows-wrapper .fullscreen a').click(function(){
@@ -77,39 +58,5 @@ define(['jquery', 'jquery.fancybox', 'jquery.slides', 'domReady!'], function(){
     //         wrapper.toggleClass('fullscreen');
     //     });
     //     $('.close-button').click(exitFullScreen);
-    // });
-
-    // // Slideshow lightbox
-    // $("article#story .slideshows-wrapper .fullscreen a").fancybox({
-    //     fitToView   : false,
-    //     autoSize    : false,
-    //     openEffect  : 'none',
-    //     closeEffect : 'none',
-    //     width: $(window).width(),
-    //     height: $(window).height(),
-    //     // leftRatio   : 0.66,
-    //     afterShow   : function(){
-    //         if (this.content) {
-    //             var ss = this.content.find(".slideshow"),
-    //                 dom = this.content;
-    //             ss.slidesjs({
-    //                 width: $(window).width(),
-    //                 height: $(window).height(),
-    //                 pagination: {
-    //                     active: false
-    //                 },
-    //                 navigation: {
-    //                     active: false
-    //                 },
-    //                 callback: {
-    //                     complete: function(current){
-    //                         dom.find('.current-slide').html(current);
-    //                     }
-    //                 }
-    //             });
-    //             var total = this.content.find('.slideshow figure').length;
-    //             this.content.find('.total-slides').html(total);
-    //         }
-    //     }
     // });
 });
