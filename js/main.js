@@ -23,5 +23,6 @@ require([
     'app/comments',
     'app/article-lead-slideshow',
     'app/section-slideshow',
-    'app/free-article-overlay'
+    'app/free-article-overlay',
+    'slick'
 ]);

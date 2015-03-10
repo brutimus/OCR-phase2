@@ -100,9 +100,9 @@
 	z-index: 8040;
 }
 .fancybox-close i {
-	font-size: 50px;
+	font-size: 30px;
 	color: #e2e2e2;
-	background-color: #fff;
+	/*background-color: #fff;*/
 	-moz-border-radius: 50%;
     -webkit-border-radius: 50%;
 	border-radius: 50%;
@@ -196,12 +196,13 @@
 	overflow: hidden;
 	display: none;
 	z-index: 8010;
-	background-image: -ms-radial-gradient(center bottom, circle farthest-corner, #FFFFFF 65%, rgba(255,255,255,0.9) 100%); /* IE10 */
-	background-image: -moz-radial-gradient(center bottom, circle farthest-corner, #FFFFFF 65%, rgba(255,255,255,0.9) 100%); /* Firefox */
-	background-image: -o-radial-gradient(center bottom, circle farthest-corner, #FFFFFF 65%, rgba(255,255,255,0.9) 100%); /* Opera */
-	background-image: -webkit-gradient(linear, left bottom, right top, color-stop(0, #FFFFFF), color-stop(1, rgba(255,255,255,0.9))); /* Safari/Chrome 10 */
-	background-image: -webkit-radial-gradient(center bottom, circle farthest-corner, #FFFFFF 65%, rgba(255,255,255,0.9) 100%); /* Chrome 11+ */
-	background-image: radial-gradient(center bottom, circle farthest-corner,#FFFFFF 65%, rgba(255,255,255,0.9) 100%);
+	background-color: #222;
+	/*background-image: -ms-radial-gradient(center bottom, circle farthest-corner, #FFFFFF 65%, rgba(255,255,255,0.9) 100%); /* IE10 */*/
+	/*background-image: -moz-radial-gradient(center bottom, circle farthest-corner, #FFFFFF 65%, rgba(255,255,255,0.9) 100%); /* Firefox */*/
+	/*background-image: -o-radial-gradient(center bottom, circle farthest-corner, #FFFFFF 65%, rgba(255,255,255,0.9) 100%); /* Opera */*/
+	/*background-image: -webkit-gradient(linear, left bottom, right top, color-stop(0, #FFFFFF), color-stop(1, rgba(255,255,255,0.9))); /* Safari/Chrome 10 */*/
+	/*background-image: -webkit-radial-gradient(center bottom, circle farthest-corner, #FFFFFF 65%, rgba(255,255,255,0.9) 100%); /* Chrome 11+ */*/
+	/*background-image: radial-gradient(center bottom, circle farthest-corner,#FFFFFF 65%, rgba(255,255,255,0.9) 100%);*/
 }
 
 .fancybox-overlay-fixed {
