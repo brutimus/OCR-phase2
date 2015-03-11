@@ -1795,21 +1795,35 @@ footer {
                 height: 100%;
                 figure {
                     margin: 0;
+                    .img-wrap {
+                        max-width: 80%;
+                        height: 100%;
+                    }
                     img {
                         margin: 0 auto;
                     }
                     .caption {
-                        width: 100%;
+                        font-size: 14px;
+                        line-height: 17px;
+                        font-weight: 200;
+                        width: 20%;
+                        height: 100%;
                         position: absolute;
-                        bottom: 0;
+                        top: 0;
+                        right: 0;
                         color: #d3d3d3;
-                        background-color: rgba(100,100,100,.75);
+                        // background-color: rgba(100,100,100,.75);
                         border-bottom: none;
-                        padding: 5px;
+                        padding: 60px 15px 0 15px;
                         .img-credit {
                             color: #bbb;
+                            display: block;
+                            margin: 5px 0 0 0;
                         }
                     }
+                }
+                .slick-prev:before, .slick-next:before {
+                    color: #d3d3d3;
                 }
             }
             .fullscreen-button {

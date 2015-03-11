@@ -2009,20 +2009,34 @@ footer .legal span {
 .article .slideshows-wrapper.fullscreen .lead-slideshow figure {
   margin: 0;
 }
+.article .slideshows-wrapper.fullscreen .lead-slideshow figure .img-wrap {
+  max-width: 80%;
+  height: 100%;
+}
 .article .slideshows-wrapper.fullscreen .lead-slideshow figure img {
   margin: 0 auto;
 }
 .article .slideshows-wrapper.fullscreen .lead-slideshow figure .caption {
-  width: 100%;
+  font-size: 14px;
+  line-height: 17px;
+  font-weight: 200;
+  width: 20%;
+  height: 100%;
   position: absolute;
-  bottom: 0;
+  top: 0;
+  right: 0;
   color: #d3d3d3;
-  background-color: rgba(100, 100, 100, 0.75);
   border-bottom: none;
-  padding: 5px;
+  padding: 60px 15px 0 15px;
 }
 .article .slideshows-wrapper.fullscreen .lead-slideshow figure .caption .img-credit {
   color: #bbb;
+  display: block;
+  margin: 5px 0 0 0;
+}
+.article .slideshows-wrapper.fullscreen .lead-slideshow .slick-prev:before,
+.article .slideshows-wrapper.fullscreen .lead-slideshow .slick-next:before {
+  color: #d3d3d3;
 }
 .article .slideshows-wrapper.fullscreen .fullscreen-button {
   display: none;
