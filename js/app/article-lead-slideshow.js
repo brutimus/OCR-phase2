@@ -1,5 +1,8 @@
 define(['jquery', 'jquery.fancybox', 'jquery.slides', 'domReady!'], function(){
-    $('.lead-slideshow').slick({
+
+
+
+    $('.slick-slideshow').slick({
         dots: true,
         respondTo: 'slider'
     });
@@ -10,14 +13,13 @@ define(['jquery', 'jquery.fancybox', 'jquery.slides', 'domReady!'], function(){
         width: 'auto',
         height: 'auto',
         afterShow: function(){
-            $('.slideshows-wrapper').addClass('fullscreen');
-            $('.lead-slideshow').slick('setPosition');
+            $(this.href).addClass('fullscreen').find('.slick-list').focus();
+            $(this.href).find('.slick-slideshow').slick('setPosition');
             $('body').css('overflow', 'hidden');
         },
         afterClose: function(){
-            $(this.href).removeClass('fullscreen');
-            $(this.href).show();
-            $('.lead-slideshow').slick('setPosition');
+            $(this.href).removeClass('fullscreen').show();
+            $(this.href).find('.slick-slideshow').slick('setPosition');
             $('body').css('overflow', 'auto');
         }
     });

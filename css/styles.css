@@ -1964,17 +1964,17 @@ footer .legal span {
   padding-bottom: 10px;
   margin-bottom: 20px;
 }
-.article .slideshows-wrapper .lead-slideshow {
+.article .slideshows-wrapper .slick-slideshow {
   height: 100%;
   margin: 0;
 }
-.article .slideshows-wrapper .lead-slideshow figure {
+.article .slideshows-wrapper .slick-slideshow figure {
   clear: none;
 }
-.article .slideshows-wrapper .lead-slideshow figure figcaption {
+.article .slideshows-wrapper .slick-slideshow figure figcaption {
   border-bottom: none;
 }
-.article .slideshows-wrapper .lead-slideshow figure figcaption .slide-share {
+.article .slideshows-wrapper .slick-slideshow figure figcaption .slide-share {
   display: none;
 }
 .article .slideshows-wrapper .slideshow-tools {
@@ -2006,20 +2006,20 @@ footer .legal span {
   padding: 0;
   border-bottom: none;
 }
-.article .slideshows-wrapper.fullscreen .lead-slideshow {
+.article .slideshows-wrapper.fullscreen .slick-slideshow {
   height: 100%;
 }
-.article .slideshows-wrapper.fullscreen .lead-slideshow figure {
+.article .slideshows-wrapper.fullscreen .slick-slideshow figure {
   margin: 0;
 }
-.article .slideshows-wrapper.fullscreen .lead-slideshow figure .img-wrap {
+.article .slideshows-wrapper.fullscreen .slick-slideshow figure .img-wrap {
   max-width: 80%;
   height: 100%;
 }
-.article .slideshows-wrapper.fullscreen .lead-slideshow figure img {
+.article .slideshows-wrapper.fullscreen .slick-slideshow figure img {
   margin: 0 auto;
 }
-.article .slideshows-wrapper.fullscreen .lead-slideshow figure .caption {
+.article .slideshows-wrapper.fullscreen .slick-slideshow figure .caption {
   font-size: 14px;
   line-height: 17px;
   font-weight: 200;
@@ -2032,27 +2032,27 @@ footer .legal span {
   border-bottom: none;
   padding: 60px 15px 0 15px;
 }
-.article .slideshows-wrapper.fullscreen .lead-slideshow figure .caption .img-credit {
+.article .slideshows-wrapper.fullscreen .slick-slideshow figure .caption .img-credit {
   color: #bbb;
   display: block;
   margin: 10px 0 0 0;
 }
-.article .slideshows-wrapper.fullscreen .lead-slideshow figure .caption .slide-share {
+.article .slideshows-wrapper.fullscreen .slick-slideshow figure .caption .slide-share {
   display: block;
   margin-top: 10px;
 }
-.article .slideshows-wrapper.fullscreen .lead-slideshow figure .caption .slide-share li {
+.article .slideshows-wrapper.fullscreen .slick-slideshow figure .caption .slide-share li {
   float: left;
   padding: 5px 0;
 }
-.article .slideshows-wrapper.fullscreen .lead-slideshow figure .caption .slide-share li a i {
+.article .slideshows-wrapper.fullscreen .slick-slideshow figure .caption .slide-share li a i {
   color: #d3d3d3;
 }
-.article .slideshows-wrapper.fullscreen .lead-slideshow figure .caption .slide-share li + li {
+.article .slideshows-wrapper.fullscreen .slick-slideshow figure .caption .slide-share li + li {
   padding-left: 20px;
 }
-.article .slideshows-wrapper.fullscreen .lead-slideshow .slick-prev:before,
-.article .slideshows-wrapper.fullscreen .lead-slideshow .slick-next:before {
+.article .slideshows-wrapper.fullscreen .slick-slideshow .slick-prev:before,
+.article .slideshows-wrapper.fullscreen .slick-slideshow .slick-next:before {
   color: #d3d3d3;
 }
 .article .slideshows-wrapper.fullscreen .fullscreen-button {
@@ -2503,8 +2503,6 @@ footer .legal span {
 .slick-next {
   position: absolute;
   display: block;
-  height: 20px;
-  width: 20px;
   line-height: 0px;
   font-size: 0px;
   cursor: pointer;
@@ -2537,7 +2535,7 @@ footer .legal span {
 .slick-prev:before,
 .slick-next:before {
   font-family: "ocr-icons";
-  font-size: 20px;
+  font-size: 30px;
   line-height: 1;
   color: #ffffff;
   opacity: 0.8;

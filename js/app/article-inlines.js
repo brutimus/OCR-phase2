@@ -36,7 +36,7 @@ define(['jquery', 'jquery.fancybox', 'jquery.slides', 'domReady!'], function(){
         fitToView   : true,
         autoSize    : true,
         openEffect  : 'none',
-        closeEffect : 'none',
+        closeEffect : 'none'
     });
 
     // Video lightbox
