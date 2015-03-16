@@ -4,7 +4,9 @@ define(['jquery', 'jquery.fancybox', 'jquery.slides', 'domReady!'], function(){
 
     $('.slick-slideshow').slick({
         dots: true,
+        lazyLoad: 'ondemand',
         respondTo: 'slider'
+
     });
     $('article#story .slideshows-wrapper .fullscreen-button a').fancybox({
         margin: 0,
